@@ -10,7 +10,7 @@ const About = () => {
       id="about"
       className="bg-background flex py-20 sm:py-30 justify-center items-center"
     >
-      <div className="flex sm:flex-row flex-col px-6 lg:px-8 max-w-7xl sm:gap-24 text-center items-center justify-center">
+      <div className="flex sm:flex-row flex-col px-6 lg:px-8 max-w-7xl gap-10 sm:gap-24 text-center items-center justify-center">
         {/* Left Column Image */}
         <div className="relative aspect-4/5 sm:w-1/2 rounded-3xl overflow-">
           <Image
