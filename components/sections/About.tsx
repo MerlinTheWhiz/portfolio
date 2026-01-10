@@ -26,7 +26,7 @@ const About = () => {
               </span>
               <div className="text-left">
                 <p className="text-2xl font-bold">MerlinTheWhiz</p>
-                <p className="text-sm text-text-primary/80">Tech Alias</p>
+                <p className="text-sm text-text-primary/80 dark:text-text-muted">Tech Alias</p>
               </div>
             </div>
           </div>
