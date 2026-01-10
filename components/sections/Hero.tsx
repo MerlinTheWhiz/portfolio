@@ -8,7 +8,7 @@ const Hero = () => {
           <span className="w-2 h-2 rounded-full bg-accent-success animate-pulse"></span>
           Available for new projects
         </span>
-        <div className="flex flex-col gap-8 items-center justify-center">
+        <div className="flex flex-col gap-8 min-w-fit items-center justify-center">
           <h1 className="flex flex-col">
             <span className="text-5xl text-text-primary dark:text-text-primary sm:text-6xl md:text-7xl lg:text-8xl font-bold">
               Michael Anokam
