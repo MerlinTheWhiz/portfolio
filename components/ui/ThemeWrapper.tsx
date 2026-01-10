@@ -6,9 +6,9 @@ import { ReactNode, useState, useEffect } from "react";
 export default function ThemeWrapper({ children }: { children: ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
-  // Only render after the component mounts on the client
   useEffect(() => {
-    setMounted(true);
+    const id = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(id);
   }, []);
 
   if (!mounted) return null;
