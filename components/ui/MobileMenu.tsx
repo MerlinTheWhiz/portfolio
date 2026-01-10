@@ -32,9 +32,33 @@ const MobileMenu = () => {
         `}
       >
         <div className="flex justify-center gap-6 text-gray-600">
-          <LuGithub className="w-5 h-5 mt-1.5" />
-          <LuLinkedin className="w-5 h-5 m-1.5" />
-          <BsTwitterX className="w-5 h-5 m-1.5" />
+          <a
+            href="https://github.com/MerlinTheWhiz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1.5"
+          >
+            {" "}
+            <LuGithub className="w-5 h-5" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/michaelanokamcodes/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1.5"
+          >
+            {" "}
+            <LuLinkedin className="w-5 h-5" />
+          </a>
+          <a
+            href="https://x.com/madebymichael_"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1.5"
+          >
+            {" "}
+            <BsTwitterX className="w-5 h-5" />
+          </a>
           <div className="flex items-center justify-center rounded-full bg-gray-200 dark:bg-white/10">
             <ThemeToggle />
           </div>
