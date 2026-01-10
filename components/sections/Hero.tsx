@@ -1,12 +1,11 @@
-'use client';
-import React from "react";
+"use client";
 import Link from "next/link";
 
 const Hero = () => {
   return (
     <section
       id="#hero"
-      className="mx-auto my-30 md:my-40 flex flex-col max-w-4xl text-center items-center justify-center gap-8"
+      className="mx-auto my-30 sm:my-40 flex flex-col max-w-4xl text-center items-center justify-center gap-8"
     >
       <span className="flex text-text-muted items-center gap-2 px-4 py-2 text-sm bg-background-card dark:bg-white/5 border border-border-default rounded-full">
         <span className="w-2 h-2 rounded-full bg-accent-success animate-pulse"></span>
@@ -21,7 +20,7 @@ const Hero = () => {
             Software Engineer
           </span>
         </h1>
-        <p className="max-w-2xl text-base md:text-lg lg:text-xl text-text-muted px-4 mb-5">
+        <p className="max-w-2xl text-lg lg:text-xl text-text-muted px-4 mb-5">
           Creative software engineer specializing in building innovative
           solutions that bridge technology and user experience. I craft clean,
           efficient code and transform ideas into impactful digital products.

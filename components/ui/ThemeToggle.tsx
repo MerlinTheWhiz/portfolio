@@ -1,33 +1,23 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import { LuSun, LuMoon } from "react-icons/lu";
 
-const getInitialTheme = () => {
-  if (typeof window === "undefined") return false;
-
-  const stored = localStorage.getItem("theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  return stored === "dark" || (!stored && prefersDark);
-};
-
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(getInitialTheme);
+  const { theme, systemTheme, setTheme } = useTheme();
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDark);
-  }, [isDark]);
-
-  const toggleTheme = () => {
-    const next = !isDark;
-    setIsDark(next);
-    localStorage.setItem("theme", next ? "dark" : "light");
-  };
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <button onClick={toggleTheme} className="hover:cursor-pointer">
-      {isDark ? <LuSun className="w-5 h-5 text-white" /> : <LuMoon className="w-5 h-5" />}
+    <button
+      onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
+      className="hover:cursor-pointer p-1.5 rounded-full transition-colors  hover:text-text-primary  duration-100 hover:bg-gray-200 dark:hover:bg-white/10"
+    >
+      {currentTheme === "dark" ? (
+        <LuSun className="w-5 h-5 text-white" />
+      ) : (
+        <LuMoon className="w-5 h-5" />
+      )}
     </button>
   );
 }
