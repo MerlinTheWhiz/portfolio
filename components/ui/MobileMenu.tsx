@@ -22,7 +22,7 @@ const MobileMenu = () => {
       {/* Menu */}
       <div
         className={`absolute top-full mt-3 left-0 right-0
-          rounded-2xl bg-background pt-6 backdrop-blur-lg border border-border-default
+          rounded-2xl bg-background pt-6  backdrop-blur-lg border border-border-default
           shadow-xl p-4 transition-all duration-200
           ${
             open
@@ -39,7 +39,7 @@ const MobileMenu = () => {
             <ThemeToggle />
           </div>
         </div>
-        <div className="flex justify-between items-center mt-4">
+        <div className="flex justify-between items-center mt-6">
           <a
             href="/resume.pdf"
             download
