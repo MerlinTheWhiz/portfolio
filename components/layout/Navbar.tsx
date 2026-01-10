@@ -53,7 +53,7 @@ const Navbar = () => {
             {" "}
             <BsTwitterX className="w-5 h-5" />
           </a>
-          <div className="p-1.5 flex items-center justify-center rounded-full hover:cursor-pointer hover:bg-gray-200 hover:text-text-primary hover:dark:bg-white/10 transition-colors duration 300">
+          <div className="p-1.5 flex items-center justify-center rounded-full hover:cursor-pointer transition-colors duration 300">
             <ThemeToggle />
           </div>
           <span className="hidden sm:block border-l h-6 border-gray-400/80"></span>

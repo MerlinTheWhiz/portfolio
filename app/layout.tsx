@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import ThemeWrapper from "@/components/ui/ThemeWrapper";
 
 export const metadata: Metadata = {
   title: {
-    default: "Michael Nathan — Software Engineer",
-    template: "%s | Michael Nathan",
+    default: "Michael Anokam — Software Engineer",
+    template: "%s | Michael Anokam",
   },
   description:
     "Software engineer focused on building fast, accessible, and scalable web applications with modern frontend technologies.",
@@ -19,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
+        <ThemeWrapper>
+          <Navbar />
+          {children}
+        </ThemeWrapper>
       </body>
     </html>
   );

@@ -13,7 +13,7 @@ const MobileMenu = () => {
       {/* Toggle button */}
       <button
         onClick={() => setOpen(!open)}
-        className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/80 transition"
+        className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 dark:text-white transition"
         aria-label="Toggle menu"
       >
         {open ? <LuX className="w-5 h-5" /> : <LuMenu className="w-5 h-5" />}
@@ -32,10 +32,10 @@ const MobileMenu = () => {
         `}
       >
         <div className="flex justify-center gap-6 text-gray-600">
-          <LuGithub className="w-5 h-5 m-1.5" />
+          <LuGithub className="w-5 h-5 mt-1.5" />
           <LuLinkedin className="w-5 h-5 m-1.5" />
           <BsTwitterX className="w-5 h-5 m-1.5" />
-          <div className="p-1.5 flex items-center justify-center rounded-full bg-gray-200 dark:bg-white/10">
+          <div className="flex items-center justify-center rounded-full bg-gray-200 dark:bg-white/10">
             <ThemeToggle />
           </div>
         </div>
