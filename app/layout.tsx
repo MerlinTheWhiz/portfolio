@@ -5,7 +5,7 @@ import ThemeWrapper from "@/components/ui/ThemeWrapper";
 
 export const metadata: Metadata = {
   title: {
-    default: "Michael Anokam — Software Engineer",
+    default: "Michael Anokam - Software Engineer",
     template: "%s | Michael Anokam",
   },
   description:
