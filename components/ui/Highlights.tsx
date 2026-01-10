@@ -20,9 +20,7 @@ const Highlights = () => {
         >
           <Icon className="w-6 h-6 text-accent-primary mb-4" />
           <p className="text-3xl font-bold">{value}</p>
-          <p className="text-sm mt-1 dark:text-[#737373] text-gray-600">
-            {label}
-          </p>
+          <p className="text-sm mt-1 text-text-muted">{label}</p>
         </div>
       ))}
     </div>
