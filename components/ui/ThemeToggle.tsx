@@ -27,7 +27,11 @@ export default function ThemeToggle() {
 
   return (
     <button onClick={toggleTheme} className="hover:cursor-pointer">
-      {isDark ? <LuSun className="w-5 h-5 text-white" /> : <LuMoon className="w-5 h-5" />}
+      {isDark ? (
+        <LuSun className="w-5 h-5 text-white" />
+      ) : (
+        <LuMoon className="w-5 h-5" />
+      )}
     </button>
   );
 }
