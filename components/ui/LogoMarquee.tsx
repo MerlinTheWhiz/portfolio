@@ -46,7 +46,7 @@ const techLogos = [
 
 const LogoCarousel = () => {
   return (
-    <div className="overflow-hidden mx-6 md:mx-auto max-w-7xl py-6">
+    <div className="overflow-hidden md:mx-auto max-w-7xl py-6">
       <Marquee
         gradient={false}
         speed={40}
