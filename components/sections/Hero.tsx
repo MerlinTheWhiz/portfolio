@@ -1,12 +1,13 @@
 import Link from "next/link";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (
     <section id="hero" className="bg-background flex py-30 sm:py-40">
       <div className="mx-auto flex flex-col text-center px-6 items-center justify-center gap-8">
-        <span className="flex text-text-muted items-center gap-2 px-4 py-2 text-sm bg-background-card dark:bg-white/5 border border-border-default rounded-full">
+        <span className="metal-badge relative flex text-text-muted items-center gap-2 px-4 py-2 text-sm bg-background-card dark:bg-white/5 border border-border-default rounded-full overflow-hidden">
           <span className="w-2 h-2 rounded-full bg-accent-success animate-pulse"></span>
-          Available for new projects
+          <span className="relative z-10">Available for new projects</span>
         </span>
         <div className="flex flex-col gap-8 min-w-fit items-center justify-center">
           <h1 className="flex flex-col">
@@ -14,7 +15,12 @@ const Hero = () => {
               Michael Anokam
             </span>
             <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold py-2 bg-linear-to-r from-accent-primary via-accent-hover to-accent-dark bg-clip-text text-transparent">
-              Software Engineer
+              <Typewriter
+                words={["Software Engineer"]}
+                loop={1}
+                typeSpeed={75}
+                deleteSpeed={50}
+              />
             </span>
           </h1>
           <p className="max-w-2xl text-lg lg:text-xl text-text-muted px-4 mb-5">
