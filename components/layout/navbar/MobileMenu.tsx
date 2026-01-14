@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { Home } from "lucide-react";
 import { LuMenu, LuX, LuGithub, LuLinkedin, LuDownload } from "react-icons/lu";
 import { BsTwitterX } from "react-icons/bs";
-import ThemeToggle from "../ui/ThemeToggle";
+import ThemeToggle from "../../ui/ThemeToggle";
 
 const MobileMenu = () => {
   const [open, setOpen] = useState(false);
@@ -32,6 +34,13 @@ const MobileMenu = () => {
         `}
       >
         <div className="flex justify-center gap-6 text-gray-600">
+          <Link
+            href="/"
+            className="p-1.5 flex items-center justify-center rounded-full transition-transform duration-200 ease-in-out hover:text-text-primary bg-gray-200 dark:bg-white/10"
+          >
+            {" "}
+            <Home className="w-5 h-5" />
+          </Link>
           <a
             href="https://github.com/MerlinTheWhiz"
             target="_blank"

@@ -11,7 +11,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
-      className="hover:cursor-pointer p-1.5 rounded-full transition-colors  hover:text-text-primary  duration-100 hover:bg-gray-200 dark:hover:bg-white/10"
+      className="hover:cursor-pointer p-1.5 rounded-full transition-colors  hover:text-text-primary  duration-300 hover:bg-gray-200 dark:hover:bg-white/10"
     >
       {currentTheme === "dark" ? (
         <LuSun className="w-5 h-5 text-white" />

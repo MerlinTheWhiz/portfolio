@@ -13,10 +13,10 @@ const Highlights = () => {
     <div className="mt-12 grid grid-cols-2 gap-6">
       {highlights.map(({ icon: Icon, value, label }, index) => (
         <div
-          key={label}
+          key={index}
           className="p-6 rounded-2xl border transition-colors duration-500
-                  bg-background-card border-border-default
-                      hover:border-accent-primary"
+        bg-background-card border-border-default
+        hover:border-accent-primary"
         >
           <Icon className="w-6 h-6 text-accent-primary mb-4" />
           <p className="text-3xl font-bold">{value}</p>
