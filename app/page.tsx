@@ -1,6 +1,6 @@
 import About from "@/components/sections/About";
 import Hero from "@/components/sections/Hero";
-import Technologies from "@/components/sections/Skills";
+import SkillsList from "@/components/sections/Skills";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <div className="w-full">
         <Hero />
         <About />
-        <Technologies />
+        <SkillsList />
       </div>
     </main>
   );
