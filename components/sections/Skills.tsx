@@ -1,7 +1,7 @@
 import LogoMarquee from "@/components/ui/LogoMarquee";
 import { Code2, Server, Cloud, Wrench } from "lucide-react";
 
-const Skills = () => {
+const SkillsList = () => {
   const skillCategories = [
     {
       title: "Frontend",
@@ -103,4 +103,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillsList;

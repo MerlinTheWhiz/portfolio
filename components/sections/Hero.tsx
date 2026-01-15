@@ -39,7 +39,7 @@ const Hero = () => {
 
       {/* Hero content */}
       <div className="mx-auto relative flex flex-col text-center px-6 items-center justify-center gap-8 z-10">
-        <span className="metal-badge relative flex text-text-muted items-center gap-2 px-4 py-2 text-sm bg-background-card border border-border-default rounded-full overflow-hidden">
+        <span className="metal-badge relative flex text-text-muted items-center gap-2 px-4 py-2 text-sm bg-background-card dark:bg-background border border-border-default rounded-full overflow-hidden">
           <span className="w-2 h-2 rounded-full bg-accent-success animate-pulse"></span>
           <span className="relative z-10">Available for new projects</span>
         </span>
