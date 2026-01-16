@@ -31,6 +31,7 @@ const Navbar = () => {
           <Link
             href="/"
             className="p-1.5 mr-1 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-gray-200 dark:hover:bg-white/10"
+            title="Home"
           >
             {" "}
             <Home className="w-5 h-5" />
@@ -40,6 +41,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="transition-transform duration-200 ease-in-out hover:-translate-y-0.5 hover:text-text-primary"
+            title="GitHub"
           >
             {" "}
             <LuGithub className="w-5 h-5" />
@@ -49,6 +51,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="transition-transform p-1.5 duration-200 ease-in-out hover:-translate-y-0.5 hover:text-text-primary"
+            title="LinkedIn"
           >
             {" "}
             <LuLinkedin className="w-5 h-5" />
@@ -58,11 +61,13 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="transition-transform duration-200 ease-in-out hover:-translate-y-0.5 hover:text-text-primary"
+            title="Twitter X"
           >
             {" "}
             <BsTwitterX className="w-5 h-5" />
           </a>
-          <div className="p-1.5 flex items-center justify-center rounded-full hover:cursor-pointer transition-colors duration 300">
+          <div className="p-1.5 flex items-center justify-center rounded-full hover:cursor-pointer transition-colors duration 300"
+          title="Theme">
             <ThemeToggle />
           </div>
           <span className="hidden sm:block border-l h-6 border-gray-400/80"></span>

@@ -1,20 +1,16 @@
 "use client";
+
 import { Typewriter } from "react-simple-typewriter";
 
-interface HeroTypewriterProps {
-  words: string[];
-}
+export default function HeroTypewriter( { words }: { words: string[] } ) {
 
-const HeroTypewriter = ({ words }: HeroTypewriterProps) => {
   return (
     <Typewriter
       words={words}
-      loop={1}
-      typeSpeed={75}
+      loop={0}
+      typeSpeed={100}
+      delaySpeed={5000}
       deleteSpeed={50}
-    >
-    </Typewriter>
+    />
   );
-};
-
-export default HeroTypewriter;
+}
