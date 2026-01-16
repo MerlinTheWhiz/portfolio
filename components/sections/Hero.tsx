@@ -50,7 +50,7 @@ const Hero = () => {
               Michael Anokam
             </span>
             <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold py-2 bg-linear-to-r from-accent-primary via-accent-hover to-accent-dark bg-clip-text text-transparent">
-              <HeroTypewriter words={["Software Engineer"]} />
+              <HeroTypewriter words={["Software Engineer"]}/>
             </span>
           </h1>
           <p className="max-w-2xl text-lg lg:text-xl text-text-muted px-4 mb-5">

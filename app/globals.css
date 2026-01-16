@@ -63,7 +63,7 @@
 }
 
 
-/* -------- Metal Shine Effect (Dark Mode Only) -------- */
+/* Metal Shine Effect (Dark Mode Only) */
 
 @keyframes metal-shine {
   0% {
@@ -101,8 +101,7 @@
 }
 
 
-
-
+/* Global Styles */
 body {
   font-family: var(--font-sans);
 }
