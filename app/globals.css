@@ -62,7 +62,6 @@
   }
 }
 
-
 /* Metal Shine Effect (Dark Mode Only) */
 
 @keyframes metal-shine {
@@ -100,7 +99,6 @@
   pointer-events: none;
 }
 
-
 /* Global Styles */
 body {
   font-family: var(--font-sans);
@@ -123,10 +121,11 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-border-muted);
-  border-radius: 4px;
+  background-color: var(--color-accent-primary);
+  border-radius: 999px;
+  border: 2px solid var(--color-background);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-border-default);
+  background-color: var(--color-accent-hover);
 }

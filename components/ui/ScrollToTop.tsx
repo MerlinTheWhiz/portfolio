@@ -1,28 +1,25 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { ReactNode } from "react";
+import { useState, useEffect } from "react";
+import { ArrowUp } from "lucide-react";
 
-type Props = {
-  href: string;
-  children: ReactNode;
-  className?: string;
-};
+export default function ScrollToTopButton() {
+  const [visible, setVisible] = useState(false);
 
-export default function ScrollToTop({ href, children, className }: Props) {
-  const pathname = usePathname();
+  useEffect(() => {
+    const handleScroll = () => setVisible(window.scrollY > 300);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (pathname === "/" && href === "/") {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
+  if (!visible) return null;
 
   return (
-    <Link href={href} onClick={handleClick} className={className}>
-      {children}
-    </Link>
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className="fixed bottom-6 right-6 p-3 rounded-full bg-accent-primary hover:bg-accent-hover text-white transition-all duration-300 z-50 hover:scale-105 hover:cursor-pointer shadow-xl shadow-black/50"
+    >
+      <ArrowUp className="w-5 h-5 animate-bounce" />
+    </button>
   );
 }
