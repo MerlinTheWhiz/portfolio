@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar/Navbar";
 import ThemeWrapper from "@/components/ui/ThemeWrapper";
+import ScrollToTopButton from "@/components/ui/ScrollToTop";
 
 export const metadata: Metadata = {
   title: {
@@ -23,6 +24,7 @@ export default function RootLayout({
         <ThemeWrapper>
           <Navbar />
           {children}
+          <ScrollToTopButton />
         </ThemeWrapper>
       </body>
     </html>

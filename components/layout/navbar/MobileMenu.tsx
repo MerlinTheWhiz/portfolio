@@ -36,6 +36,7 @@ const MobileMenu = () => {
         <div className="flex justify-center gap-6 text-gray-600">
           <Link
             href="/"
+            onClick={() => setOpen(!open)}
             className="p-1.5 flex items-center justify-center rounded-full transition-transform duration-200 ease-in-out hover:text-text-primary bg-gray-200 dark:bg-white/10"
           >
             {" "}
@@ -43,6 +44,7 @@ const MobileMenu = () => {
           </Link>
           <a
             href="https://github.com/MerlinTheWhiz"
+            onClick={() => setOpen(!open)}
             target="_blank"
             rel="noopener noreferrer"
             className="p-1.5"
@@ -52,6 +54,7 @@ const MobileMenu = () => {
           </a>
           <a
             href="https://www.linkedin.com/in/michaelanokamcodes/"
+            onClick={() => setOpen(!open)}
             target="_blank"
             rel="noopener noreferrer"
             className="p-1.5"
@@ -61,6 +64,7 @@ const MobileMenu = () => {
           </a>
           <a
             href="https://x.com/madebymichael_"
+            onClick={() => setOpen(!open)}
             target="_blank"
             rel="noopener noreferrer"
             className="p-1.5"
@@ -68,7 +72,10 @@ const MobileMenu = () => {
             {" "}
             <BsTwitterX className="w-5 h-5" />
           </a>
-          <div className="flex items-center justify-center rounded-full bg-gray-200 dark:bg-white/10">
+          <div
+            onClick={() => setOpen(!open)}
+            className="flex items-center justify-center rounded-full bg-gray-200 dark:bg-white/10"
+          >
             <ThemeToggle />
           </div>
         </div>
