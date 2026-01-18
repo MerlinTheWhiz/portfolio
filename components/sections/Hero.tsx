@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section id="hero" className="relative bg-background flex py-32 sm:py-40">
       {/* Dark mode pattern background */}
-      <div className="absolute  inset-0 z-0 dark:block hidden">
+      <div className="absolute inset-0 z-0 dark:block hidden">
         <div
           className="w-full h-full"
           style={{
