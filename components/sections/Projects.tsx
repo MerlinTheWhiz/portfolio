@@ -111,8 +111,11 @@ const Projects = () => {
               </div>
             ))}
         </div>
-        <Link href="/projects">
-          <span className="flex font-semibold group rounded-full gap-2 items-center justify-center w-fit mx-auto bg-accent-primary/5 dark:bg-accent-primary/10 hover:bg-accent-primary/10 hover:dark:bg-accent-primary/20 border-2 border-accent-primary text-accent-primary px-8 py-4 ease-in-out md:hover:scale-102 transition-all duration-300">
+        <Link href="/projects" className="w-fit mx-auto">
+          <span className="flex font-semibold group rounded-full gap-2 bg-accent-primary/5 dark:bg-accent-primary/10 
+          hover:bg-accent-primary/10 hover:dark:bg-accent-primary/20 border-2 border-accent-primary 
+          text-accent-primary px-8 py-4 ease-in-out md:hover:scale-102 transition-all duration-300
+          justify-center items-center">
             View All Projects <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5"/>
           </span>
         </Link>
