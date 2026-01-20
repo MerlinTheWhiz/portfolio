@@ -5,39 +5,48 @@ import ThemeWrapper from "@/components/ui/ThemeWrapper";
 import ScrollToTopButton from "@/components/ui/ScrollToTop";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://michaelanokam.vercel.app"),
+
   title: {
     default: "Michael Anokam - Software Engineer",
     template: "%s | Michael Anokam",
   },
   description:
-    "Software engineer focused on building fast, accessible, and scalable web applications with modern frontend technologies.",
-  
+    "Software engineer focused on building fast, accessible, and scalable web applications with modern technologies.",
+
   keywords: [
     "Software Engineer",
     "Frontend Developer",
+    "Backend Developer",
+    "Fullstack Developer",
+    "TypeScript",
+    "Tailwind CSS",
     "React",
     "Next.js",
+    "Django",
+    "Node.js",
+    "PostgreSQL",
+    "MongoDB",
     "Portfolio",
     "Web Developer",
+    "Remote Software Engineer",
   ],
 
-  authors: [{ name: "Michael Anokam", url: "https://michaelanokam.vercel.app" }],
+  authors: [
+    { name: "Michael Anokam", url: "https://michaelanokam.vercel.app" },
+  ],
   creator: "Michael Anokam",
   publisher: "Michael Anokam",
 
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
   },
 
   openGraph: {
     title: "Michael Anokam - Software Engineer",
     description:
-      "Building fast, accessible, and scalable web applications with modern frontend technologies.",
+      "Building fast, accessible, and scalable web applications with modern technologies.",
     url: "https://michaelanokam.vercel.app",
     siteName: "Michael Anokam Portfolio",
     images: [
@@ -56,21 +65,28 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Michael Anokam - Software Engineer",
     description:
-      "Building fast, accessible, and scalable web applications with modern frontend technologies.",
-    creator: "@YourTwitterHandle",
+      "Building fast, accessible, and scalable web applications with modern technologies.",
+    creator: "@madebymichael_",
     images: ["/og-image.png"],
   },
 
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
+    shortcut: [
+      { url: "/favicon-16x16.png", sizes: "16x16" },
+      { url: "/favicon-32x32.png", sizes: "32x32" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512" },
+    ],
     apple: "/apple-touch-icon.png",
-    android: "/android-chrome-192x192.png",
-    android512: "/android-chrome-512x512.png",
   },
+};
 
+
+export const viewport = {
   themeColor: "#057ef6",
 };
+
 
 export default function RootLayout({
   children,
@@ -79,6 +95,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="googlebot"
+          content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
+      </head>
       <body>
         <ThemeWrapper>
           <Navbar />
