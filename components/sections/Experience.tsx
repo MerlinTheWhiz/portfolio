@@ -26,7 +26,7 @@ export default function ExperienceSection() {
       role: "Frontend Engineer",
       company: "Grainlify (Open Source)",
       location: "Remote",
-      period: "2026 - Present",
+      period: "2026",
       description:
         "Enhanced UI and functionality across Grainlify with responsive design, dashboard layout, and dynamic ecosystem interactions.",
       highlights: [
@@ -43,7 +43,7 @@ export default function ExperienceSection() {
       role: "Frontend Engineer",
       company: "Remitwise (Open Source)",
       location: "Remote",
-      period: "2026 - Present",
+      period: "2026",
       description:
         "Built and improved UI components and pages, focusing on responsive layouts, seamless interactions, and consistent user experience.",
       highlights: [
@@ -60,7 +60,7 @@ export default function ExperienceSection() {
       role: "Frontend Engineer",
       company: "Stellar Wrap (Open Source)",
       location: "Remote",
-      period: "2026 - Present",
+      period: "2026",
       description:
         "Added multi-network support with seamless Mainnet/Testnet switching, network-aware API calls, and type-safe state handling.",
       highlights: [
@@ -77,7 +77,7 @@ export default function ExperienceSection() {
       role: "Frontend Engineer",
       company: "CommitLabs (Open Source)",
       location: "Remote",
-      period: "2026 - Present",
+      period: "2026",
       description:
         "Built responsive Hero Section with animations and composed Commitment Marketplace page using existing components with page-level state.",
       highlights: [
@@ -94,7 +94,7 @@ export default function ExperienceSection() {
       role: "UI Engineer",
       company: "SkillSphere (Open Source)",
       location: "Remote",
-      period: "2026 - Present",
+      period: "2026",
       description:
         "Implemented a reusable UI component library with dark-mode support and scalable props-driven components for consistent design.",
       highlights: [
@@ -111,15 +111,26 @@ export default function ExperienceSection() {
       role: "Frontend Engineer",
       company: "Stellar-Guilds (Open Source)",
       location: "Remote",
-      period: "2026 - Present",
+      period: "2026",
       description:
-        "Developed high-performance particle background with smooth animations and responsive design, enhancing visual appeal without impacting performance.",
+        "Designed and built the landing page UI with responsive sections and an optimized particle animation background with dynamic connections.",
       highlights: [
-        "Particle Animation",
         "Optimized Performance",
+        "Particle Animation",
         "Responsive UI",
         "Smooth Animations",
       ],
+    },
+    // Hackathon - CarbNB
+    {
+      id: 8,
+      role: "Frontend Engineer",
+      company: "QAC Hackathon",
+      location: "Remote",
+      period: "2025",
+      description:
+        "Built Carbnb, car rental system, in a hackathon team with structured roles (PM, UI/UX, backend/frontend) and collaborative workflows.",
+      highlights: ["Hackathon Build", "Team Workflow", "GitHub Projects"],
     },
   ];
 
@@ -137,8 +148,8 @@ export default function ExperienceSection() {
             <span className="text-accent-primary"> journey</span>
           </h2>
           <p className="mt-6 text-lg max-w-2xl mx-auto text-text-muted">
-            A timeline of growth, challenges overcome, and milestones achieved
-            across my career.
+            A timeline of recent growth, challenges overcome, and milestones
+            achieved across my career.
           </p>
         </div>
 
