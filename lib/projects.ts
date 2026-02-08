@@ -45,7 +45,8 @@ export const projects: Project[] = [
       "A clean energy product website promoting sustainable solar solutions for African homes and businesses.",
     image: cleanspark,
     tags: ["Next.js", "TypeScript", "Tailwind", "GSAP"],
-    link: "https://your-live-link.com",
+    link: "https://www.cleansparktechnologies.com/",
+    github: "https://github.com/codeAKstan/CleanSpark",
     featured: true,
   },
 ];
