@@ -1,8 +1,8 @@
 import mediaxis from "@/public/mediaxis.png";
 import portfolio from "@/public/portfolio.png";
 import cleanspark from "@/public/cleanspark.png";
+import blackfrica from "@/public/blackfrica.png";
 import { StaticImageData } from "next/image";
-
 
 export type Project = {
   id: number;
@@ -47,6 +47,17 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Tailwind", "GSAP"],
     link: "https://www.cleansparktechnologies.com/",
     github: "https://github.com/codeAKstan/CleanSpark",
+    featured: true,
+  },
+  {
+    id: 4,
+    title: "Blackfrica",
+    description:
+      "A culturally-driven NFT marketplace spotlighting African digital art and creators, featuring curated collections, seamless wallet integration, and immersive animated UI.",
+    image: blackfrica,
+    tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion", "Web3"],
+    link: "https://blackfrica.vercel.app/",
+    github: "https://github.com/MerlinTheWhiz/Blackfrica",
     featured: true,
   },
 ];
