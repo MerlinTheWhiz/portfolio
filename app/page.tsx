@@ -3,7 +3,7 @@ import Hero from "@/components/sections/Hero";
 import SkillsList from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
-// import Contact from "@/components/sections/Contact";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
         <SkillsList />
         <Projects />
         <Experience />
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </main>
   );
