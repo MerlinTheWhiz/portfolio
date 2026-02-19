@@ -3,11 +3,11 @@ import { Briefcase, MapPin } from "lucide-react";
 
 export default function ExperienceSection() {
   const experiences = [
-    // Blackricans
+    // Blackfrica
     {
       id: 1,
       role: "Tech Lead",
-      company: "Blackricans (Startup)",
+      company: "BLACKfrica (Startup)",
       location: "Nigeria (Remote)",
       period: "2026 - Present",
       description:
