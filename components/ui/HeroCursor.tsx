@@ -1,12 +1,27 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const HeroCursor: React.FC = () => {
   const cursorRef = useRef<HTMLDivElement | null>(null);
   const posRef = useRef({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Detect mobile
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    // Don't run effect on mobile
+    if (isMobile) return;
+
     const cursor = cursorRef.current;
     if (!cursor) return;
 
@@ -88,7 +103,7 @@ const HeroCursor: React.FC = () => {
         }
       });
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <div

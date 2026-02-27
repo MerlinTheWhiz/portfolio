@@ -1,15 +1,30 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function HoverRevealText() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const textRef = useRef<HTMLHeadingElement>(null);
 
   const radius = 100;
 
+  useEffect(() => {
+    // Detect mobile
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Don't track on mobile
+    if (isMobile) return;
+
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
@@ -40,19 +55,21 @@ export default function HoverRevealText() {
         ref={textRef}
         className="text-5xl text-text-primary dark:text-text-primary sm:text-6xl md:text-7xl lg:text-8xl font-bold relative z-10"
         style={{
-          WebkitMaskImage: hovered
-            ? `radial-gradient(circle ${radius}px at ${position.x}px ${position.y}px, transparent 100%, black 100%)`
-            : "none",
-          maskImage: hovered
-            ? `radial-gradient(circle ${radius}px at ${position.x}px ${position.y}px, transparent 100%, black 100%)`
-            : "none",
+          WebkitMaskImage:
+            hovered && !isMobile
+              ? `radial-gradient(circle ${radius}px at ${position.x}px ${position.y}px, transparent 100%, black 100%)`
+              : "none",
+          maskImage:
+            hovered && !isMobile
+              ? `radial-gradient(circle ${radius}px at ${position.x}px ${position.y}px, transparent 100%, black 100%)`
+              : "none",
         }}
       >
         Michael Anokam
       </h1>
 
       {/* Hover Circle */}
-      {hovered && (
+      {hovered && !isMobile && (
         <div
           className="absolute pointer-events-none rounded-full"
           style={{
@@ -71,9 +88,10 @@ export default function HoverRevealText() {
       <h1
         className="absolute font-cinzel inset-0 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold pointer-events-none text-white dark:text-black z-20"
         style={{
-          clipPath: hovered
-            ? `circle(${radius}px at ${position.x}px ${position.y}px)`
-            : "circle(0px at 0 0)",
+          clipPath:
+            hovered && !isMobile
+              ? `circle(${radius}px at ${position.x}px ${position.y}px)`
+              : "circle(0px at 0 0)",
         }}
       >
         MerlinTheWhiz
