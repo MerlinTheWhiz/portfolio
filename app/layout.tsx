@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/navbar/Navbar";
 import ThemeWrapper from "@/components/ui/ThemeWrapper";
 import ScrollToTopButton from "@/components/ui/ScrollToTop";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://michaelanokam.vercel.app"),
@@ -106,6 +107,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <ScrollToTopButton />
+          <Footer />
         </ThemeWrapper>
       </body>
     </html>
