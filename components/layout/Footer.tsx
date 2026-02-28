@@ -10,21 +10,21 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <a
               href="#"
-              className="text-sm text-gray-600 transition-colors hover:text-[#057ef6] dark:text-[#737373] dark:hover:text-[#057ef6]"
+              className="text-sm text-gray-600 transition-colors hover:text-accent-primary dark:text-[#737373] dark:hover:text-accent-primary"
             >
               GitHub
             </a>
 
             <a
               href="#"
-              className="text-sm text-gray-600 transition-colors hover:text-[#057ef6] dark:text-[#737373] dark:hover:text-[#057ef6]"
+              className="text-sm text-gray-600 transition-colors hover:text-accent-primary dark:text-[#737373] dark:hover:text-accent-primary"
             >
               LinkedIn
             </a>
 
             <a
               href="#"
-              className="text-sm text-gray-600 transition-colors hover:text-[#057ef6] dark:text-[#737373] dark:hover:text-[#057ef6]"
+              className="text-sm text-gray-600 transition-colors hover:text-accent-primary dark:text-[#737373] dark:hover:text-accent-primary"
             >
               Twitter
             </a>
