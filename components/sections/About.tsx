@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import aboutImage from "@/public/logo.png";
 import { Code2 } from "lucide-react";
 import Highlights from "../ui/Highlights";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -11,7 +14,13 @@ const About = () => {
     >
       <div className="flex sm:flex-row flex-col px-6 lg:px-8 max-w-7xl gap-10 sm:gap-24 text-center items-center justify-center">
         {/* Left Column Image */}
-        <div className="relative aspect-4/5 sm:w-1/2 rounded-3xl overflow-">
+        <motion.div
+          className="relative aspect-4/5 sm:w-1/2 rounded-3xl"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: false }}
+        >
           <Image
             src={aboutImage}
             alt="Picture of Michael Anokam avatar"
@@ -31,31 +40,58 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Column Content */}
         <div className="flex flex-col sm:w-1/2 text-left">
-          <span className="inline-block px-4 w-fit py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6">
+          <motion.span
+            className="inline-block px-4 w-fit py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: false }}
+          >
             About Me
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
+          </motion.span>
+          <motion.h2
+            className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: false }}
+          >
             Passionate about creating
             <span className="text-accent-primary"> impactful </span>
             solutions
-          </h2>
-          <p className="mt-8 space-y-6 text-lg leading-relaxed text-text-secondary">
-            I&apos;m Michael Anokam, a software engineer passionate about
-            creating innovative solutions that make a real impact. With
-            expertise spanning full-stack development, I bring ideas to life
-            through elegant code and thoughtful design.
-          </p>
-          <p className="mt-8 space-y-6 text-lg leading-relaxed text-text-secondary">
-            My work focuses on building scalable applications, optimizing
-            performance, and delivering seamless user experiences. I believe in
-            writing code that&apos;s not just functional, but maintainable,
-            efficient, and future-proof.
-          </p>
-          <Highlights />
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            viewport={{ once: false }}
+          >
+            <p className="mt-8 space-y-6 text-lg leading-relaxed text-text-secondary">
+              I&apos;m Michael Anokam, a software engineer passionate about
+              creating innovative solutions that make a real impact. With
+              expertise spanning full-stack development, I bring ideas to life
+              through elegant code and thoughtful design.
+            </p>
+            <p className="mt-8 space-y-6 text-lg leading-relaxed text-text-secondary">
+              My work focuses on building scalable applications, optimizing
+              performance, and delivering seamless user experiences. I believe
+              in writing code that&apos;s not just functional, but maintainable,
+              efficient, and future-proof.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            viewport={{ once: false }}
+          >
+            <Highlights />
+          </motion.div>
         </div>
       </div>
     </section>

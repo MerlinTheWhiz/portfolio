@@ -5,11 +5,13 @@ import { useEffect, useRef, useState } from "react";
 interface CountUpProps {
   target: number;
   duration?: number;
+  delay?: number;
 }
 
 export default function CountUp({
   target,
   duration = 1500,
+  delay = 0,
 }: CountUpProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const [value, setValue] = useState(0);
@@ -18,7 +20,7 @@ export default function CountUp({
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        setStarted(true);
+        setTimeout(() => setStarted(true), delay);
         observer.disconnect();
       }
     });

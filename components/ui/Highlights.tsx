@@ -21,7 +21,7 @@ const Highlights = () => {
           <p className="text-3xl font-bold">
             {value !== Infinity ? (
               <>
-                <CountUp target={value} />
+                <CountUp target={value} delay={800}/>
                 {suffix}
               </>
             ) : (
