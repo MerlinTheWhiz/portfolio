@@ -28,7 +28,7 @@ export default function CountUp({
     if (ref.current) observer.observe(ref.current);
 
     return () => observer.disconnect();
-  }, []);
+  }, [delay]);
 
   useEffect(() => {
     if (!started) return;
