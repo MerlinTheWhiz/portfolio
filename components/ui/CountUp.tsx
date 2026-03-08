@@ -21,7 +21,10 @@ export default function CountUp({
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setTimeout(() => setStarted(true), delay);
-        observer.disconnect();
+      } else {
+        // Reset when element leaves viewport
+        setStarted(false);
+        setValue(0);
       }
     });
 

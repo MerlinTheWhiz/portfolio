@@ -7,6 +7,20 @@ import HoverRevealText from "../ui/HeroHoverRevealText";
 import HeroCursor from "../ui/HeroCursor";
 import { motion } from "framer-motion";
 
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 50 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 const Hero = () => {
   return (
     <section id="hero" className="relative bg-background flex py-32 sm:py-40">
@@ -48,77 +62,62 @@ const Hero = () => {
       </div>
 
       {/* Hero content */}
-      <div className="mx-auto relative flex flex-col text-center px-6 items-center justify-center gap-8 z-10">
-        <motion.div
-          className=""
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+      <motion.div
+        className="mx-auto relative flex flex-col text-center px-6 items-center justify-center gap-8 z-10"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false }}
+      >
+        <motion.span
+          className="metal-badge relative flex text-text-muted items-center gap-2 px-4 py-2 text-sm bg-background-card dark:bg-background border border-border-default rounded-full overflow-hidden"
+          variants={item}
         >
-          <span className="metal-badge relative flex text-text-muted items-center gap-2 px-4 py-2 text-sm bg-background-card dark:bg-background border border-border-default rounded-full overflow-hidden">
-            <span className="w-2 h-2 rounded-full bg-accent-success animate-pulse"></span>
-            <span className="relative z-0">Available for new projects</span>
-          </span>
-        </motion.div>
+          <span className="w-2 h-2 rounded-full bg-accent-success animate-pulse"></span>
+          <span className="relative z-0">Available for new projects</span>
+        </motion.span>
 
         <div className="flex flex-col gap-2 min-w-fit items-center justify-center">
           <h1 className="flex flex-col gap-2">
-            <motion.div
-              className=""
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+            <motion.span
+              className="text-5xl text-text-primary dark:text-text-primary sm:text-6xl md:text-7xl lg:text-8xl font-bold"
+              variants={item}
             >
-              <span className="text-5xl text-text-primary dark:text-text-primary sm:text-6xl md:text-7xl lg:text-8xl font-bold">
-                <HoverRevealText />
-              </span>
-            </motion.div>
-            <motion.div
-              className="min-h-28 "
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              <HoverRevealText />
+            </motion.span>
+            <motion.span
+              className="min-h-28 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold py-2 bg-linear-to-r from-accent-primary via-accent-hover to-accent-dark bg-clip-text text-transparent"
+              variants={item}
             >
-              <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold py-2 bg-linear-to-r from-accent-primary via-accent-hover to-accent-dark bg-clip-text text-transparent">
-                <HeroTypewriter words={["Software Engineer"]} />
-              </span>
-            </motion.div>
+              <HeroTypewriter words={["Software Engineer"]} />
+            </motion.span>
           </h1>
-          <motion.div
-            className=""
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+          <motion.p
+            className="max-w-2xl text-lg lg:text-xl text-text-muted dark:text-white/60 px-4 mb-5"
+            variants={item}
           >
-            <p className="max-w-2xl text-lg lg:text-xl text-text-muted dark:text-white/60 px-4 mb-5">
-              Creative software engineer specializing in building innovative
-              solutions that bridge technology and user experience. I craft
-              clean, efficient code and transform ideas into impactful digital
-              products.
-            </p>
-          </motion.div>
+            Creative software engineer specializing in building innovative
+            solutions that bridge technology and user experience. I craft clean,
+            efficient code and transform ideas into impactful digital products.
+          </motion.p>
         </div>
 
         <motion.div
-          className=""
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.0 }}
+          className="flex flex-col md:flex-row gap-5 font-semibold"
+          variants={item}
         >
-          <div className="flex flex-col md:flex-row gap-5 font-semibold">
-            <Link href="/projects">
-              <span className="flex rounded-full bg-accent-primary border-accent-primary text-white px-8 py-4 hover:bg-accent-hover shadow-lg ease-in-out md:hover:scale-102 transition-all duration-300">
-                View My Work
-              </span>
-            </Link>
-            <Link href="/#contact">
-              <span className="flex rounded-full bg-accent-primary/5 dark:bg-accent-primary/10 hover:bg-accent-primary/10 hover:dark:bg-accent-primary/20 border-2 border-accent-primary text-accent-primary px-8 py-4 ease-in-out md:hover:scale-102 transition-all duration-300">
-                Get In Touch
-              </span>
-            </Link>
-          </div>
+          <Link href="/projects">
+            <span className="flex rounded-full bg-accent-primary border-accent-primary text-white px-8 py-4 hover:bg-accent-hover shadow-lg ease-in-out md:hover:scale-102 transition-all duration-300">
+              View My Work
+            </span>
+          </Link>
+          <Link href="/#contact">
+            <span className="flex rounded-full bg-accent-primary/5 dark:bg-accent-primary/10 hover:bg-accent-primary/10 hover:dark:bg-accent-primary/20 border-2 border-accent-primary text-accent-primary px-8 py-4 ease-in-out md:hover:scale-102 transition-all duration-300">
+              Get In Touch
+            </span>
+          </Link>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };

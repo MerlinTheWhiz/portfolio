@@ -1,5 +1,8 @@
+"use client";
+
 import LogoMarquee from "@/components/ui/LogoMarquee";
 import { Code2, Server, Cloud, Wrench } from "lucide-react";
+import { motion } from "framer-motion";
 
 const SkillsList = () => {
   const skillCategories = [
@@ -49,6 +52,37 @@ const SkillsList = () => {
     },
   ];
 
+  const container1 = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item1 = {
+    hidden: { opacity: 0, y: 100 },
+    show: { opacity: 1, y: 0, 
+      transition: { duration: 0.5 }
+    },
+    
+  };
+
+  const container2 = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const item2 = {
+    hidden: { opacity: 0, x: -20 },
+    show: { opacity: 1, x: 0 },
+  };
+
   return (
     <section
       id="technologies"
@@ -56,18 +90,35 @@ const SkillsList = () => {
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(5,126,246,0.03),transparent_70%)]" />
       <div className="max-w-7xl w-full mx-auto px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col text-center items-center justify-center">
-          <span className="inline-block px-4 w-fit py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6">
+        <motion.div
+          className="flex flex-col text-center items-center justify-center"
+          variants={container1}
+          initial="hidden"
+          whileInView="show"
+        >
+          <motion.span
+            className="inline-block px-4 w-fit py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6"
+            variants={item1}
+            viewport={{ once: false }}
+          >
             My Expertise
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
+          </motion.span>
+          <motion.h2
+            className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight"
+            variants={item1}
+            viewport={{ once: false }}
+          >
             Technologies I <span className="text-accent-primary">master</span>
-          </h2>
-          <p className="mt-6 space-y-6 text-lg max-w-2xl leading-relaxed text-text-secondary">
+          </motion.h2>
+          <motion.p
+            className="mt-6 space-y-6 text-lg max-w-2xl leading-relaxed text-text-secondary"
+            variants={item1}
+            viewport={{ once: false }}
+          >
             A comprehensive toolkit refined over years of building
             production-grade applications at scale.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
         <div className="w-full mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map(({ icon: Icon, title, skills }, index) => (
             <div
@@ -83,15 +134,25 @@ const SkillsList = () => {
                 </h3>
               </div>
 
-              <ul className="mt-4 space-y-2">
+              <motion.ul
+                className="mt-4 space-y-2"
+                variants={container2}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false }}
+              >
                 {skills.map((skill) => (
-                  <li key={skill} className="text-sm text-text-secondary">
-                    <div className="bg-background-card p-2 hover:bg-accent-primary/10 hover:text-accent-primary rounded-lg transition-all duration-300">
+                  <motion.li
+                    key={skill}
+                    variants={item2}
+                    className="text-sm text-text-secondary"
+                  >
+                    <div className="bg-background-card p-2 hover:bg-accent-primary/10 hover:text-accent-primary rounded-lg transition-all duration-200">
                       {skill}
                     </div>
-                  </li>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
             </div>
           ))}
         </div>
