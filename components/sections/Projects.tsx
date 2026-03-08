@@ -3,13 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
-import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { LuGithub } from "react-icons/lu";
+import { motion } from "framer-motion";
 
 const Projects = () => {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-
   return (
     <section
       id="projects"
@@ -20,29 +18,34 @@ const Projects = () => {
           <span className="inline-block px-4 w-fit py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6">
             Featured Work
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
+          <motion.h2
+            className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             Selected <span className="text-accent-primary">Projects</span>
-          </h2>
+          </motion.h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {projects
             .filter((p) => p.featured)
-            .map((project) => (
-              <div
+            .map((project, i) => (
+              <motion.div
                 key={project.id}
-                onMouseEnter={() => setHoveredProject(project.id)}
-                onMouseLeave={() => setHoveredProject(null)}
                 className="group relative rounded-3xl overflow-hidden border transition-all duration-500
                  bg-background-card border-border-default hover:border-accent-primary/40 
                   dark:hover:border-accent-primary/40 p-6"
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: i * 0.15 }}
+                viewport={{ once: false }}
               >
                 <div className="aspect-10/5 overflow-hidden rounded-2xl mb-6">
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className={`w-full h-full object-cover transition-transform duration-500 ${
-                      hoveredProject === project.id ? "scale-110" : "scale-100"
-                    }`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
 
@@ -82,15 +85,21 @@ const Projects = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
         </div>
         <Link href="/projects" className="w-fit mx-auto">
-          <span className="flex font-semibold group rounded-full gap-2 bg-accent-primary/5 dark:bg-accent-primary/10 
+          <span
+            className="flex font-semibold group rounded-full gap-2 bg-accent-primary/5 dark:bg-accent-primary/10 
           hover:bg-accent-primary/10 hover:dark:bg-accent-primary/20 border-2 border-accent-primary 
           text-accent-primary px-8 py-4 ease-in-out md:hover:scale-102 transition-all duration-300
-          justify-center items-center">
-            View All Projects <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5"/>
+          justify-center items-center"
+          >
+            View All Projects{" "}
+            <ArrowUpRight
+              size={16}
+              className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5"
+            />
           </span>
         </Link>
       </div>

@@ -17,7 +17,7 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, y: 100 },
+  hidden: { opacity: 0, y: 50 },
   show: {
     opacity: 1,
     y: 0,
@@ -72,14 +72,12 @@ const About = () => {
           <motion.span
             className="inline-block px-4 w-fit py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6"
             variants={item}
-            viewport={{ once: false }}
           >
             About Me
           </motion.span>
           <motion.h2
             className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight"
             variants={item}
-            viewport={{ once: false }}
           >
             Passionate about creating
             <span className="text-accent-primary"> impactful </span>
@@ -87,7 +85,6 @@ const About = () => {
           </motion.h2>
           <motion.div
             variants={item}
-            viewport={{ once: false }}
           >
             <p className="mt-8 space-y-6 text-lg leading-relaxed text-text-secondary">
               I&apos;m Michael Anokam, a software engineer passionate about
@@ -105,7 +102,6 @@ const About = () => {
 
           <motion.div
             variants={item}
-            viewport={{ once: false }}
           >
             <Highlights />
           </motion.div>
