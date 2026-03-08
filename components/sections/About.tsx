@@ -6,6 +6,25 @@ import { Code2 } from "lucide-react";
 import Highlights from "../ui/Highlights";
 import { motion } from "framer-motion";
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.4,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 100 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
+};
+
 const About = () => {
   return (
     <section
@@ -43,21 +62,23 @@ const About = () => {
         </motion.div>
 
         {/* Right Column Content */}
-        <div className="flex flex-col sm:w-1/2 text-left">
+        <motion.div
+          className="flex flex-col sm:w-1/2 text-left"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false }}
+        >
           <motion.span
             className="inline-block px-4 w-fit py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6"
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            variants={item}
             viewport={{ once: false }}
           >
             About Me
           </motion.span>
           <motion.h2
             className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight"
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            variants={item}
             viewport={{ once: false }}
           >
             Passionate about creating
@@ -65,9 +86,7 @@ const About = () => {
             solutions
           </motion.h2>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            variants={item}
             viewport={{ once: false }}
           >
             <p className="mt-8 space-y-6 text-lg leading-relaxed text-text-secondary">
@@ -85,14 +104,12 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+            variants={item}
             viewport={{ once: false }}
           >
             <Highlights />
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
