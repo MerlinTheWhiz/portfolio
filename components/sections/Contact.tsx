@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Mail,
   MapPin,
@@ -45,7 +46,12 @@ export default function ContactSection({ theme = "dark" }) {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left Column */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5 }}
+          >
             <span className="inline-block px-4 py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6">
               Get In Touch
             </span>
@@ -68,7 +74,7 @@ export default function ContactSection({ theme = "dark" }) {
                   href={href}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="w-14 h-14 rounded-2xl border flex items-center justify-center transition-all duration-300 bg-background-card border-border-default group-hover:border-accent-primary/30 group-hover:bg-accent-primary/5">
+                  <div className="w-14 h-14 rounded-2xl border flex items-center justify-center transition-all duration-300 border-border-default group-hover:border-accent-primary/30 bg-[#dbeafe] dark:bg-background-card dark:group-hover:bg-accent-primary/5">
                     <Icon className="w-6 h-6 transition-colors duration-300 text-text-muted group-hover:text-accent-primary" />
                   </div>
                   <div>
@@ -83,15 +89,20 @@ export default function ContactSection({ theme = "dark" }) {
 
             <a
               href="#"
-              className="mt-12 inline-flex items-center gap-3 px-6 py-4 rounded-2xl border transition-all duration-300 group border-border-default hover:border-accent-primary/30 hover:bg-background-card hover:scale-105"
+              className="mt-12 inline-flex items-center gap-3 px-6 py-4 rounded-2xl border transition-all duration-300 group border-border-default hover:border-accent-primary/30 hover:bg-[#dbeafe] dark:hover:bg-background-card hover:scale-105"
             >
               <span className="font-medium">Download Resume</span>
               <ArrowUpRight className="w-5 h-5 transition-colors duration-300 text-text-muted group-hover:text-accent-primary" />
             </a>
-          </div>
+          </motion.div>
 
           {/* Right Column */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="p-8 md:p-10 rounded-3xl border dark:bg-background-card bg-background border-border-default shadow-lg">
               {isSubmitted ? (
                 <div className="text-center py-12">
@@ -183,7 +194,7 @@ export default function ContactSection({ theme = "dark" }) {
                 </form>
               )}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
