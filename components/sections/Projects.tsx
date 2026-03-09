@@ -31,16 +31,12 @@ const Projects = () => {
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {projects
             .filter((p) => p.featured)
-            .map((project, i) => (
-              <motion.div
+            .map((project) => (
+              <div
                 key={project.id}
                 className="group relative rounded-3xl overflow-hidden border transition-all duration-500
                  bg-background-card border-border-default hover:border-accent-primary/40 
                   dark:hover:border-accent-primary/40 p-6"
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
-                viewport={{ once: false }}
               >
                 <div className="aspect-10/5 overflow-hidden rounded-2xl mb-6">
                   <Image
@@ -86,7 +82,7 @@ const Projects = () => {
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
         </div>
         <Link href="/projects" className="w-fit mx-auto">
