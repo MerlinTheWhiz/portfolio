@@ -37,8 +37,8 @@ const Projects = () => {
                 className="group relative rounded-3xl overflow-hidden border transition-all duration-500
                  bg-background-card border-border-default hover:border-accent-primary/40 
                   dark:hover:border-accent-primary/40 p-6"
-                initial={{ scale: 0.8, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
                 viewport={{ once: false }}
               >
@@ -55,7 +55,7 @@ const Projects = () => {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-white/5 text-text-secondary"
+                        className="px-3 py-1 rounded-full text-xs bg-[#dbeafe] dark:bg-white/5 text-text-secondary"
                       >
                         {tag}
                       </span>
@@ -80,7 +80,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 rounded-full transition-colors bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10"
+                      className="p-2 rounded-full transition-colors bg-[#dbeafe] dark:bg-white/5 hover:bg-[#cfe5ff] dark:hover:bg-white/10"
                     >
                       <LuGithub size={18} className="text-text-muted" />
                     </a>

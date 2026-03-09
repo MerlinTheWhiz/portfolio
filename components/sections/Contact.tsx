@@ -73,7 +73,7 @@ export default function ContactSection({ theme = "dark" }) {
                   </div>
                   <div>
                     <p className="text-sm text-text-muted">{label}</p>
-                    <p className="text-lg font-medium group-hover:text-accent-primary transition-colors duration-300">
+                    <p className="sm:text-lg font-medium group-hover:text-accent-primary transition-colors duration-300">
                       {value}
                     </p>
                   </div>

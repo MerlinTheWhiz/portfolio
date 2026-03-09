@@ -1,5 +1,7 @@
-import React from "react";
+"use client";
+
 import { Briefcase, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function ExperienceSection() {
   const experiences = [
@@ -134,46 +136,80 @@ export default function ExperienceSection() {
     },
   ];
 
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, scale: 0 },
+    show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  };
+
   return (
     <section id="experience" className="py-32 relative bg-background-card/50">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(5,126,246,0.03),transparent_50%)]" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-20">
-          <span className="inline-block px-4 py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6">
+        <motion.div
+          className="text-center mb-20"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false }}
+        >
+          <motion.span
+            className="inline-block px-4 py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6"
+            variants={item}
+          >
             Career Path
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
+          </motion.span>
+          <motion.h2
+            className="text-4xl sm:text-5xl font-bold tracking-tight"
+            variants={item}
+          >
             Professional
             <span className="text-accent-primary"> journey</span>
-          </h2>
-          <p className="mt-6 text-lg max-w-2xl mx-auto text-text-muted">
+          </motion.h2>
+          <motion.p
+            className="mt-6 text-lg max-w-2xl mx-auto text-text-muted"
+            variants={item}
+          >
             A timeline of recent growth, challenges overcome, and milestones
             achieved across my career.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Timeline */}
         <div className="relative">
           {/* Center Line */}
-          <div className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-accent-primary text-accent-primary/50 via-accent-primtext-accent-primary/20 to-transparent" />
+          <div className="absolute lg:left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-accent-primary text-accent-primary/50 via-accent-primtext-accent-primary/20 to-transparent" />
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
-              <div
+              <motion.div
                 key={exp.id}
                 className={`relative flex flex-col lg:flex-row gap-8 ${
                   index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
+                variants={container}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false }}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-8 lg:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-accent-primary border-4 border-background z-10" />
+                <div className="absolute lg:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-accent-primary border-4 border-background z-10" />
 
                 {/* Content */}
-                <div
+                <motion.div
                   className={`lg:w-1/2 ${
                     index % 2 === 0 ? "lg:pr-16" : "lg:pl-16"
-                  } pl-16 lg:pl-0`}
+                  } pl-4 lg:pl-0`}
+                  variants={item}
                 >
                   <div
                     className={`group p-8 rounded-3xl border transition-all duration-500 border-border-default hover:border-accent-primary/40
@@ -210,18 +246,18 @@ export default function ExperienceSection() {
                       {exp.highlights.map((highlight) => (
                         <span
                           key={highlight}
-                          className="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-white/5 text-text-muted"
+                          className="px-3 py-1 rounded-full text-xs bg-[#edf5ff] dark:bg-white/5 text-text-muted"
                         >
                           {highlight}
                         </span>
                       ))}
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Spacer for the other side */}
                 <div className="hidden lg:block lg:w-1/2" />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
