@@ -24,7 +24,7 @@ export default function ThoughtAvatar({ logo }: Props) {
   };
 
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block shrink-0">
       {visible && (
         <div className="absolute top-[110%] left-auto translate-x-0 sm:left-1/2 sm:-translate-x-1/2 max-w-60 w-max px-4 py-3 rounded-2xl text-center text-sm leading-snug bg-white/70 dark:bg-black/70 border border-border-default backdrop-blur-md shadow-lg shadow-black/20 text-text-secondary animate-[pop_.2s_ease-out]">
           {thoughts[index]}
