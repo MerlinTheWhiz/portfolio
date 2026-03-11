@@ -79,7 +79,7 @@ const About = () => {
             className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight"
             variants={item}
           >
-            Passionate about creating
+            Focused on creating
             <span className="text-accent-primary"> impactful </span>
             solutions
           </motion.h2>
