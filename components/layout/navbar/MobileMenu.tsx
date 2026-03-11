@@ -1,11 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { Home } from "lucide-react";
 import { LuMenu, LuX, LuGithub, LuLinkedin, LuDownload } from "react-icons/lu";
 import { BsTwitterX } from "react-icons/bs";
-import ThemeToggle from "../../ui/ThemeToggle";
 
 const MobileMenu = () => {
   const [open, setOpen] = useState(false);
@@ -15,7 +12,7 @@ const MobileMenu = () => {
       {/* Toggle button */}
       <button
         onClick={() => setOpen(!open)}
-        className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 dark:text-white transition"
+        className="pr-2 py-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 dark:text-white transition"
         aria-label="Toggle menu"
       >
         {open ? <LuX className="w-5 h-5" /> : <LuMenu className="w-5 h-5" />}
@@ -34,14 +31,6 @@ const MobileMenu = () => {
         `}
       >
         <div className="flex justify-center gap-6 text-gray-600">
-          <Link
-            href="/"
-            onClick={() => setOpen(!open)}
-            className="p-1.5 flex items-center justify-center rounded-full transition-transform duration-200 ease-in-out hover:text-text-primary bg-gray-200 dark:bg-white/10"
-          >
-            {" "}
-            <Home className="w-5 h-5" />
-          </Link>
           <a
             href="https://github.com/MerlinTheWhiz"
             onClick={() => setOpen(!open)}
@@ -72,12 +61,6 @@ const MobileMenu = () => {
             {" "}
             <BsTwitterX className="w-5 h-5" />
           </a>
-          <div
-            onClick={() => setOpen(!open)}
-            className="flex items-center justify-center rounded-full bg-gray-200 dark:bg-white/10"
-          >
-            <ThemeToggle />
-          </div>
         </div>
         <div className="flex justify-between items-center mt-6">
           <a

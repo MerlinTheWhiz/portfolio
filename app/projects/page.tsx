@@ -5,7 +5,7 @@ import { LuGithub } from "react-icons/lu";
 
 export default function Projects() {
   return (
-    <main className="flex flex-col relative bg-background py-20 sm:py-30 justify-center items-center px-16 sm:items-start">
+    <main className="flex flex-col relative bg-background py-32 sm:py-40 justify-center items-center px-6 sm:px-16 sm:items-start">
       <div className="grid lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
         {projects
           .filter((p) => p.featured)

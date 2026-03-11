@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import logo from "../../../public/logo.png";
-import { Home } from "lucide-react";
+import { Home, FolderGit2 } from "lucide-react";
 import { LuGithub, LuLinkedin, LuDownload } from "react-icons/lu";
 import { BsTwitterX } from "react-icons/bs";
 import MobileMenu from "./MobileMenu";
 import ThemeToggle from "../../ui/ThemeToggle";
 import ThoughtAvatar from "@/components/ui/ThoughtAvatar";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
@@ -19,8 +19,36 @@ const Navbar = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="flex justify-between w-full sm:w-fit px-3 md:px-5 py-2 gap-6 items-center sm:justify-center">
+        <div className="flex justify-between w-full sm:w-fit px-3 md:px-5 py-2 sm:gap-4 items-center sm:justify-center">
           <ThoughtAvatar logo={logo} />
+
+          {/* Mobile Navigation Links */}
+          <div className="flex sm:hidden gap-6 items-center text-gray-600 font-medium">
+            <span className="border-l h-6 border-gray-400/80"></span>
+            <Link
+              href="/"
+              className="p-1.5 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-gray-200 dark:hover:bg-white/10"
+              title="Home"
+            >
+              {" "}
+              <Home className="w-5 h-5" />
+            </Link>
+            <Link
+              href="/projects"
+              className="p-1.5 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-gray-200 dark:hover:bg-white/10"
+              title="Projects"
+            >
+              {" "}
+              <FolderGit2 className="w-5 h-5" />
+            </Link>
+            <div
+              className="flex items-center justify-center rounded-full hover:cursor-pointer transition-colors duration 300"
+              title="Theme"
+            >
+              <ThemeToggle />
+            </div>
+            <span className="border-l h-6 border-gray-400/80"></span>
+          </div>
 
           <MobileMenu />
 
