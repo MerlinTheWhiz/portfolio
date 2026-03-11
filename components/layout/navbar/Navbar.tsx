@@ -19,12 +19,14 @@ const Navbar = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="flex justify-between w-full sm:w-fit px-3 md:px-5 py-2 sm:gap-4 items-center sm:justify-center">
+        <div className="flex justify-between w-full sm:w-fit px-3 md:px-5 py-2 gap-8 sm:gap-4 items-center sm:justify-center">
           <ThoughtAvatar logo={logo} />
+          
 
           {/* Mobile Navigation Links */}
-          <div className="flex sm:hidden gap-6 items-center text-gray-600 font-medium">
-            <span className="border-l h-6 border-gray-400/80"></span>
+          {/* <span className="flex sm:hidden border-l h-6 border-gray-400/80"></span> */}
+          <div className="flex sm:hidden w-full gap-8 justify-center items-center text-gray-500 font-medium">
+            
             <Link
               href="/"
               className="p-1.5 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-gray-200 dark:hover:bg-white/10"
@@ -47,9 +49,9 @@ const Navbar = () => {
             >
               <ThemeToggle />
             </div>
-            <span className="border-l h-6 border-gray-400/80"></span>
+            
           </div>
-
+          {/* <span className="flex sm:hidden border-l h-6 border-gray-400/80"></span> */}
           <MobileMenu />
 
           {/* Desktop Navigation Links */}
