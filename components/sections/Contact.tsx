@@ -11,7 +11,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 
-export default function ContactSection({ theme = "dark" }) {
+export default function ContactSection() {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
