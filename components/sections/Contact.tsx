@@ -11,40 +11,69 @@ import {
   CheckCircle,
 } from "lucide-react";
 
+import {
+  validateField,
+  ContactForm,
+  ContactFormErrors,
+} from "@/lib/validation";
+
 export default function ContactSection() {
-  const [formState, setFormState] = useState({
+  const [formState, setFormState] = useState<ContactForm>({
     name: "",
     email: "",
     message: "",
     company: "",
   });
+
+  const [formErrors, setFormErrors] = useState<ContactFormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  // 🔹 Real-time validation handler
+  const handleChange = (field: keyof ContactForm, value: string) => {
+    setFormState((prev) => ({ ...prev, [field]: value }));
+    setFormErrors((prev) => ({
+      ...prev,
+      [field]: validateField(field, value) || undefined,
+    }));
+  };
+
+  // 🔹 Form submit
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
+    // Final frontend validation
+    const finalErrors: ContactFormErrors = {
+      name: validateField("name", formState.name),
+      email: validateField("email", formState.email),
+      message: validateField("message", formState.message),
+    };
+    setFormErrors(finalErrors);
+
+    if (Object.values(finalErrors).some(Boolean)) return;
+
+    setIsSubmitting(true);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formState),
       });
 
+      const data = await res.json();
+
       if (!res.ok) {
-        throw new Error("Failed to send message");
+        const backendError = data.error || "Something went wrong";
+        alert(backendError);
+        return;
       }
 
       setIsSubmitted(true);
       setFormState({ name: "", email: "", message: "", company: "" });
-    } catch (error) {
-      console.error("Error sending message:", error);
+      setFormErrors({});
+    } catch (err) {
+      console.error("Network error:", err);
       alert("Something went wrong. Please try again.");
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -61,7 +90,6 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-32 relative">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(5,126,246,0.05),transparent_50%)]" />
-
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left Column */}
@@ -74,12 +102,10 @@ export default function ContactSection() {
             <span className="inline-block px-4 py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6">
               Get In Touch
             </span>
-
             <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
-              Let&apos;s build something
-              <span className="text-accent-primary"> amazing</span> together
+              Let&apos;s build something{" "}
+              <span className="text-accent-primary">amazing</span> together
             </h2>
-
             <p className="mt-6 text-lg leading-relaxed text-text-muted">
               Have a project in mind? I&apos;m always open to discussing new
               opportunities, creative ideas, or just having a chat about
@@ -106,6 +132,7 @@ export default function ContactSection() {
               ))}
             </div>
 
+            {/* Download Resume */}
             <a
               href="#"
               className="mt-12 inline-flex items-center gap-3 px-6 py-4 rounded-2xl border transition-all duration-300 group border-border-default hover:border-accent-primary/30 hover:bg-[#dbeafe] dark:hover:bg-background-card hover:scale-105"
@@ -141,6 +168,7 @@ export default function ContactSection() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Name */}
                   <div>
                     <label className="block text-sm font-medium mb-2 text-text-secondary">
                       Your Name
@@ -148,15 +176,19 @@ export default function ContactSection() {
                     <input
                       type="text"
                       value={formState.name}
-                      onChange={(e) =>
-                        setFormState({ ...formState, name: e.target.value })
-                      }
+                      onChange={(e) => handleChange("name", e.target.value)}
                       placeholder="John Doe"
                       required
-                      className="w-full h-14 rounded-xl px-4 transition-all bg-background-card dark:bg-background border border-border-default text-text-primary placeholder:text-text-muted focus:border-accent-primary/50 focus:ring focus:ring-accent-primary/20"
+                      className={`w-full h-14 rounded-xl px-4 transition-all bg-background-card dark:bg-background border border-border-default text-text-primary placeholder:text-text-muted focus:border-accent-primary/50 focus:ring focus:ring-accent-primary/20 ${formErrors.name ? "border-red-500" : ""}`}
                     />
+                    {formErrors.name && (
+                      <p className="mt-1 text-sm text-red-500">
+                        {formErrors.name}
+                      </p>
+                    )}
                   </div>
 
+                  {/* Email */}
                   <div>
                     <label className="block text-sm font-medium mb-2 text-text-secondary">
                       Email Address
@@ -164,15 +196,19 @@ export default function ContactSection() {
                     <input
                       type="email"
                       value={formState.email}
-                      onChange={(e) =>
-                        setFormState({ ...formState, email: e.target.value })
-                      }
+                      onChange={(e) => handleChange("email", e.target.value)}
                       placeholder="john@example.com"
                       required
-                      className="w-full h-14 rounded-xl px-4 transition-all bg-background-card dark:bg-background border border-border-default text-text-primary placeholder:text-text-muted focus:border-accent-primary/50 focus:ring focus:ring-accent-primary/20"
+                      className={`w-full h-14 rounded-xl px-4 transition-all bg-background-card dark:bg-background border border-border-default text-text-primary placeholder:text-text-muted focus:border-accent-primary/50 focus:ring focus:ring-accent-primary/20 ${formErrors.email ? "border-red-500" : ""}`}
                     />
+                    {formErrors.email && (
+                      <p className="mt-1 text-sm text-red-500">
+                        {formErrors.email}
+                      </p>
+                    )}
                   </div>
 
+                  {/* Message */}
                   <div>
                     <label className="block text-sm font-medium mb-2 text-text-secondary">
                       Your Message
@@ -181,20 +217,40 @@ export default function ContactSection() {
                       value={formState.message}
                       onChange={(e) => {
                         const value = e.target.value;
-                        if (value.length <= 2000) {
-                          setFormState({ ...formState, message: value });
-                        }
+                        if (value.length <= 2000)
+                          handleChange("message", value);
                       }}
                       placeholder="Tell me about your project..."
                       required
                       rows={5}
-                      className="w-full rounded-xl px-4 py-2 transition-all resize-none dark:bg-background border border-border-default placeholder:text-text-muted bg-background-card text-text-primary focus:border-accent-primary/50 focus:ring focus:ring-accent-primary/20"
+                      className={`w-full rounded-xl px-4 py-2 transition-all resize-none dark:bg-background border border-border-default placeholder:text-text-muted bg-background-card text-text-primary focus:border-accent-primary/50 focus:ring focus:ring-accent-primary/20 ${formErrors.message ? "border-red-500" : ""}`}
                     />
                     <p className="text-sm text-text-muted mt-1">
                       {formState.message.length}/2000 characters
                     </p>
+                    {formErrors.message && (
+                      <p className="mt-1 text-sm text-red-500">
+                        {formErrors.message}
+                      </p>
+                    )}
                   </div>
 
+                  {/* Honeypot */}
+                  <input
+                    type="text"
+                    value={formState.company}
+                    onChange={(e) =>
+                      setFormState((prev) => ({
+                        ...prev,
+                        company: e.target.value,
+                      }))
+                    }
+                    className="hidden"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+
+                  {/* Submit */}
                   <button
                     type="submit"
                     disabled={isSubmitting}
@@ -202,13 +258,11 @@ export default function ContactSection() {
                   >
                     {isSubmitting ? (
                       <>
-                        <Loader2 className="w-5 h-5 animate-spin" />
-                        Sending...
+                        <Loader2 className="w-5 h-5 animate-spin" /> Sending...
                       </>
                     ) : (
                       <>
-                        <Send className="w-5 h-5" />
-                        Send Message
+                        <Send className="w-5 h-5" /> Send Message
                       </>
                     )}
                   </button>
