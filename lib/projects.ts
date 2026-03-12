@@ -42,7 +42,7 @@ export const projects: Project[] = [
     id: 3,
     title: "CleanSpark",
     description:
-      "A clean energy product website promoting sustainable solar solutions for African homes and businesses.",
+      "A clean energy product website showcase promoting sustainable solar solutions for African homes and businesses.",
     image: cleanspark,
     tags: ["Next.js", "TypeScript", "Tailwind", "GSAP"],
     link: "https://www.cleansparktechnologies.com/",
