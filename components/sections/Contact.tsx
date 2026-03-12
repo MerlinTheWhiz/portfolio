@@ -16,6 +16,7 @@ export default function ContactSection({ theme = "dark" }) {
     name: "",
     email: "",
     message: "",
+    company: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -23,10 +24,28 @@ export default function ContactSection({ theme = "dark" }) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormState({ name: "", email: "", message: "" });
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setIsSubmitted(true);
+      setFormState({ name: "", email: "", message: "", company: "" });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -155,23 +174,25 @@ export default function ContactSection({ theme = "dark" }) {
                   </div>
 
                   <div>
-                    <label
-                      className={`block text-sm font-medium mb-2 ${
-                        theme === "dark" ? "text-[#a3a3a3]" : "text-gray-700"
-                      }`}
-                    >
+                    <label className="block text-sm font-medium mb-2 text-text-secondary">
                       Your Message
                     </label>
                     <textarea
                       value={formState.message}
-                      onChange={(e) =>
-                        setFormState({ ...formState, message: e.target.value })
-                      }
+                      onChange={(e) => {
+                        const value = e.target.value;
+                        if (value.length <= 2000) {
+                          setFormState({ ...formState, message: value });
+                        }
+                      }}
                       placeholder="Tell me about your project..."
                       required
                       rows={5}
                       className="w-full rounded-xl px-4 py-2 transition-all resize-none dark:bg-background border border-border-default placeholder:text-text-muted bg-background-card text-text-primary focus:border-accent-primary/50 focus:ring focus:ring-accent-primary/20"
                     />
+                    <p className="text-sm text-text-muted mt-1">
+                      {formState.message.length}/2000 characters
+                    </p>
                   </div>
 
                   <button
