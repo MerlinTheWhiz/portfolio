@@ -10,7 +10,7 @@ import {
   Loader2,
   CheckCircle,
 } from "lucide-react";
-
+import { toast } from "sonner";
 import {
   validateField,
   ContactForm,
@@ -64,16 +64,18 @@ export default function ContactSection() {
 
       if (!res.ok) {
         const backendError = data.error || "Something went wrong";
-        alert(backendError);
+        toast.error(backendError);
         return;
       }
-
+      toast.success("Message sent successfully!");
       setIsSubmitted(true);
       setFormState({ name: "", email: "", message: "", company: "" });
       setFormErrors({});
     } catch (err) {
       console.error("Network error:", err);
-      alert("Something went wrong. Please try again.");
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -254,7 +256,7 @@ export default function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full h-14 bg-accent-primary hover:cursor-pointer hover:bg-accent-hover text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-accent-primary/20 flex items-center justify-center gap-2"
+                    className="w-full h-14 bg-accent-primary hover:cursor-pointer hover:bg-accent-hover disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-accent-primary/20 flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>
