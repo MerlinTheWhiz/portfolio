@@ -145,7 +145,12 @@ export default function ExperienceSection() {
     },
   };
 
-  const item = {
+  const item1 = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  const item2 = {
     hidden: { opacity: 0, scale: 0 },
     show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
   };
@@ -164,20 +169,20 @@ export default function ExperienceSection() {
         >
           <motion.span
             className="inline-block px-4 py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6"
-            variants={item}
+            variants={item1}
           >
             Career Path
           </motion.span>
           <motion.h2
             className="text-4xl sm:text-5xl font-bold tracking-tight"
-            variants={item}
+            variants={item1}
           >
             Professional
             <span className="text-accent-primary"> journey</span>
           </motion.h2>
           <motion.p
             className="mt-6 text-lg max-w-2xl mx-auto text-text-muted"
-            variants={item}
+            variants={item1}
           >
             A timeline of recent growth, challenges overcome, and milestones
             achieved across my career.
@@ -209,7 +214,7 @@ export default function ExperienceSection() {
                   className={`lg:w-1/2 ${
                     index % 2 === 0 ? "lg:pr-16" : "lg:pl-16"
                   } pl-4 lg:pl-0`}
-                  variants={item}
+                  variants={item2}
                 >
                   <div
                     className={`group p-8 rounded-3xl border transition-all duration-500 border-border-default hover:border-accent-primary/40

@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/navbar/Navbar";
 import ThemeWrapper from "@/components/ui/ThemeWrapper";
 import ScrollToTopButton from "@/components/ui/ScrollToTop";
 import Footer from "@/components/layout/Footer";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://michaelanokam.vercel.app"),
@@ -83,11 +84,9 @@ export const metadata: Metadata = {
   },
 };
 
-
 export const viewport = {
   themeColor: "#057ef6",
 };
-
 
 export default function RootLayout({
   children,
@@ -106,6 +105,7 @@ export default function RootLayout({
         <ThemeWrapper>
           <Navbar />
           {children}
+          <Toaster position="top-right" richColors />
           <ScrollToTopButton />
           <Footer />
         </ThemeWrapper>
