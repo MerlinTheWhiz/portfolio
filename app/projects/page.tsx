@@ -48,7 +48,7 @@ export default function Projects() {
 
           {/* Hire Me button */}
           <Link
-            href="/"
+            href="/#contact"
             className="absolute right-0 -bottom-12 sm:-bottom-16 md:-bottom-20 mr-6 flex w-fit rounded-full font-semibold bg-accent-primary text-white text-sm sm:text-base px-4 py-1 sm:px-6 sm:py-2 md:px-8 md:py-2 hover:bg-accent-hover transition-all duration-300"
           >
             Hire Me!
@@ -71,20 +71,27 @@ export default function Projects() {
               </span>{" "}
               <span className="text-text-muted">Total</span>
             </span>
-            <span className="text-border-default">|</span> */}
-            {(["Personal", "Client", "Open Source"] as ProjectCategory[]).map(
-              (cat, i, arr) => (
-                <span key={cat} className="text-text-secondary">
-                  <span className="font-semibold text-text-primary">
-                    {count(cat)}
-                  </span>{" "}
-                  <span className="text-text-muted">
-                    {cat}
-                    {i < arr.length - 1 ? " •" : ""}
+            <span className="text-text-muted">|</span> */}
+            <div className="flex items-center gap-2 sm:gap-3">
+              {(["Personal", "Client", "Open Source"] as ProjectCategory[]).map(
+                (cat, i, arr) => (
+                  <span
+                    key={cat}
+                    className="flex items-center text-text-secondary"
+                  >
+                    <span className="font-semibold text-text-primary">
+                      {count(cat)}
+                    </span>
+
+                    <span className="ml-1 text-text-muted">{cat}</span>
+
+                    {i < arr.length - 1 && (
+                      <span className="ml-2 text-text-muted ">•</span>
+                    )}
                   </span>
-                </span>
-              ),
-            )}
+                ),
+              )}
+            </div>
           </div>
           {/* Filter Tabs */}
           <div className="flex w-full max-w-lg justify-between items-center gap-2 mt-8 flex-wrap">
@@ -117,7 +124,7 @@ export default function Projects() {
               <div
                 key={project.id}
                 className="group relative rounded-3xl overflow-hidden border transition-all duration-500
-                         bg-background-card border-border-default hover:border-accent-primary/40 
+                         bg-background border-border-default hover:border-accent-primary/40 
                           dark:hover:border-accent-primary/40 p-6"
               >
                 <div className="aspect-10/5 overflow-hidden rounded-2xl mb-6">
@@ -133,7 +140,7 @@ export default function Projects() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 rounded-full text-xs bg-[#dbeafe] dark:bg-white/5 text-text-secondary"
+                        className="px-3 py-1 rounded-full text-xs bg-accent-primary/10 dark:bg-white/5 text-text-secondary"
                       >
                         {tag}
                       </span>
@@ -158,7 +165,7 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 rounded-full transition-colors bg-[#dbeafe] dark:bg-white/5 hover:bg-[#cfe5ff] dark:hover:bg-white/10"
+                      className="p-2 rounded-full transition-colors bg-accent-primary/10 dark:bg-white/5 hover:bg-[#cfe5ff] dark:hover:bg-white/10"
                     >
                       <LuGithub size={18} className="text-text-muted" />
                     </a>
