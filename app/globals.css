@@ -100,6 +100,22 @@
   pointer-events: none;
 }
 
+@keyframes wave {
+  0%   { transform: rotate(0deg); }
+  15%  { transform: rotate(5deg); }
+  30%  { transform: rotate(-5deg); }
+  45%  { transform: rotate(5deg); }
+  60%  { transform: rotate(-3deg); }
+  75%  { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+} 
+
+.animate-wave {
+  animation: wave 0.8s ease-in-out infinite;
+  transform-origin: bottom center; /* Pivot from bottom like a waving hand */
+  display: inline-block;
+} 
+
 /* Global Styles */
 body {
   font-family: var(--font-sans);
