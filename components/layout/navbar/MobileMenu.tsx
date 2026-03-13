@@ -20,8 +20,8 @@ const MobileMenu = () => {
 
       {/* Menu */}
       <div
-        className={`absolute top-full mt-3 left-0 right-0
-          rounded-2xl bg-background pt-6  backdrop-blur-lg border border-border-default
+        className={`fixed top-full mt-3 left-0 right-0
+          rounded-2xl bg-transparent pt-6  backdrop-blur-md border border-border-default
           shadow-xl p-4 transition-all duration-200
           ${
             open
