@@ -4,6 +4,8 @@ import cleanspark from "@/public/cleanspark.png";
 import blackfrica from "@/public/blackfrica.png";
 import { StaticImageData } from "next/image";
 
+export type ProjectCategory = "Personal" | "Client" | "Open Source";
+
 export type Project = {
   id: number;
   title: string;
@@ -13,6 +15,7 @@ export type Project = {
   link: string;
   github?: string;
   featured?: boolean;
+  category: ProjectCategory;
 };
 
 export const projects: Project[] = [
@@ -26,6 +29,7 @@ export const projects: Project[] = [
     link: "https://mediaxis-blue.vercel.app/",
     github: "https://github.com/MerlinTheWhiz/mediaxis",
     featured: true,
+    category: "Personal",
   },
   {
     id: 2,
@@ -37,6 +41,7 @@ export const projects: Project[] = [
     link: "https://michaelanokam.vercel.app/",
     github: "https://github.com/MerlinTheWhiz/portfolio",
     featured: true,
+    category: "Personal",
   },
   {
     id: 3,
@@ -48,6 +53,7 @@ export const projects: Project[] = [
     link: "https://www.cleansparktechnologies.com/",
     github: "https://github.com/codeAKstan/CleanSpark",
     featured: true,
+    category: "Client",
   },
   {
     id: 4,
@@ -59,5 +65,6 @@ export const projects: Project[] = [
     link: "https://blackfrica.vercel.app/",
     github: "https://github.com/MerlinTheWhiz/Blackfrica",
     featured: true,
+    category: "Client",
   },
 ];

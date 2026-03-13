@@ -1,15 +1,30 @@
 "use client";
 
 import Image from "next/image";
-import { projects } from "@/lib/projects";
+import { projects, ProjectCategory } from "@/lib/projects";
 import { ArrowUpRight } from "lucide-react";
 import { LuGithub } from "react-icons/lu";
 import Link from "next/link";
+import { useState } from "react";
+
+type FilterTab = "All" | ProjectCategory;
+
+const TABS: FilterTab[] = ["All", "Personal", "Client", "Open Source"];
+
+const count = (cat: ProjectCategory) =>
+  projects.filter((p) => p.category === cat).length;
 
 export default function Projects() {
+  const [activeTab, setActiveTab] = useState<FilterTab>("All");
+
+  const filtered =
+    activeTab === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeTab);
+
   return (
     <main className="flex flex-col relative items-center bg-background ">
-      <div className="flex flex-col max-w-5xl border border-border-default items-center sm:items-start">
+      <div className="flex flex-col max-w-5xl w-full border border-border-default items-center sm:items-start">
         <div className="relative w-full mb-20 sm:mb-24 md:mb-28">
           {/* Banner */}
           <div className="relative h-48 w-full sm:h-64 md:h-72 overflow-hidden">
@@ -39,28 +54,66 @@ export default function Projects() {
             Hire Me!
           </Link>
         </div>
-        <div className="border-b border-border-default mb-10 flex flex-col items-center gap-2 md:gap-4 w-full h-48 px-6">
-          <h1 className="flex flex-col items-center gap-2 md:gap-4 text-text-primary font-semibold text-xl sm:text-2xl md:text-3xl">
-            <span>Hey <span className="animate-wave">👋</span>,</span>
+        <div className="border-b border-border-default mb-10 flex flex-col items-center gap-2 md:gap-4 w-full h-fit px-6">
+          <h1 className="flex flex-col justify-center items-center gap-2 md:gap-4 text-text-primary font-bold text-3xl">
             <span>
+              Hey <span className="animate-wave">👋</span>,
+            </span>
+            <span className="flex flex-col sm:flex-row gap-2 text-center mb-2">
               Here&apos;s What I&apos;ve Been{" "}
               <span className="text-accent-primary">Building.</span>
             </span>
           </h1>
-          <div>
-            <span className="text-text-secondary text-sm sm:text-base">
-              12 <span className="text-text-muted">Personal •</span> 4{" "}
-              <span className="text-text-muted">Client •</span> 3{" "}
-              <span className="text-text-muted">Open Source</span>
+          <div className="flex gap-3 text-sm sm:text-base items-center">
+            {/* <span className="text-text-secondary">
+              <span className="font-semibold text-text-primary">
+                {projects.length}
+              </span>{" "}
+              <span className="text-text-muted">Total</span>
             </span>
+            <span className="text-border-default">|</span> */}
+            {(["Personal", "Client", "Open Source"] as ProjectCategory[]).map(
+              (cat, i, arr) => (
+                <span key={cat} className="text-text-secondary">
+                  <span className="font-semibold text-text-primary">
+                    {count(cat)}
+                  </span>{" "}
+                  <span className="text-text-muted">
+                    {cat}
+                    {i < arr.length - 1 ? " •" : ""}
+                  </span>
+                </span>
+              ),
+            )}
           </div>
-          <div></div>
+          {/* Filter Tabs */}
+          <div className="flex w-full max-w-lg justify-between items-center gap-2 mt-8 flex-wrap">
+            {TABS.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`relative py-2 text-sm sm:text-base font-medium transition-colors duration-300 cursor-pointer
+                  after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:rounded-full
+                  after:bg-accent-primary after:transition-transform after:duration-300 after:origin-left
+                  ${
+                    activeTab === tab
+                      ? "text-accent-primary after:scale-x-100"
+                      : "text-text-secondary hover:text-accent-primary after:scale-x-0 hover:after:scale-x-100"
+                  }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 mb-16 px-6 sm:px-16 max-w-6xl mx-auto">
-          {projects
-            .filter((p) => p.featured)
-            .map((project) => (
+        {filtered.length === 0 ? (
+          <p className="w-full text-center text-text-muted px-6 sm:px-16 mb-16 text-sm sm:text-base">
+            No projects in this category yet.
+          </p>
+        ) : (
+          <div className="grid lg:grid-cols-2 gap-8 mb-16 px-6 max-w-6xl mx-auto">
+            {filtered.map((project) => (
               <div
                 key={project.id}
                 className="group relative rounded-3xl overflow-hidden border transition-all duration-500
@@ -113,7 +166,8 @@ export default function Projects() {
                 </div>
               </div>
             ))}
-        </div>
+          </div>
+        )}
       </div>
     </main>
   );
