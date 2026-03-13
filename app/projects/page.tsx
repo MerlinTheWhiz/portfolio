@@ -60,8 +60,10 @@ export default function Projects() {
               Hey <span className="animate-wave">👋</span>,
             </span>
             <span className="flex flex-col sm:flex-row gap-2 text-center mb-2">
-              Here&apos;s What I&apos;ve Been{" "}
-              <span className="text-accent-primary">Building.</span>
+              Here&apos;s What I&apos;ve
+              <span>
+                Been <span className="text-accent-primary">Building.</span>
+              </span>
             </span>
           </h1>
           <div className="flex gap-3 text-sm sm:text-base items-center">
