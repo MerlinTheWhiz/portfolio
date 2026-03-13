@@ -19,13 +19,13 @@ const Navbar = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="flex justify-between w-full sm:w-fit px-3 md:px-5 py-2 gap-8 sm:gap-4 items-center sm:justify-center">
+        <div className="flex justify-between w-full sm:w-fit px-3 md:px-5 py-2 gap-10 sm:gap-4 items-center sm:justify-center">
           <ThoughtAvatar logo={logo} />
           
 
           {/* Mobile Navigation Links */}
           {/* <span className="flex sm:hidden border-l h-6 border-gray-400/80"></span> */}
-          <div className="flex sm:hidden w-full gap-8 justify-center items-center text-gray-500 font-medium">
+          <div className="flex sm:hidden w-full max-w-xs justify-between items-center text-gray-500 font-medium">
             
             <Link
               href="/"
