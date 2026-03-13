@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className="">
       <motion.div
-        className="fixed z-50 top-5 sm:top-10 left-0 right-0 flex mx-6 sm:mx-auto dark:border dark:border-border-default dark:shadow-none shadow-lg shadow-black/10 rounded-full sm:w-fit bg-background/30 backdrop-blur-md"
+        className="fixed z-50 top-3 sm:top-10 left-0 right-0 flex mx-6 sm:mx-auto dark:border dark:border-border-default shadow-lg shadow-black/10 rounded-full sm:w-fit bg-transparent backdrop-blur-md"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
