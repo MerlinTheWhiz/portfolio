@@ -1,19 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { createPortal } from "react-dom";
 import { LuMenu, LuX, LuGithub, LuLinkedin, LuDownload } from "react-icons/lu";
 import { BsTwitterX } from "react-icons/bs";
 
 const MobileMenu = () => {
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
 
   const drawer = (
     <div
-      className={`fixed top-20 left-4 right-4 z-40
+      className={`fixed top-18 left-4 right-4 z-40
         rounded-2xl bg-transparent backdrop-blur-md mx-2
         shadow-lg shadow-black/10 p-4 transition-all duration-200
         ${open ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}
@@ -71,7 +68,7 @@ const MobileMenu = () => {
         {open ? <LuX className="w-5 h-5" /> : <LuMenu className="w-5 h-5" />}
       </button>
 
-      {mounted && createPortal(drawer, document.body)}
+      {typeof document !== "undefined" && createPortal(drawer, document.body)}
     </div>
   );
 };
