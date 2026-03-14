@@ -121,7 +121,7 @@ export default function Projects() {
         </div>
 
         {filtered.length === 0 ? (
-          <p className="w-full text-center text-text-muted px-6 sm:px-16 mb-16 text-sm sm:text-base">
+          <p className="w-full text-center min-h-[20vh] sm:min-h-[30vh] md:min-h-[40vh] text-text-muted px-6 sm:px-16 mb-16 text-sm sm:text-base">
             No projects in this category yet.
           </p>
         ) : (
