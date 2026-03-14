@@ -19,7 +19,7 @@ const Navbar = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="flex justify-between w-full sm:w-fit px-3 md:px-5 py-2 gap-10 sm:gap-4 items-center sm:justify-center">
+        <div className="flex justify-between w-full sm:w-fit px-2 md:px-5 py-1 md:py-2 gap-10 sm:gap-4 items-center sm:justify-center">
           <ThoughtAvatar logo={logo} />
           
 

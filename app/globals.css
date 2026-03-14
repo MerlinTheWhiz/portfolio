@@ -6,6 +6,13 @@
 /* Allows dark mode utilities */
 @custom-variant dark (&:where(.dark, .dark *));
 
+@font-face {
+  font-family: "Aubette";
+  src: url("/fonts/Aubette-Archi-Type-Normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Light mode variables */
 @theme {
   /* Backgrounds */
@@ -32,6 +39,7 @@
   /* Typography */
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-cinzel: "Cinzel", serif;
+  --font-aubette: "Aubette", sans-serif;
 }
 
 /* Dark mode overrides */
