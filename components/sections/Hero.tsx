@@ -23,7 +23,7 @@ const item = {
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative bg-background flex py-30 sm:py-40">
+    <section id="hero" className="relative bg-background flex py-26 sm:py-40">
       <HeroCursor />
       {/* Dark mode background */}
       <div className="absolute inset-0 z-0 dark:block hidden">
@@ -93,7 +93,7 @@ const Hero = () => {
             </motion.span>
           </h1>
           <motion.p
-            className="max-w-2xl text-lg lg:text-xl text-text-muted dark:text-white/60 px-4 mb-5"
+            className="max-w-2xl text-lg lg:text-xl text-text-muted dark:text-white/60 px-4 sm:mb-5"
             variants={item}
           >
             Creative software engineer specializing in building innovative
