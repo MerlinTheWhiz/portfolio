@@ -35,6 +35,10 @@ export default function Projects() {
               className="object-cover"
               priority
             />
+            <div className="inset-0 top-2 sm:top-0 absolute flex flex-col md:gap-2 text-center justify-center items-center font-aubette text-white text-xl sm:text-2xl md:text-3xl [text-shadow:0_2px_8px_rgba(0,0,0,0.8)]">
+              <span>“THE MOST REMARKABLE COMPUTER EVER INVENTED</span>
+              <span>IS THE HUMAN BRAIN“</span>
+            </div>
           </div>
 
           {/* PFP */}
@@ -55,7 +59,7 @@ export default function Projects() {
           </Link>
         </div>
         <div className="border-b border-border-default mb-10 flex flex-col items-center gap-2 md:gap-4 w-full h-fit px-6">
-          <h1 className="flex flex-col justify-center items-center gap-2 md:gap-4 text-text-primary font-bold text-3xl">
+          <h1 className="flex flex-col justify-center items-center gap-2 text-text-primary font-bold text-3xl">
             <span>
               Hey <span className="animate-wave">👋</span>,
             </span>
@@ -96,7 +100,7 @@ export default function Projects() {
             </div>
           </div>
           {/* Filter Tabs */}
-          <div className="flex w-full max-w-lg justify-between items-center gap-2 mt-8 flex-wrap">
+          <div className="flex w-full max-w-lg justify-between items-center gap-2 mt-6 flex-wrap">
             {TABS.map((tab) => (
               <button
                 key={tab}
