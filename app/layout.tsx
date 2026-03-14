@@ -5,6 +5,7 @@ import ThemeWrapper from "@/components/ui/ThemeWrapper";
 import ScrollToTopButton from "@/components/ui/ScrollToTop";
 import Footer from "@/components/layout/Footer";
 import { Toaster } from "sonner";
+import { ReactLenis } from "lenis/react";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://michaelanokam.vercel.app"),
@@ -102,13 +103,15 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <ThemeWrapper>
-          <Navbar />
-          {children}
-          <Toaster position="top-right" richColors />
-          <ScrollToTopButton />
-          <Footer />
-        </ThemeWrapper>
+        <ReactLenis root>
+          <ThemeWrapper>
+            <Navbar />
+            {children}
+            <Toaster position="top-right" richColors />
+            <ScrollToTopButton />
+            <Footer />
+          </ThemeWrapper>
+        </ReactLenis>
       </body>
     </html>
   );
