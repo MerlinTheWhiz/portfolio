@@ -61,7 +61,7 @@ export default function ProjectsClient() {
         <div className="border-b border-border-default mb-10 flex flex-col items-center gap-2 md:gap-4 w-full h-fit px-6">
           <h1 className="flex flex-col justify-center items-center gap-2 sm:gap-3 text-text-primary font-bold text-3xl sm:text-4xl">
             <span>
-              Hey<span className="animate-wave">👋</span>
+              Hey <span className="animate-wave">👋</span>,
             </span>
             <span className="flex flex-col sm:flex-row gap-2 text-center mb-2">
               Here&apos;s What I&apos;ve
