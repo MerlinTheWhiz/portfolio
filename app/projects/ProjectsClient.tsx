@@ -6,6 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 import { LuGithub } from "react-icons/lu";
 import Link from "next/link";
 import { useState } from "react";
+import ProjectsThoughtAvatar from "@/components/ui/ProjectsThoughtAvatar";
 
 type FilterTab = "All" | ProjectCategory;
 
@@ -42,13 +43,9 @@ export default function ProjectsClient() {
           </div>
 
           {/* PFP */}
-          <Image
-            src="/pfp.png"
-            alt="Profile"
-            width={96}
-            height={96}
-            className="absolute left-1/2 -translate-x-1/2 -bottom-12 sm:-bottom-16 md:-bottom-20 w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full"
-          />
+          <div className="absolute left-1/2 -translate-x-1/2 -bottom-12 sm:-bottom-16 md:-bottom-20 z-10">
+            <ProjectsThoughtAvatar logo="/pfp.png" />
+          </div>
 
           {/* Hire Me button */}
           <Link
@@ -61,7 +58,7 @@ export default function ProjectsClient() {
         <div className="border-b border-border-default mb-10 flex flex-col items-center gap-2 md:gap-4 w-full h-fit px-6">
           <h1 className="flex flex-col justify-center items-center gap-2 sm:gap-3 text-text-primary font-bold text-3xl sm:text-4xl">
             <span>
-              Hey{" "}<span className="animate-wave">👋</span>,
+              Hey <span className="animate-wave">👋</span>,
             </span>
             <span className="flex flex-col sm:flex-row gap-2 text-center mb-2">
               Here&apos;s What I&apos;ve
