@@ -43,14 +43,6 @@ export default function ProjectsClient() {
           </div>
 
           {/* PFP */}
-          {/* <Image
-            src="/pfp.png"
-            alt="Profile"
-            width={96}
-            height={96}
-            className="absolute left-1/2 -translate-x-1/2 -bottom-12 sm:-bottom-16 md:-bottom-20 w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full"
-          /> */}
-
           <div className="absolute left-1/2 -translate-x-1/2 -bottom-12 sm:-bottom-16 md:-bottom-20 z-10">
             <ProjectsThoughtAvatar logo="/pfp.png" />
           </div>
