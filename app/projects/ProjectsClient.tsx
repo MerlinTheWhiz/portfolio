@@ -24,8 +24,8 @@ export default function ProjectsClient() {
       : projects.filter((p) => p.category === activeTab);
 
   return (
-    <main className="flex flex-col relative items-center bg-background ">
-      <div className="flex flex-col max-w-5xl w-full border border-border-default items-center sm:items-start">
+    <main className="flex min-h-screen flex-col relative items-center bg-background ">
+      <div className="flex flex-col max-w-5xl w-full border border-b-0 border-border-default items-center sm:items-start">
         <div className="relative w-full mb-20 sm:mb-24 md:mb-28">
           {/* Banner */}
           <div className="relative h-48 w-full sm:h-64 md:h-72 overflow-hidden">
@@ -118,7 +118,7 @@ export default function ProjectsClient() {
         </div>
 
         {filtered.length === 0 ? (
-          <p className="w-full text-center min-h-[20vh] sm:min-h-[30vh] md:min-h-[40vh] text-text-muted px-6 sm:px-16 mb-16 text-sm sm:text-base">
+          <p className="w-full text-center text-text-muted px-6 sm:px-16 mb-16 text-sm sm:text-base">
             No projects in this category yet.
           </p>
         ) : (
