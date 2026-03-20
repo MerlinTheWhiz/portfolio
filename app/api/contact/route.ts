@@ -1,12 +1,24 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { validateContactForm, ContactFormData } from "@/app/api/contact/validation";
+import {
+  validateContactForm,
+  ContactFormData,
+} from "@/app/api/contact/validation";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Simple in-memory rate limit (per IP)
 const rateLimit = new Map<string, number>();
 const RATE_LIMIT_TIME = 10000;
+
+function escapeHTML(str: string) {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
 
 export async function POST(req: Request) {
   try {
@@ -18,7 +30,7 @@ export async function POST(req: Request) {
     if (lastRequest && now - lastRequest < RATE_LIMIT_TIME) {
       return NextResponse.json(
         { error: "Too many requests. Please wait before trying again." },
-        { status: 429 }
+        { status: 429 },
       );
     }
     rateLimit.set(ip, now);
@@ -37,24 +49,32 @@ export async function POST(req: Request) {
       return NextResponse.json({ error }, { status: 400 });
     }
 
+    // 🔹 Sanitize / escape user input for safe HTML
+    const safeName = escapeHTML(formData.name);
+    const safeEmail = escapeHTML(formData.email);
+    const safeMessage = escapeHTML(formData.message).replace(/\n/g, "<br/>");
+
     // Send email
     await resend.emails.send({
       from: "Portfolio <onboarding@resend.dev>",
       to: "michaelnathan505@gmail.com",
       subject: "New message from portfolio",
-      replyTo: formData.email,
+      replyTo: safeEmail,
       html: `
         <h2>New Portfolio Message</h2>
-        <p><strong>Name:</strong> ${formData.name}</p>
-        <p><strong>Email:</strong> ${formData.email}</p>
+        <p><strong>Name:</strong> ${safeName}</p>
+        <p><strong>Email:</strong> ${safeEmail}</p>
         <p><strong>Message:</strong></p>
-        <p>${formData.message}</p>
+        <p>${safeMessage}</p>
       `,
     });
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Contact form error:", error);
-    return NextResponse.json({ error: "Something went wrong" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Something went wrong" },
+      { status: 500 },
+    );
   }
 }
