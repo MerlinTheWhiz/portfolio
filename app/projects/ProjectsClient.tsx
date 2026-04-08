@@ -43,7 +43,7 @@ export default function ProjectsClient() {
           </div>
 
           {/* PFP */}
-          <div className="absolute left-1/2 -translate-x-1/2 -bottom-12 sm:-bottom-16 md:-bottom-20 z-10">
+          <div className="absolute border-6 border-background rounded-full left-1/2 -translate-x-1/2 -bottom-12 sm:-bottom-16 md:-bottom-20 z-10">
             <ProjectsThoughtAvatar logo="/pfp.png" />
           </div>
 
