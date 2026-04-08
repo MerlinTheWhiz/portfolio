@@ -33,21 +33,21 @@ export default function ThoughtAvatar({ logo }: Props) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.15, delay: 0.1 }}
-            className="absolute left-1/2 -translate-x-1/2 sm:left-[calc(100%-1rem)] sm:translate-x-0 top-[calc(110%-1.25rem)] sm:top-[calc(95%-1.25rem)] z-20 h-3 w-3 rounded-full bg-white/70 dark:bg-black/70 border border-white/30 backdrop-blur-md"
+            className="absolute left-1/2 -translate-x-1/2 sm:left-[calc(100%-1rem)] sm:translate-x-0 top-[calc(110%-1.25rem)] sm:top-[calc(95%-1.25rem)] z-20 h-3 w-3 rounded-full bg-white/70 dark:bg-black/70 border border-black/30 dark:border-white/30 backdrop-blur-md shadow-lg shadow-black/20"
           />
           {/* Big dot */}
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.15, delay: 0.25 }}
-            className="absolute left-1/2 -translate-x-1/2 sm:left-[calc(100%-0.25rem)] sm:translate-x-0 top-[calc(110%-0.75rem)] sm:top-[calc(95%-0.75rem)] z-20 h-4 w-4 rounded-full bg-white/70 dark:bg-black/70 border border-white/30 backdrop-blur-md"
+            className="absolute left-1/2 -translate-x-1/2 sm:left-[calc(100%-0.25rem)] sm:translate-x-0 top-[calc(110%-0.75rem)] sm:top-[calc(95%-0.75rem)] z-20 h-4 w-4 rounded-full bg-white/70 dark:bg-black/70 border border-black/30 dark:border-white/30 backdrop-blur-md shadow-lg shadow-black/20"
           />
           {/* Bubble */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.2, delay: 0.4 }}
-            className="absolute z-20 top-[110%] sm:top-[calc(95%-0.25rem)] sm:left-1/1 sm:translate-x-0 left-1/2 -translate-x-1/2 max-w-60 w-max px-4 py-3 rounded-2xl text-center text-sm sm:text-base leading-snug bg-white/70 dark:bg-black/70 border border-white/30 backdrop-blur-md shadow-lg shadow-black/20 text-text-secondary"
+            className="absolute z-20 top-[110%] sm:top-[calc(95%-0.25rem)] sm:left-1/1 sm:translate-x-0 left-1/2 -translate-x-1/2 max-w-60 w-max px-4 py-3 rounded-2xl text-center text-sm sm:text-base leading-snug bg-white/70 dark:bg-black/70 border border-black/30 dark:border-white/30 backdrop-blur-md shadow-lg shadow-black/20 text-text-secondary"
           >
             {thoughts[index]}
           </motion.div>
