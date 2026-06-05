@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ProjectsClient from "./ProjectsClient";
 
 export const metadata: Metadata = {
-  title: "Projects | Michael Anokam",
+  title: "Projects",
   description: "All my projects, personal, client, and open-source.",
   openGraph: {
     title: "Projects | Michael Anokam",
