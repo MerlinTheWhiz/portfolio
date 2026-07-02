@@ -51,19 +51,19 @@ export default function ThemeToggleSlider() {
         disabled={animating}
       >
         <span className="absolute inset-0 flex items-center justify-between px-[11px]">
-          <LuSun className="w-5 h-5 text-amber-400" />
-          <LuMoon className="w-5 h-5 text-blue-400" />
+          <LuSun className={`w-5 h-5 ${isDark ? 'text-gray-400' : 'text-accent-primary'}`} />
+          <LuMoon className={`w-5 h-5 ${isDark ? 'text-accent-primary' : 'text-gray-400'}`} />
         </span>
         <motion.span
           className="absolute top-[4px] w-[32px] h-[32px] rounded-full bg-white dark:bg-gray-700 shadow-sm border border-border-default flex items-center justify-center"
           animate={{ x: isDark ? 50 : 4 }}
-          transition={{ type: "spring", stiffness: 200, damping: 35, mass: 1.1 }}
+          transition={{ duration: 1.0, ease: [0.65, 0, 0.35, 1] }}
         >
-          {isDark ? (
-            <LuMoon className="w-5 h-5 text-blue-400" />
-          ) : (
-            <LuSun className="w-5 h-5 text-amber-500" />
-          )}
+        {isDark ? (
+          <LuMoon className="w-5 h-5 text-accent-primary" />
+        ) : (
+          <LuSun className="w-5 h-5 text-accent-primary" />
+        )}
         </motion.span>
       </button>
 
@@ -103,8 +103,8 @@ function ThemeReveal({
     if (!el) return;
 
     const controls = animate(0, 1, {
-      duration: 0.8,
-      ease: [0.25, 1, 0.5, 1],
+      duration: 1.0,
+      ease: [0.65, 0, 0.35, 1],
       onUpdate: (latest) => {
         const pct = latest * 180;
         el.style.maskImage = `radial-gradient(circle at ${x}px ${y}px, transparent ${pct}%, black ${pct}%)`;
