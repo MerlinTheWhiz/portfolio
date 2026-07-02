@@ -28,17 +28,38 @@ export default function ThemeToggleSlider() {
     const x = rect.left + rect.width / 2;
     const y = rect.top + rect.height / 2;
 
-    const bg =
-      getComputedStyle(document.documentElement)
-        .getPropertyValue("--color-background")
-        .trim() || (isDark ? "#0a0a0a" : "#f6faff");
-
     setAnimating(true);
-    setOverlay({ bg, x, y });
 
-    requestAnimationFrame(() => {
-      setTheme(isDark ? "light" : "dark");
-    });
+    if (document.startViewTransition) {
+      const style = document.createElement("style");
+      style.textContent = `
+        @keyframes wipe-new {
+          from { clip-path: circle(0% at ${x}px ${y}px); }
+          to { clip-path: circle(150% at ${x}px ${y}px); }
+        }
+      `;
+      document.head.appendChild(style);
+
+      const transition = document.startViewTransition(() => {
+        setTheme(isDark ? "light" : "dark");
+      });
+
+      transition.finished.then(() => {
+        style.remove();
+        setAnimating(false);
+      });
+    } else {
+      const bg =
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--color-background")
+          .trim() || (isDark ? "#0a0a0a" : "#f6faff");
+
+      setOverlay({ bg, x, y });
+
+      requestAnimationFrame(() => {
+        setTheme(isDark ? "light" : "dark");
+      });
+    }
   }, [animating, isDark, setTheme]);
 
   return (
@@ -51,19 +72,23 @@ export default function ThemeToggleSlider() {
         disabled={animating}
       >
         <span className="absolute inset-0 flex items-center justify-between px-[11px]">
-          <LuSun className={`w-5 h-5 ${isDark ? 'text-gray-400' : 'text-accent-primary'}`} />
-          <LuMoon className={`w-5 h-5 ${isDark ? 'text-accent-primary' : 'text-gray-400'}`} />
+          <LuSun
+            className={`w-5 h-5 ${isDark ? "text-gray-400" : "text-accent-primary"}`}
+          />
+          <LuMoon
+            className={`w-5 h-5 ${isDark ? "text-accent-primary" : "text-gray-400"}`}
+          />
         </span>
         <motion.span
           className="absolute top-[4px] w-[32px] h-[32px] rounded-full bg-white dark:bg-gray-700 shadow-sm border border-border-default flex items-center justify-center"
           animate={{ x: isDark ? 50 : 4 }}
           transition={{ duration: 1.0, ease: [0.65, 0, 0.35, 1] }}
         >
-        {isDark ? (
-          <LuMoon className="w-5 h-5 text-accent-primary" />
-        ) : (
-          <LuSun className="w-5 h-5 text-accent-primary" />
-        )}
+          {isDark ? (
+            <LuMoon className="w-5 h-5 text-accent-primary" />
+          ) : (
+            <LuSun className="w-5 h-5 text-accent-primary" />
+          )}
         </motion.span>
       </button>
 
