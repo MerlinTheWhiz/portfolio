@@ -138,6 +138,23 @@
   display: inline-block;
 }
 
+/* View Transitions - Theme reveal circle wipe */
+::view-transition-old(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+  animation: wipe-new 1s cubic-bezier(0.65, 0, 0.35, 1) both;
+  mix-blend-mode: normal;
+}
+
+/* Position is overridden by JS-injected styles with the toggle position */
+@keyframes wipe-new {
+  from { clip-path: circle(0% at 50% 50%); }
+  to { clip-path: circle(150% at 50% 50%); }
+}
+
 /* Global Styles */
 body {
   font-family: var(--font-sans);
