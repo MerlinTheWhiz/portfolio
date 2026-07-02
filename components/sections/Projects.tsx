@@ -5,6 +5,7 @@ import Link from "next/link";
 import { projects } from "@/lib/projects";
 import { ArrowUpRight } from "lucide-react";
 import { LuGithub } from "react-icons/lu";
+import ScrambleText from "@/components/ui/ScrambleText";
 import { motion } from "framer-motion";
 
 const Projects = () => {
@@ -25,7 +26,7 @@ const Projects = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: false }}
           >
-            Selected <span className="text-accent-primary">Projects</span>
+            Selected <ScrambleText text="Projects" className="text-accent-primary" as="span" />
           </motion.h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-8 mb-16">

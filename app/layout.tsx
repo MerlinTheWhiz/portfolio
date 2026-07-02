@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/navbar/Navbar";
 import ThemeWrapper from "@/components/ui/ThemeWrapper";
 import ScrollToTopButton from "@/components/ui/ScrollToTop";
 import Footer from "@/components/layout/Footer";
+import CursorGlow from "@/components/ui/CursorGlow";
 import { Toaster } from "sonner";
 import { ReactLenis } from "lenis/react";
 
@@ -107,6 +108,7 @@ export default function RootLayout({
           <ThemeWrapper>
             <Navbar />
             {children}
+            <CursorGlow />
             <Toaster position="top-right" richColors />
             <ScrollToTopButton />
             <Footer />

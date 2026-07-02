@@ -4,6 +4,7 @@ import Image from "next/image";
 import aboutImage from "@/public/logo.png";
 import { Code2 } from "lucide-react";
 import Highlights from "../ui/Highlights";
+import ScrambleText from "@/components/ui/ScrambleText";
 import { motion } from "framer-motion";
 
 const container = {
@@ -79,8 +80,8 @@ const About = () => {
             className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight"
             variants={item}
           >
-            Focused on creating
-            <span className="text-accent-primary"> impactful </span>
+            Focused on creating{" "}
+            <ScrambleText text="impactful" className="text-accent-primary" as="span" />{" "}
             solutions
           </motion.h2>
           <motion.div

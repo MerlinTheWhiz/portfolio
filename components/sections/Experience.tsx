@@ -1,6 +1,7 @@
 "use client";
 
 import { Briefcase, MapPin } from "lucide-react";
+import ScrambleText from "@/components/ui/ScrambleText";
 import { motion } from "framer-motion";
 
 export default function ExperienceSection() {
@@ -177,8 +178,8 @@ export default function ExperienceSection() {
             className="text-4xl sm:text-5xl font-bold tracking-tight"
             variants={item1}
           >
-            Professional
-            <span className="text-accent-primary"> journey</span>
+            Professional{" "}
+            <ScrambleText text="journey" className="text-accent-primary" as="span" />
           </motion.h2>
           <motion.p
             className="mt-6 text-lg max-w-2xl mx-auto text-text-muted"
