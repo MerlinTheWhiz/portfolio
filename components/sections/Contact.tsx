@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import ScrambleText from "@/components/ui/ScrambleText";
 import {
   Mail,
   MapPin,
@@ -106,7 +107,7 @@ export default function ContactSection() {
             </span>
             <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
               Let&apos;s build something{" "}
-              <span className="text-accent-primary">amazing</span> together
+              <ScrambleText text="amazing" className="text-accent-primary" as="span" /> together
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-text-muted">
               Have a project in mind? I&apos;m always open to discussing new

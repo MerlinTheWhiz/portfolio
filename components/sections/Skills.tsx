@@ -1,6 +1,7 @@
 "use client";
 
 import LogoMarquee from "@/components/ui/LogoMarquee";
+import ScrambleText from "@/components/ui/ScrambleText";
 import { Code2, Server, Cloud, Wrench } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -108,7 +109,7 @@ const SkillsList = () => {
             variants={item1}
             viewport={{ once: false }}
           >
-            Technologies I <span className="text-accent-primary">master</span>
+            Technologies I <ScrambleText text="master" className="text-accent-primary" as="span" />
           </motion.h2>
           <motion.p
             className="mt-6 space-y-6 text-lg max-w-2xl leading-relaxed text-text-secondary"
