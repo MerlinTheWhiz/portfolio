@@ -7,6 +7,8 @@ export default function CursorGlow() {
   const pos = useRef({ x: -1000, y: -1000 });
 
   useEffect(() => {
+    if (window.matchMedia("(max-width: 768px)").matches) return;
+
     const el = ref.current;
     if (!el) return;
 
@@ -33,7 +35,7 @@ export default function CursorGlow() {
   return (
     <div
       ref={ref}
-      className="fixed inset-0 pointer-events-none z-10 dark:opacity-100 opacity-70"
+      className="fixed inset-0 pointer-events-none z-10 dark:opacity-100 opacity-70 hidden md:block"
     />
   );
 }

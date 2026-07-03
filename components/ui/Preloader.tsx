@@ -58,7 +58,7 @@ export default function Preloader() {
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/10 backdrop-blur-md transition-opacity duration-500"
+      className="fixed inset-0 z-9999 flex items-center justify-center bg-background/10 backdrop-blur-md transition-opacity duration-500"
     >
       <div className="relative" style={{ width: 160, height: 160 }}>
         {/* Rotating ring */}
