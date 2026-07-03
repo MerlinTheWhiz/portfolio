@@ -67,11 +67,11 @@ export default function ThemeToggleSlider() {
       <button
         ref={btnRef}
         onClick={handleClick}
-        className="relative w-[86px] h-[40px] rounded-full bg-background-card border border-border-default shadow-lg hover:shadow-accent-primary/20 hover:shadow-md transition-shadow duration-300 cursor-pointer"
+        className="relative w-21.5 h-10 rounded-full bg-background-card border border-border-default shadow-lg hover:shadow-accent-primary/20 hover:shadow-md transition-shadow duration-300 cursor-pointer"
         aria-label="Toggle theme"
         disabled={animating}
       >
-        <span className="absolute inset-0 flex items-center justify-between px-[11px]">
+        <span className="absolute inset-0 flex items-center justify-between px-2.75">
           <LuSun
             className={`w-5 h-5 ${isDark ? "text-gray-400" : "text-accent-primary"}`}
           />
@@ -80,9 +80,9 @@ export default function ThemeToggleSlider() {
           />
         </span>
         <motion.span
-          className="absolute top-[4px] w-[32px] h-[32px] rounded-full bg-white dark:bg-gray-700 shadow-sm border border-border-default flex items-center justify-center"
+          className="absolute top-1 w-8 h-8 rounded-full bg-white dark:bg-gray-700 shadow-sm border border-border-default flex items-center justify-center"
           animate={{ x: isDark ? 50 : 4 }}
-          transition={{ duration: 1.0, ease: [0.65, 0, 0.35, 1] }}
+          transition={{ duration: 0.6, ease: [0.65, 0, 0.35, 1] }}
         >
           {isDark ? (
             <LuMoon className="w-5 h-5 text-accent-primary" />
@@ -128,7 +128,7 @@ function ThemeReveal({
     if (!el) return;
 
     const controls = animate(0, 1, {
-      duration: 1.0,
+      duration: 0.6,
       ease: [0.65, 0, 0.35, 1],
       onUpdate: (latest) => {
         const pct = latest * 180;
@@ -139,12 +139,12 @@ function ThemeReveal({
     });
 
     return () => controls.stop();
-  }, []);
+  }, [x, y, onComplete]);
 
   return (
     <div
       ref={ref}
-      className="fixed inset-0 z-[9999] pointer-events-none"
+      className="fixed inset-0 z-9999 pointer-events-none"
       style={{ backgroundColor: bg }}
     />
   );

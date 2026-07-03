@@ -108,7 +108,7 @@ const HeroCursor: React.FC = () => {
   return (
     <div
       ref={cursorRef}
-      className="fixed w-6 h-6 rounded-full bg-accent-primary pointer-events-none z-50 opacity-0"
+      className="fixed w-6 h-6 rounded-full bg-accent-primary pointer-events-none z-50 opacity-0 hidden md:block"
       style={{
         left: 0,
         top: 0,
