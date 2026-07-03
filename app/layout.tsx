@@ -5,6 +5,7 @@ import ThemeWrapper from "@/components/ui/ThemeWrapper";
 import ScrollToTopButton from "@/components/ui/ScrollToTop";
 import Footer from "@/components/layout/Footer";
 import CursorGlow from "@/components/ui/CursorGlow";
+import Preloader from "@/components/ui/Preloader";
 import { Toaster } from "sonner";
 import { ReactLenis } from "lenis/react";
 
@@ -106,6 +107,7 @@ export default function RootLayout({
       <body>
         <ReactLenis root>
           <ThemeWrapper>
+            <Preloader />
             <Navbar />
             {children}
             <CursorGlow />
