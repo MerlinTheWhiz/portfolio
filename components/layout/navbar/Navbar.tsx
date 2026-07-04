@@ -9,6 +9,7 @@ import MobileMenu from "./MobileMenu";
 import ThemeToggle from "../../ui/ThemeToggle";
 import ThemeToggleSlider from "../../ui/ThemeToggleSlider";
 import ThoughtAvatar from "@/components/ui/ThoughtAvatar";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -50,7 +51,7 @@ const Navbar = () => {
             >
               <ThemeToggle />
             </div>
-            
+            <LanguageSwitcher />
           </div>
           {/* <span className="flex sm:hidden border-l h-6 border-gray-400/80"></span> */}
           <MobileMenu />
@@ -104,6 +105,7 @@ const Navbar = () => {
               {" "}
               <FolderGit2 className="w-5 h-5" />
             </Link>
+            <LanguageSwitcher />
             <span className="hidden sm:block border-l h-6 border-gray-400/80"></span>
           </div>
           <div className="hidden sm:flex rounded-full text-white font-semibold bg-accent-primary hover:bg-accent-hover text-sm px-4 py-2 md:hover:scale-102 transition-all duration-300">
