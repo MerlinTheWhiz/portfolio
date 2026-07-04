@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "title": "Michael Anokam - Software Engineer",
+    "titleTemplate": "%s | Michael Anokam",
+    "description": "Software engineer focused on building fast, accessible, and scalable web applications with modern technologies.",
+    "keywords": [
+      "Software Engineer",
+      "Frontend Developer",
+      "Backend Developer",
+      "Fullstack Developer",
+      "TypeScript",
+      "Tailwind CSS",
+      "React",
+      "Next.js",
+      "Django",
+      "Node.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Portfolio",
+      "Web Developer",
+      "Remote Software Engineer"
+    ],
+    "author": "Michael Anokam",
+    "ogTitle": "Michael Anokam - Software Engineer",
+    "ogDescription": "Building fast, accessible, and scalable web applications with modern technologies.",
+    "ogSiteName": "Michael Anokam Portfolio",
+    "ogImageAlt": "Michael Anokam Portfolio",
+    "ogLocale": "en_US",
+    "twitterTitle": "Michael Anokam - Software Engineer",
+    "twitterDescription": "Building fast, accessible, and scalable web applications with modern technologies."
+  },
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "theme": "Theme",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter X",
+    "resume": "Resume"
+  },
+  "mobileMenu": {
+    "resume": "Resume",
+    "toggleMenu": "Toggle menu"
+  },
+  "footer": {
+    "copyright": "© {year} All rights reserved.",
+    "github": "Github",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter"
+  },
+  "hero": {
+    "available": "Available for new projects",
+    "roles": ["Software Engineer"],
+    "description": "Creative software engineer specializing in building innovative solutions that bridge technology and user experience. I craft clean, efficient code and transform ideas into impactful digital products.",
+    "viewMyWork": "View My Work",
+    "getInTouch": "Get In Touch"
+  },
+  "hoverReveal": {
+    "name": "Michael Anokam",
+    "alias": "MerlinTheWhiz"
+  },
+  "about": {
+    "imageAlt": "Picture of Michael Anokam avatar",
+    "techAlias": "MerlinTheWhiz",
+    "techAliasLabel": "Tech Alias",
+    "badge": "About Me",
+    "emphasizedWord": "impactful",
+    "paragraph1": "I'm Michael Anokam, a software engineer passionate about creating innovative solutions that make a real impact. With expertise spanning full-stack development, I bring ideas to life through elegant code and thoughtful design.",
+    "paragraph2": "My work focuses on building scalable applications, optimizing performance, and delivering seamless user experiences. I believe in writing code that's not just functional, but maintainable, efficient, and future-proof."
+  },
+  "highlights": {
+    "yearsExperience": "Years Experience",
+    "projectsDelivered": "Projects Delivered",
+    "happyClients": "Happy Clients",
+    "linesOfCode": "Lines of Code"
+  },
+  "skills": {
+    "badge": "My Expertise",
+    "emphasizedWord": "master",
+    "description": "A comprehensive toolkit refined over years of building production-grade applications at scale.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "devops": "DevOps",
+      "tools": "Tools"
+    },
+    "items": {
+      "frontend": ["HTML5 & CSS3", "JavaScript", "React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      "backend": ["Python", "Django", "Node.js", "Express.js", "PostgreSQL", "MongoDB", "GraphQL"],
+      "devops": ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform", "Linux", "GitHub Actions"],
+      "tools": ["Git", "Figma", "VS Code", "Postman", "Jira", "Notion", "Slack"]
+    }
+  },
+  "logoMarquee": {
+    "items": ["React", "Node.js", "TypeScript", "Python", "PostgreSQL", "MongoDB", "Docker", "AWS", "GraphQL", "Kubernetes"]
+  },
+  "projects": {
+    "badge": "Featured Work",
+    "emphasizedWord": "Projects",
+    "viewProject": "View Project",
+    "viewAllProjects": "View All Projects",
+    "items": {
+      "mediAxis": {
+        "title": "MediAxis",
+        "description": "A hospital management system that streamlines patient records, appointments, billing, and staff workflows through a unified dashboard.",
+        "category": "Personal",
+        "tags": ["React", "Django", "PostgreSQL", "Tailwind", "Framer Motion"]
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "My personal portfolio showcasing selected projects, design experiments, and interactive UI with smooth animations.",
+        "category": "Personal",
+        "tags": ["Next.js", "TypeScript", "Tailwind", "Framer Motion"]
+      },
+      "cleanSpark": {
+        "title": "CleanSpark",
+        "description": "A clean energy product website showcase promoting sustainable solar solutions for African homes and businesses.",
+        "category": "Client",
+        "tags": ["Next.js", "TypeScript", "Tailwind", "GSAP"]
+      },
+      "blackfrica": {
+        "title": "Blackfrica",
+        "description": "A culturally-driven NFT marketplace spotlighting African digital art and creators, featuring curated collections, seamless wallet integration, and immersive animated UI.",
+        "category": "Client",
+        "tags": ["Next.js", "TypeScript", "Tailwind", "Framer Motion", "Web3"]
+      }
+    },
+    "categoryTabs": {
+      "all": "All",
+      "personal": "Personal",
+      "client": "Client",
+      "openSource": "Open Source"
+    }
+  },
+  "projectsPage": {
+    "bannerAlt": "Banner",
+    "bannerQuoteLine1": "\"THE MOST REMARKABLE COMPUTER EVER INVENTED\"",
+    "bannerQuoteLine2": "IS THE HUMAN BRAIN\"",
+    "profileAlt": "Profile",
+    "hireMe": "Hire Me!",
+    "greeting": "Hey",
+    "headingPart1": "Here's What I've",
+    "headingPart2": "Been",
+    "headingAccent": "Building.",
+    "emptyState": "No projects in this category yet.",
+    "viewProject": "View Project",
+    "metaTitle": "Projects",
+    "metaDescription": "All my projects, personal, client, and open-source.",
+    "ogTitle": "Projects | Michael Anokam",
+    "ogDescription": "Showcasing my work: personal, client, and open-source projects.",
+    "twitterDescription": "All my projects in one place."
+  },
+  "experience": {
+    "badge": "Career Path",
+    "emphasizedWord": "journey",
+    "description": "A timeline of recent growth, challenges overcome, and milestones achieved across my career.",
+    "entries": [
+      {
+        "role": "Tech Lead",
+        "company": "BLACKfrica (Startup)",
+        "location": "Nigeria (Remote)",
+        "period": "2026 - Present",
+        "description": "Building an MVP for a decentralized fashion modeling ecosystem with landing pages, technical structure, and NFT royalty logic.",
+        "highlights": ["MVP Architecture", "Landing Page", "Web3 Monetization", "Feature Roadmap"]
+      },
+      {
+        "role": "Frontend Engineer",
+        "company": "Grainlify (Open Source)",
+        "location": "Remote",
+        "period": "2026",
+        "description": "Enhanced UI and functionality across Grainlify with responsive design, dashboard layout, and dynamic ecosystem interactions.",
+        "highlights": ["Dashboard Layout", "Mobile Hero Fixes", "Profile Toasts", "Leaderboard Filters"]
+      },
+      {
+        "role": "Frontend Engineer",
+        "company": "Remitwise (Open Source)",
+        "location": "Remote",
+        "period": "2026",
+        "description": "Built and improved UI components and pages, focusing on responsive layouts, seamless interactions, and consistent user experience.",
+        "highlights": ["Recipient Input", "Layout Structure", "Form UX", "UX Consistency"]
+      },
+      {
+        "role": "Frontend Engineer",
+        "company": "Stellar Wrap (Open Source)",
+        "location": "Remote",
+        "period": "2026",
+        "description": "Added multi-network support with seamless Mainnet/Testnet switching, network-aware API calls, and type-safe state handling.",
+        "highlights": ["Network Toggle", "API Calls", "Type-Safe Handling", "Zustand State"]
+      },
+      {
+        "role": "Frontend Engineer",
+        "company": "CommitLabs (Open Source)",
+        "location": "Remote",
+        "period": "2026",
+        "description": "Built responsive Hero Section with animations and composed Commitment Marketplace page using existing components with page-level state.",
+        "highlights": ["Hero Section", "Marketplace Page", "Responsive Layout", "Figma Fidelity"]
+      },
+      {
+        "role": "UI Engineer",
+        "company": "SkillSphere (Open Source)",
+        "location": "Remote",
+        "period": "2026",
+        "description": "Implemented a reusable UI component library with dark-mode support and scalable props-driven components for consistent design.",
+        "highlights": ["Props Components", "States Handling", "Reusable UI", "Dark Mode Support"]
+      },
+      {
+        "role": "Frontend Engineer",
+        "company": "Stellar-Guilds (Open Source)",
+        "location": "Remote",
+        "period": "2026",
+        "description": "Designed and built the landing page UI with responsive sections and an optimized particle animation background with dynamic connections.",
+        "highlights": ["Optimized Performance", "Particle Animation", "Responsive UI", "Smooth Animations"]
+      },
+      {
+        "role": "Frontend Engineer",
+        "company": "QAC Hackathon",
+        "location": "Remote",
+        "period": "2025",
+        "description": "Built Carbnb, car rental system, in a hackathon team with structured roles (PM, UI/UX, backend/frontend) and collaborative workflows.",
+        "highlights": ["Hackathon Build", "Team Workflow", "GitHub Projects"]
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "emphasizedWord": "amazing",
+    "description": "Have a project in mind? I'm always open to discussing new opportunities, creative ideas, or just having a chat about technology and design.",
+    "email": "Email",
+    "emailValue": "michaelnathan505@gmail.com",
+    "location": "Location",
+    "locationValue": "Enugu, Nigeria",
+    "downloadResume": "Download Resume",
+    "successTitle": "Message Sent!",
+    "successMessage": "Thanks for reaching out. I'll get back to you soon.",
+    "sendAnother": "Send another message",
+    "formName": "Your Name",
+    "formEmail": "Email Address",
+    "formMessage": "Your Message",
+    "namePlaceholder": "John Doe",
+    "emailPlaceholder": "john@example.com",
+    "messagePlaceholder": "Tell me about your project...",
+    "charCount": "{count}/2000 characters",
+    "sendMessage": "Send Message",
+    "sending": "Sending..."
+  },
+  "validation": {
+    "nameRequired": "Name is required",
+    "nameMinLength": "Name must be at least 2 characters",
+    "nameMaxLength": "Name must be under 50 characters",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Enter a valid email",
+    "messageRequired": "Message is required",
+    "messageMinLength": "Message must be at least 10 characters",
+    "messageMaxLength": "Message must be under 2000 characters"
+  },
+  "toasts": {
+    "errorDefault": "Something went wrong",
+    "success": "Message sent successfully!",
+    "errorNetwork": "Something went wrong. Please try again."
+  },
+  "thoughtBubbles": [
+    "Hire me so I can feed my pet cat 🐈",
+    "Hire me and get free dance lessons (I'll break it down hehe) 💃",
+    "Hire me and I promise to buy a yacht and make it open source 😁",
+    "Hire me so I can become world president 🌍 and stop world hunger",
+    "Seriously... still reading my thoughts? Hire me already! 😅"
+  ],
+  "languageSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ko": "한국어",
+    "ja": "日本語",
+    "zh": "中文",
+    "de": "Deutsch",
+    "hi": "हिन्दी",
+    "pt": "Português",
+    "ar": "العربية"
+  }
+}
