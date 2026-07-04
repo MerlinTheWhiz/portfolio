@@ -10,9 +10,11 @@ import ThemeToggle from "../../ui/ThemeToggle";
 import ThemeToggleSlider from "../../ui/ThemeToggleSlider";
 import ThoughtAvatar from "@/components/ui/ThoughtAvatar";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const t = useTranslations("navbar");
   return (
     <nav className="">
       <motion.div
@@ -32,7 +34,7 @@ const Navbar = () => {
             <Link
               href="/"
               className="p-1.5 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-gray-200 dark:hover:bg-white/10"
-              title="Home"
+              title={t("home")}
             >
               {" "}
               <Home className="w-5 h-5" />
@@ -40,14 +42,14 @@ const Navbar = () => {
             <Link
               href="/projects"
               className="p-1.5 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-gray-200 dark:hover:bg-white/10"
-              title="Projects"
+              title={t("projects")}
             >
               {" "}
               <FolderGit2 className="w-5 h-5" />
             </Link>
             <div
               className="flex items-center justify-center rounded-full hover:cursor-pointer transition-colors duration 300"
-              title="Theme"
+              title={t("theme")}
             >
               <ThemeToggle />
             </div>
@@ -62,7 +64,7 @@ const Navbar = () => {
             <Link
               href="/"
               className="p-1.5 mr-1 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-gray-200 dark:hover:bg-white/10"
-              title="Home"
+              title={t("home")}
             >
               {" "}
               <Home className="w-5 h-5" />
@@ -72,7 +74,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="transition-transform duration-200 ease-in-out hover:-translate-y-0.5 hover:text-text-primary"
-              title="GitHub"
+              title={t("github")}
             >
               {" "}
               <LuGithub className="w-5 h-5" />
@@ -82,7 +84,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="transition-transform p-1.5 duration-200 ease-in-out hover:-translate-y-0.5 hover:text-text-primary"
-              title="LinkedIn"
+              title={t("linkedin")}
             >
               {" "}
               <LuLinkedin className="w-5 h-5" />
@@ -92,7 +94,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="transition-transform duration-200 ease-in-out hover:-translate-y-0.5 hover:text-text-primary"
-              title="Twitter X"
+              title={t("twitter")}
             >
               {" "}
               <BsTwitterX className="w-5 h-5" />
@@ -100,7 +102,7 @@ const Navbar = () => {
             <Link
               href="/projects"
               className="p-1.5 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-gray-200 dark:hover:bg-white/10"
-              title="Projects"
+              title={t("projects")}
             >
               {" "}
               <FolderGit2 className="w-5 h-5" />
@@ -111,7 +113,7 @@ const Navbar = () => {
           <div className="hidden sm:flex rounded-full text-white font-semibold bg-accent-primary hover:bg-accent-hover text-sm px-4 py-2 md:hover:scale-102 transition-all duration-300">
             <a href="/resume.pdf" download>
               <LuDownload className="w-4 h-4 inline-block mr-2 animate-bounce" />
-              Resume
+              {t("resume")}
             </a>
           </div>
         </div>

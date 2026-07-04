@@ -5,8 +5,10 @@ import { motion, animate } from "framer-motion";
 import { LuSun, LuMoon } from "react-icons/lu";
 import { useState, useRef, useCallback, useEffect } from "react";
 import { createPortal } from "react-dom";
+import { useTranslations } from "next-intl";
 
 export default function ThemeToggleSlider() {
+  const t = useTranslations("navbar");
   const { theme, systemTheme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   const isDark = currentTheme === "dark";
@@ -68,7 +70,7 @@ export default function ThemeToggleSlider() {
         ref={btnRef}
         onClick={handleClick}
         className="relative w-21.5 h-10 rounded-full bg-background-card border border-border-default shadow-lg hover:shadow-accent-primary/20 hover:shadow-md transition-shadow duration-300 cursor-pointer"
-        aria-label="Toggle theme"
+        aria-label={t("toggleTheme")}
         disabled={animating}
       >
         <span className="absolute inset-0 flex items-center justify-between px-2.75">

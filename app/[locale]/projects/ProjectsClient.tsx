@@ -7,15 +7,29 @@ import { LuGithub } from "react-icons/lu";
 import Link from "next/link";
 import { useState } from "react";
 import ProjectsThoughtAvatar from "@/components/ui/ProjectsThoughtAvatar";
+import { useTranslations } from "next-intl";
+
+const projectIdMap: Record<number, string> = {
+  1: "mediAxis",
+  2: "portfolio",
+  3: "cleanSpark",
+  4: "blackfrica",
+};
 
 type FilterTab = "All" | ProjectCategory;
 
-const TABS: FilterTab[] = ["All", "Personal", "Client", "Open Source"];
+const categories: ProjectCategory[] = ["Personal", "Client", "Open Source"];
 
-const count = (cat: ProjectCategory) =>
-  projects.filter((p) => p.category === cat).length;
+function count(cat: ProjectCategory) {
+  return projects.filter((p) => p.category === cat).length;
+}
 
 export default function ProjectsClient() {
+  const t = useTranslations("projectsPage");
+  const tp = useTranslations("projects");
+
+  const TABS: FilterTab[] = ["All", ...categories];
+
   const [activeTab, setActiveTab] = useState<FilterTab>("All");
 
   const filtered =
@@ -31,14 +45,14 @@ export default function ProjectsClient() {
           <div className="relative h-48 w-full sm:h-64 md:h-72 overflow-hidden">
             <Image
               src="/banner.png"
-              alt="Banner"
+              alt={t("bannerAlt")}
               fill
               className="object-cover"
               priority
             />
             <div className="inset-0 top-2 sm:top-0 absolute flex flex-col md:gap-2 text-center justify-center items-center font-aubette text-white text-xl sm:text-2xl md:text-3xl [text-shadow:0_2px_8px_rgba(0,0,0,0.8)]">
-              <span>“THE MOST REMARKABLE COMPUTER EVER INVENTED</span>
-              <span>IS THE HUMAN BRAIN“</span>
+              <span>{t("bannerQuoteLine1")}</span>
+              <span>{t("bannerQuoteLine2")}</span>
             </div>
           </div>
 
@@ -52,18 +66,18 @@ export default function ProjectsClient() {
             href="/#contact"
             className="absolute right-0 -bottom-12 sm:-bottom-16 md:-bottom-20 mr-6 flex w-fit rounded-full font-semibold bg-accent-primary text-white text-sm sm:text-base px-4 py-1 sm:px-6 sm:py-2 md:px-8 md:py-2 hover:bg-accent-hover transition-all duration-300"
           >
-            Hire Me!
+            {t("hireMe")}
           </Link>
         </div>
         <div className="border-b border-border-default mb-10 flex flex-col items-center gap-2 md:gap-4 w-full h-fit px-6">
           <h1 className="flex flex-col justify-center items-center gap-2 sm:gap-3 text-text-primary font-bold text-3xl sm:text-4xl">
             <span>
-              Hey <span className="animate-wave">👋</span>,
+              {t("greeting")} <span className="animate-wave">👋</span>,
             </span>
             <span className="flex flex-col sm:flex-row gap-2 text-center mb-2">
-              Here&apos;s What I&apos;ve
+              {t("headingPart1")}
               <span>
-                Been <span className="text-accent-primary">Building.</span>
+                {t("headingPart2")} <span className="text-accent-primary">{t("headingAccent")}</span>
               </span>
             </span>
           </h1>
@@ -76,7 +90,7 @@ export default function ProjectsClient() {
             </span>
             <span className="text-text-muted">|</span> */}
             <div className="flex items-center gap-2 sm:gap-3">
-              {(["Personal", "Client", "Open Source"] as ProjectCategory[]).map(
+              {categories.map(
                 (cat, i, arr) => (
                   <span
                     key={cat}
@@ -86,7 +100,7 @@ export default function ProjectsClient() {
                       {count(cat)}
                     </span>
 
-                    <span className="ml-1 text-text-muted">{cat}</span>
+                    <span className="ml-1 text-text-muted">{tp(`categoryTabs.${cat.toLowerCase()}`)}</span>
 
                     {i < arr.length - 1 && (
                       <span className="ml-2 text-text-muted ">•</span>
@@ -111,7 +125,7 @@ export default function ProjectsClient() {
                       : "text-text-secondary hover:text-accent-primary after:scale-x-0 hover:after:scale-x-100"
                   }`}
               >
-                {tab}
+                {tab === "All" ? tp("categoryTabs.all") : tp(`categoryTabs.${tab.toLowerCase()}`)}
               </button>
             ))}
           </div>
@@ -119,7 +133,7 @@ export default function ProjectsClient() {
 
         {filtered.length === 0 ? (
           <p className="w-full text-center text-text-muted px-6 sm:px-16 mb-16 text-sm sm:text-base">
-            No projects in this category yet.
+            {t("emptyState")}
           </p>
         ) : (
           <div className="grid lg:grid-cols-2 gap-8 mb-16 px-6 max-w-6xl mx-auto">
@@ -133,14 +147,14 @@ export default function ProjectsClient() {
                 <div className="aspect-10/5 overflow-hidden rounded-2xl mb-6">
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={tp(`items.${projectIdMap[project.id]}.title`)}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
 
                 <div className="">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
+                    {tp.raw(`items.${projectIdMap[project.id]}.tags`).map((tag: string) => (
                       <span
                         key={tag}
                         className="px-3 py-1 rounded-full text-xs bg-accent-primary/10 dark:bg-white/5 text-text-secondary"
@@ -150,10 +164,10 @@ export default function ProjectsClient() {
                     ))}
                   </div>
                   <h3 className="text-2xl font-bold mb-2 text-text-primary group-hover:text-accent-primary transition-colors duration-300">
-                    {project.title}
+                    {tp(`items.${projectIdMap[project.id]}.title`)}
                   </h3>
                   <p className="line-clamp-2 mb-6 text-text-muted">
-                    {project.description}
+                    {tp(`items.${projectIdMap[project.id]}.description`)}
                   </p>
                   <div className="flex items-center gap-4">
                     <a
@@ -162,7 +176,7 @@ export default function ProjectsClient() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-sm font-medium text-accent-primary hover:text-accent-hover transition-colors"
                     >
-                      View Project <ArrowUpRight size={16} />
+                      {t("viewProject")} <ArrowUpRight size={16} />
                     </a>
                     <a
                       href={project.github}

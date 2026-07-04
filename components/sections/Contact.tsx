@@ -12,6 +12,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 import {
   validateField,
   ContactForm,
@@ -19,6 +20,24 @@ import {
 } from "@/lib/validation";
 
 export default function ContactSection() {
+  const t = useTranslations("contact");
+  const tv = useTranslations("validation");
+  const ttoast = useTranslations("toasts");
+
+  function validateWithT(field: keyof ContactForm, value: string): string {
+    const raw = validateField(field, value);
+    const map: Record<string, string> = {
+      "Name is required": tv("nameRequired"),
+      "Name must be at least 2 characters": tv("nameMinLength"),
+      "Name must be under 50 characters": tv("nameMaxLength"),
+      "Email is required": tv("emailRequired"),
+      "Enter a valid email": tv("emailInvalid"),
+      "Message is required": tv("messageRequired"),
+      "Message must be at least 10 characters": tv("messageMinLength"),
+      "Message must be under 2000 characters": tv("messageMaxLength"),
+    };
+    return map[raw] ?? raw;
+  }
   const [formState, setFormState] = useState<ContactForm>({
     name: "",
     email: "",
@@ -35,7 +54,7 @@ export default function ContactSection() {
     setFormState((prev) => ({ ...prev, [field]: value }));
     setFormErrors((prev) => ({
       ...prev,
-      [field]: validateField(field, value) || undefined,
+      [field]: validateWithT(field, value) || undefined,
     }));
   };
 
@@ -45,9 +64,9 @@ export default function ContactSection() {
 
     // Final frontend validation
     const finalErrors: ContactFormErrors = {
-      name: validateField("name", formState.name),
-      email: validateField("email", formState.email),
-      message: validateField("message", formState.message),
+      name: validateWithT("name", formState.name),
+      email: validateWithT("email", formState.email),
+      message: validateWithT("message", formState.message),
     };
     setFormErrors(finalErrors);
 
@@ -64,17 +83,17 @@ export default function ContactSection() {
       const data = await res.json();
 
       if (!res.ok) {
-        const backendError = data.error || "Something went wrong";
+        const backendError = data.error || ttoast("errorDefault");
         toast.error(backendError);
         return;
       }
-      toast.success("Message sent successfully!");
+      toast.success(ttoast("success"));
       setIsSubmitted(true);
       setFormState({ name: "", email: "", message: "", company: "" });
       setFormErrors({});
     } catch (err) {
       console.error("Network error:", err);
-      toast.error("Something went wrong. Please try again.");
+      toast.error(ttoast("errorNetwork"));
     } finally {
       setIsSubmitting(false);
     }
@@ -83,11 +102,11 @@ export default function ContactSection() {
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
-      value: "michaelnathan505@gmail.com",
+      label: t("email"),
+      value: t("emailValue"),
       href: "mailto:michaelnathan505@gmail.com",
     },
-    { icon: MapPin, label: "Location", value: "Enugu, Nigeria", href: "#" },
+    { icon: MapPin, label: t("location"), value: t("locationValue"), href: "#" },
   ];
 
   return (
@@ -103,16 +122,15 @@ export default function ContactSection() {
             transition={{ duration: 0.5 }}
           >
             <span className="inline-block px-4 py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6">
-              Get In Touch
+              {t("badge")}
             </span>
             <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
-              Let&apos;s build something{" "}
-              <ScrambleText text="amazing" className="text-accent-primary" as="span" /> together
+              {t("headingPrefix")}{" "}
+              <ScrambleText text={t("emphasizedWord")} className="text-accent-primary" as="span" />{" "}
+              {t("headingSuffix")}
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-text-muted">
-              Have a project in mind? I&apos;m always open to discussing new
-              opportunities, creative ideas, or just having a chat about
-              technology and design.
+              {t("description")}
             </p>
 
             <div className="mt-12 space-y-6">
@@ -140,7 +158,7 @@ export default function ContactSection() {
               href="#"
               className="mt-12 inline-flex items-center gap-3 px-6 py-4 rounded-2xl border transition-all duration-300 group border-border-default hover:border-accent-primary/30 hover:bg-[#dbeafe] dark:hover:bg-background-card hover:scale-105"
             >
-              <span className="font-medium">Download Resume</span>
+              <span className="font-medium">{t("downloadResume")}</span>
               <ArrowUpRight className="w-5 h-5 transition-colors duration-300 text-text-muted group-hover:text-accent-primary" />
             </a>
           </motion.div>
@@ -158,15 +176,15 @@ export default function ContactSection() {
                   <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-8 h-8 text-emerald-500" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
+                  <h3 className="text-2xl font-bold mb-2">{t("successTitle")}</h3>
                   <p className="text-text-muted">
-                    Thanks for reaching out. I&apos;ll get back to you soon.
+                    {t("successMessage")}
                   </p>
                   <button
                     onClick={() => setIsSubmitted(false)}
                     className="mt-6 text-accent-primary hover:text-accent-hover bg-transparent border-none cursor-pointer"
                   >
-                    Send another message
+                    {t("sendAnother")}
                   </button>
                 </div>
               ) : (
@@ -174,13 +192,13 @@ export default function ContactSection() {
                   {/* Name */}
                   <div>
                     <label className="block text-sm font-medium mb-2 text-text-secondary">
-                      Your Name
+                      {t("formName")}
                     </label>
                     <input
                       type="text"
                       value={formState.name}
                       onChange={(e) => handleChange("name", e.target.value)}
-                      placeholder="John Doe"
+                      placeholder={t("namePlaceholder")}
                       required
                       className={`w-full h-14 rounded-xl px-4 transition-all bg-background-card dark:bg-background border border-border-default text-text-primary placeholder:text-text-muted focus:border-accent-primary/50 focus:ring focus:ring-accent-primary/20 ${formErrors.name ? "border-red-500" : ""}`}
                     />
@@ -194,13 +212,13 @@ export default function ContactSection() {
                   {/* Email */}
                   <div>
                     <label className="block text-sm font-medium mb-2 text-text-secondary">
-                      Email Address
+                      {t("formEmail")}
                     </label>
                     <input
                       type="email"
                       value={formState.email}
                       onChange={(e) => handleChange("email", e.target.value)}
-                      placeholder="john@example.com"
+                      placeholder={t("emailPlaceholder")}
                       required
                       className={`w-full h-14 rounded-xl px-4 transition-all bg-background-card dark:bg-background border border-border-default text-text-primary placeholder:text-text-muted focus:border-accent-primary/50 focus:ring focus:ring-accent-primary/20 ${formErrors.email ? "border-red-500" : ""}`}
                     />
@@ -214,7 +232,7 @@ export default function ContactSection() {
                   {/* Message */}
                   <div>
                     <label className="block text-sm font-medium mb-2 text-text-secondary">
-                      Your Message
+                      {t("formMessage")}
                     </label>
                     <textarea
                       value={formState.message}
@@ -223,13 +241,13 @@ export default function ContactSection() {
                         if (value.length <= 2000)
                           handleChange("message", value);
                       }}
-                      placeholder="Tell me about your project..."
+                      placeholder={t("messagePlaceholder")}
                       required
                       rows={5}
                       className={`w-full rounded-xl px-4 py-2 transition-all resize-none dark:bg-background border border-border-default placeholder:text-text-muted bg-background-card text-text-primary focus:border-accent-primary/50 focus:ring focus:ring-accent-primary/20 ${formErrors.message ? "border-red-500" : ""}`}
                     />
                     <p className="text-sm text-text-muted mt-1">
-                      {formState.message.length}/2000 characters
+                      {t("charCount", { count: formState.message.length })}
                     </p>
                     {formErrors.message && (
                       <p className="mt-1 text-sm text-red-500">
@@ -261,11 +279,11 @@ export default function ContactSection() {
                   >
                     {isSubmitting ? (
                       <>
-                        <Loader2 className="w-5 h-5 animate-spin" /> Sending...
+                        <Loader2 className="w-5 h-5 animate-spin" /> {t("sending")}
                       </>
                     ) : (
                       <>
-                        <Send className="w-5 h-5" /> Send Message
+                        <Send className="w-5 h-5" /> {t("sendMessage")}
                       </>
                     )}
                   </button>

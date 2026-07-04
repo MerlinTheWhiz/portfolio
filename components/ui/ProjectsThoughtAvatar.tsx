@@ -3,20 +3,15 @@
 import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 type Props = {
   logo: string | StaticImageData;
 };
 
-const thoughts = [
-  "Hire me so I can feed my pet cat 🐈",
-  "Hire me and get free dance lessons (I'll break it down hehe) 💃",
-  "Hire me and I promise to buy a yacht and make it open source 😁",
-  "Hire me so I can become world president 🌍 and stop world hunger",
-  "Seriously… still reading my thoughts? Hire me already! 😅",
-];
-
 export default function ThoughtAvatar({ logo }: Props) {
+  const t = useTranslations();
+  const thoughts = t.raw("thoughtBubbles") as string[];
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(false);
 

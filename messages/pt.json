@@ -36,7 +36,8 @@
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "twitter": "Twitter X",
-    "resume": "Resume"
+    "resume": "Resume",
+    "toggleTheme": "Toggle theme"
   },
   "mobileMenu": {
     "resume": "Resume",
@@ -64,7 +65,9 @@
     "techAlias": "MerlinTheWhiz",
     "techAliasLabel": "Tech Alias",
     "badge": "About Me",
+    "headingPrefix": "Focused on creating",
     "emphasizedWord": "impactful",
+    "headingSuffix": "solutions",
     "paragraph1": "I'm Michael Anokam, a software engineer passionate about creating innovative solutions that make a real impact. With expertise spanning full-stack development, I bring ideas to life through elegant code and thoughtful design.",
     "paragraph2": "My work focuses on building scalable applications, optimizing performance, and delivering seamless user experiences. I believe in writing code that's not just functional, but maintainable, efficient, and future-proof."
   },
@@ -76,7 +79,9 @@
   },
   "skills": {
     "badge": "My Expertise",
+    "headingPrefix": "Technologies I",
     "emphasizedWord": "master",
+    "headingSuffix": "",
     "description": "A comprehensive toolkit refined over years of building production-grade applications at scale.",
     "categories": {
       "frontend": "Frontend",
@@ -96,7 +101,9 @@
   },
   "projects": {
     "badge": "Featured Work",
+    "headingPrefix": "Selected",
     "emphasizedWord": "Projects",
+    "headingSuffix": "",
     "viewProject": "View Project",
     "viewAllProjects": "View All Projects",
     "items": {
@@ -152,7 +159,9 @@
   },
   "experience": {
     "badge": "Career Path",
+    "headingPrefix": "Professional",
     "emphasizedWord": "journey",
+    "headingSuffix": "",
     "description": "A timeline of recent growth, challenges overcome, and milestones achieved across my career.",
     "entries": [
       {
@@ -223,7 +232,9 @@
   },
   "contact": {
     "badge": "Get In Touch",
+    "headingPrefix": "Let's build something",
     "emphasizedWord": "amazing",
+    "headingSuffix": "together",
     "description": "Have a project in mind? I'm always open to discussing new opportunities, creative ideas, or just having a chat about technology and design.",
     "email": "Email",
     "emailValue": "michaelnathan505@gmail.com",

@@ -1,12 +1,16 @@
+"use client";
+
 import { Code2, Rocket, Users, Palette } from "lucide-react";
 import CountUp from "./CountUp";
+import { useTranslations } from "next-intl";
 
 const Highlights = () => {
+  const t = useTranslations("highlights");
   const highlights = [
-    { icon: Code2, value: 2, label: "Years Experience", suffix: "+" },
-    { icon: Rocket, value: 15, label: "Projects Delivered", suffix: "+" },
-    { icon: Users, value: 10, label: "Happy Clients", suffix: "+" },
-    { icon: Palette, value: Infinity, label: "Lines of Code", suffix: "∞" },
+    { icon: Code2, value: 2, label: t("yearsExperience"), suffix: "+" },
+    { icon: Rocket, value: 15, label: t("projectsDelivered"), suffix: "+" },
+    { icon: Users, value: 10, label: t("happyClients"), suffix: "+" },
+    { icon: Palette, value: Infinity, label: t("linesOfCode"), suffix: "∞" },
   ];
 
   return (

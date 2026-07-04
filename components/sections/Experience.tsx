@@ -2,140 +2,12 @@
 
 import { Briefcase, MapPin } from "lucide-react";
 import ScrambleText from "@/components/ui/ScrambleText";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 export default function ExperienceSection() {
-  const experiences = [
-    // Blackfrica
-    {
-      id: 1,
-      role: "Tech Lead",
-      company: "BLACKfrica (Startup)",
-      location: "Nigeria (Remote)",
-      period: "2026 - Present",
-      description:
-        "Building an MVP for a decentralized fashion modeling ecosystem with landing pages, technical structure, and NFT royalty logic.",
-      highlights: [
-        "MVP Architecture",
-        "Landing Page",
-        "Web3 Monetization",
-        "Feature Roadmap",
-      ],
-    },
-
-    // Grainlify
-    {
-      id: 2,
-      role: "Frontend Engineer",
-      company: "Grainlify (Open Source)",
-      location: "Remote",
-      period: "2026",
-      description:
-        "Enhanced UI and functionality across Grainlify with responsive design, dashboard layout, and dynamic ecosystem interactions.",
-      highlights: [
-        "Dashboard Layout",
-        "Mobile Hero Fixes",
-        "Profile Toasts",
-        "Leaderboard Filters",
-      ],
-    },
-
-    // Remitwise
-    {
-      id: 3,
-      role: "Frontend Engineer",
-      company: "Remitwise (Open Source)",
-      location: "Remote",
-      period: "2026",
-      description:
-        "Built and improved UI components and pages, focusing on responsive layouts, seamless interactions, and consistent user experience.",
-      highlights: [
-        "Recipient Input",
-        "Layout Structure",
-        "Form UX",
-        "UX Consistency",
-      ],
-    },
-
-    // Stellar Wrap
-    {
-      id: 4,
-      role: "Frontend Engineer",
-      company: "Stellar Wrap (Open Source)",
-      location: "Remote",
-      period: "2026",
-      description:
-        "Added multi-network support with seamless Mainnet/Testnet switching, network-aware API calls, and type-safe state handling.",
-      highlights: [
-        "Network Toggle",
-        "API Calls",
-        "Type-Safe Handling",
-        "Zustand State",
-      ],
-    },
-
-    // CommitLabs
-    {
-      id: 5,
-      role: "Frontend Engineer",
-      company: "CommitLabs (Open Source)",
-      location: "Remote",
-      period: "2026",
-      description:
-        "Built responsive Hero Section with animations and composed Commitment Marketplace page using existing components with page-level state.",
-      highlights: [
-        "Hero Section",
-        "Marketplace Page",
-        "Responsive Layout",
-        "Figma Fidelity",
-      ],
-    },
-
-    // SkillSphere
-    {
-      id: 6,
-      role: "UI Engineer",
-      company: "SkillSphere (Open Source)",
-      location: "Remote",
-      period: "2026",
-      description:
-        "Implemented a reusable UI component library with dark-mode support and scalable props-driven components for consistent design.",
-      highlights: [
-        "Props Components",
-        "States Handling",
-        "Reusable UI",
-        "Dark Mode Support",
-      ],
-    },
-
-    // Stellar-Guilds Landing Page
-    {
-      id: 7,
-      role: "Frontend Engineer",
-      company: "Stellar-Guilds (Open Source)",
-      location: "Remote",
-      period: "2026",
-      description:
-        "Designed and built the landing page UI with responsive sections and an optimized particle animation background with dynamic connections.",
-      highlights: [
-        "Optimized Performance",
-        "Particle Animation",
-        "Responsive UI",
-        "Smooth Animations",
-      ],
-    },
-    // Hackathon - CarbNB
-    {
-      id: 8,
-      role: "Frontend Engineer",
-      company: "QAC Hackathon",
-      location: "Remote",
-      period: "2025",
-      description:
-        "Built Carbnb, car rental system, in a hackathon team with structured roles (PM, UI/UX, backend/frontend) and collaborative workflows.",
-      highlights: ["Hackathon Build", "Team Workflow", "GitHub Projects"],
-    },
-  ];
+  const t = useTranslations("experience");
+  const entries = t.raw("entries");
 
   const container = {
     hidden: {},
@@ -172,21 +44,20 @@ export default function ExperienceSection() {
             className="inline-block px-4 py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6"
             variants={item1}
           >
-            Career Path
+            {t("badge")}
           </motion.span>
           <motion.h2
             className="text-4xl sm:text-5xl font-bold tracking-tight"
             variants={item1}
           >
-            Professional{" "}
-            <ScrambleText text="journey" className="text-accent-primary" as="span" />
+            {t("headingPrefix")}{" "}
+            <ScrambleText text={t("emphasizedWord")} className="text-accent-primary" as="span" />
           </motion.h2>
           <motion.p
             className="mt-6 text-lg max-w-2xl mx-auto text-text-muted"
             variants={item1}
           >
-            A timeline of recent growth, challenges overcome, and milestones
-            achieved across my career.
+            {t("description")}
           </motion.p>
         </motion.div>
 
@@ -196,7 +67,7 @@ export default function ExperienceSection() {
           <div className="absolute lg:left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-accent-primary text-accent-primary/50 via-accent-primtext-accent-primary/20 to-transparent" />
 
           <div className="space-y-12">
-            {experiences.map((exp, index) => (
+            {entries.map((exp: any, index: number) => (
               <motion.div
                 key={exp.id}
                 className={`relative flex flex-col lg:flex-row gap-8 ${

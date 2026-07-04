@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 export default function HoverRevealText() {
+  const t = useTranslations("hoverReveal");
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -65,7 +67,7 @@ export default function HoverRevealText() {
               : "none",
         }}
       >
-        Michael Anokam
+        {t("name")}
       </h1>
 
       {/* Hover Circle */}
@@ -94,7 +96,7 @@ export default function HoverRevealText() {
               : "circle(0px at 0 0)",
         }}
       >
-        MerlinTheWhiz
+        {t("alias")}
       </h1>
     </div>
   );

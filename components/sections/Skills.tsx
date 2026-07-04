@@ -3,53 +3,31 @@
 import LogoMarquee from "@/components/ui/LogoMarquee";
 import ScrambleText from "@/components/ui/ScrambleText";
 import { Code2, Server, Cloud, Wrench } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 const SkillsList = () => {
+  const t = useTranslations("skills");
   const skillCategories = [
     {
-      title: "Frontend",
+      title: t("categories.frontend"),
       icon: Code2,
-      skills: [
-        "HTML5 & CSS3",
-        "JavaScript",
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Framer Motion",
-      ],
+      skills: t("items.frontend"),
     },
     {
-      title: "Backend",
+      title: t("categories.backend"),
       icon: Server,
-      skills: [
-        "Python",
-        "Django",
-        "Node.js",
-        "Express.js",
-        "PostgreSQL",
-        "MongoDB",
-        "GraphQL",
-      ],
+      skills: t("items.backend"),
     },
     {
-      title: "DevOps",
+      title: t("categories.devops"),
       icon: Cloud,
-      skills: [
-        "AWS",
-        "Docker",
-        "Kubernetes",
-        "CI/CD",
-        "Terraform",
-        "Linux",
-        "GitHub Actions",
-      ],
+      skills: t("items.devops"),
     },
     {
-      title: "Tools",
+      title: t("categories.tools"),
       icon: Wrench,
-      skills: ["Git", "Figma", "VS Code", "Postman", "Jira", "Notion", "Slack"],
+      skills: t("items.tools"),
     },
   ];
 
@@ -102,22 +80,21 @@ const SkillsList = () => {
             variants={item1}
             viewport={{ once: false }}
           >
-            My Expertise
+            {t("badge")}
           </motion.span>
           <motion.h2
             className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight"
             variants={item1}
             viewport={{ once: false }}
           >
-            Technologies I <ScrambleText text="master" className="text-accent-primary" as="span" />
+            {t("headingPrefix")} <ScrambleText text={t("emphasizedWord")} className="text-accent-primary" as="span" />
           </motion.h2>
           <motion.p
             className="mt-6 space-y-6 text-lg max-w-2xl leading-relaxed text-text-secondary"
             variants={item1}
             viewport={{ once: false }}
           >
-            A comprehensive toolkit refined over years of building
-            production-grade applications at scale.
+            {t("description")}
           </motion.p>
         </motion.div>
         <div className="w-full mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
