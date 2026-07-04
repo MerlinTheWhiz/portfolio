@@ -120,7 +120,7 @@ export default function ExperienceSection() {
                         index % 2 === 0 ? "lg:justify-end" : ""
                       }`}
                     >
-                      {exp.highlights.map((highlight) => (
+                        {exp.highlights.map((highlight: string) => (
                         <span
                           key={highlight}
                           className="px-3 py-1 rounded-full text-xs bg-[#edf5ff] dark:bg-white/5 text-text-muted"

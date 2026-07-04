@@ -91,7 +91,7 @@ const Hero = () => {
               className="min-h-28 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold py-2 bg-linear-to-r from-accent-primary via-accent-hover to-accent-dark bg-clip-text text-transparent"
               variants={item}
             >
-              <HeroTypewriter words={t("roles")} />
+              <HeroTypewriter words={t.raw("roles")} />
             </motion.span>
           </h1>
           <motion.p

@@ -12,22 +12,22 @@ const SkillsList = () => {
     {
       title: t("categories.frontend"),
       icon: Code2,
-      skills: t("items.frontend"),
+      skills: t.raw("items.frontend"),
     },
     {
       title: t("categories.backend"),
       icon: Server,
-      skills: t("items.backend"),
+      skills: t.raw("items.backend"),
     },
     {
       title: t("categories.devops"),
       icon: Cloud,
-      skills: t("items.devops"),
+      skills: t.raw("items.devops"),
     },
     {
       title: t("categories.tools"),
       icon: Wrench,
-      skills: t("items.tools"),
+      skills: t.raw("items.tools"),
     },
   ];
 
@@ -119,7 +119,7 @@ const SkillsList = () => {
                 whileInView="show"
                 viewport={{ once: false }}
               >
-                {skills.map((skill) => (
+                {(skills as string[]).map((skill) => (
                   <motion.li
                     key={skill}
                     variants={item2}

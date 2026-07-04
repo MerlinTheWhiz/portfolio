@@ -58,7 +58,7 @@ const Projects = () => {
 
                 <div className="">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {t(`items.${ProjectIdMap[project.id]}.tags`, { returnObjects: true }).map((tag: string) => (
+                    {t.raw(`items.${ProjectIdMap[project.id]}.tags`).map((tag: string) => (
                       <span
                         key={tag}
                         className="px-3 py-1 rounded-full text-xs bg-[#dbeafe] dark:bg-white/5 text-text-secondary"
