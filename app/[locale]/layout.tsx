@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       template: t("titleTemplate"),
     },
     description: t("description"),
-    keywords: t("keywords"),
+    keywords: t.raw("keywords"),
     authors: [{ name: t("author"), url: "https://michaelanokam.vercel.app" }],
     creator: t("author"),
     publisher: t("author"),

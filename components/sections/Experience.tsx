@@ -69,7 +69,7 @@ export default function ExperienceSection() {
           <div className="space-y-12">
             {entries.map((exp: any, index: number) => (
               <motion.div
-                key={exp.id}
+                key={index}
                 className={`relative flex flex-col lg:flex-row gap-8 ${
                   index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
