@@ -1,283 +1,389 @@
 {
   "metadata": {
-    "title": "Michael Anokam - Software Engineer",
-    "titleTemplate": "%s | Michael Anokam",
-    "description": "Software engineer focused on building fast, accessible, and scalable web applications with modern technologies.",
+    "title": "माइकल अनोकम - सॉफ्टवेयर इंजीनियर",
+    "titleTemplate": "%s | माइकल अनोकाम",
+    "description": "सॉफ्टवेयर इंजीनियर आधुनिक तकनीकों का उपयोग करके तेज़, सुलभ और स्केलेबल वेब एप्लिकेशन बनाने पर ध्यान केंद्रित करता है।",
     "keywords": [
-      "Software Engineer",
-      "Frontend Developer",
-      "Backend Developer",
-      "Fullstack Developer",
-      "TypeScript",
-      "Tailwind CSS",
-      "React",
+      "सॉफ्टवेयर इंजीनियर",
+      "अग्रणी डेवलपर",
+      "बैकएंड डेवलपर",
+      "फुलस्टैक डेवलपर",
+      "टाइपप्रति",
+      "टेलविंड सीएसएस",
+      "प्रतिक्रिया",
       "Next.js",
-      "Django",
-      "Node.js",
-      "PostgreSQL",
+      "जैंगो",
+      "नोड.जेएस",
+      "पोस्टग्रेएसक्यूएल",
       "MongoDB",
-      "Portfolio",
-      "Web Developer",
-      "Remote Software Engineer"
+      "पोर्टफोलियो",
+      "वेब डेवलपर",
+      "रिमोट सॉफ्टवेयर इंजीनियर"
     ],
     "author": "Michael Anokam",
-    "ogTitle": "Michael Anokam - Software Engineer",
-    "ogDescription": "Building fast, accessible, and scalable web applications with modern technologies.",
-    "ogSiteName": "Michael Anokam Portfolio",
-    "ogImageAlt": "Michael Anokam Portfolio",
+    "ogTitle": "माइकल अनोकम - सॉफ्टवेयर इंजीनियर",
+    "ogDescription": "आधुनिक तकनीकों का उपयोग करके तेज़, सुलभ और स्केलेबल वेब एप्लिकेशन बनाना।",
+    "ogSiteName": "माइकल अनोकम पोर्टफोलियो",
+    "ogImageAlt": "माइकल अनोकम पोर्टफोलियो",
     "ogLocale": "en_US",
-    "twitterTitle": "Michael Anokam - Software Engineer",
-    "twitterDescription": "Building fast, accessible, and scalable web applications with modern technologies."
+    "twitterTitle": "माइकल अनोकम - सॉफ्टवेयर इंजीनियर",
+    "twitterDescription": "आधुनिक तकनीकों का उपयोग करके तेज़, सुलभ और स्केलेबल वेब एप्लिकेशन बनाना।"
   },
   "navbar": {
-    "home": "Home",
-    "projects": "Projects",
-    "theme": "Theme",
+    "home": "घर",
+    "projects": "परियोजनाओं",
+    "theme": "विषय",
     "github": "GitHub",
-    "linkedin": "LinkedIn",
-    "twitter": "Twitter X",
-    "resume": "Resume",
-    "toggleTheme": "Toggle theme"
+    "linkedin": "Linkedin",
+    "twitter": "ट्विटर X",
+    "resume": "फिर शुरू करना",
+    "toggleTheme": "थीम को टॉगल करें"
   },
   "mobileMenu": {
-    "resume": "Resume",
-    "toggleMenu": "Toggle menu"
+    "resume": "फिर शुरू करना",
+    "toggleMenu": "टॉगल मेनू"
   },
   "footer": {
-    "copyright": "© {year} All rights reserved.",
+    "copyright": "© {year} सर्वाधिकार सुरक्षित।",
     "github": "Github",
-    "linkedin": "LinkedIn",
-    "twitter": "Twitter"
+    "linkedin": "Linkedin",
+    "twitter": "ट्विटर"
   },
   "hero": {
-    "available": "Available for new projects",
-    "roles": ["Software Engineer"],
-    "description": "Creative software engineer specializing in building innovative solutions that bridge technology and user experience. I craft clean, efficient code and transform ideas into impactful digital products.",
-    "viewMyWork": "View My Work",
-    "getInTouch": "Get In Touch"
+    "available": "नए प्रोजेक्टों के लिए उपलब्ध",
+    "roles": [
+      "सॉफ्टवेयर इंजीनियर"
+    ],
+    "description": "मैं एक रचनात्मक सॉफ्टवेयर इंजीनियर हूं जो प्रौद्योगिकी और उपयोगकर्ता अनुभव को जोड़ने वाले नवीन समाधान विकसित करने में माहिर हूं। मैं स्वच्छ और कुशल कोड लिखता हूं और विचारों को प्रभावशाली डिजिटल उत्पादों में परिवर्तित करता हूं।",
+    "viewMyWork": "मेरा काम देखें",
+    "getInTouch": "संपर्क में रहो"
   },
   "hoverReveal": {
     "name": "Michael Anokam",
     "alias": "MerlinTheWhiz"
   },
   "about": {
-    "imageAlt": "Picture of Michael Anokam avatar",
+    "imageAlt": "माइकल अनोकम अवतार की तस्वीर",
     "techAlias": "MerlinTheWhiz",
-    "techAliasLabel": "Tech Alias",
-    "badge": "About Me",
-    "headingPrefix": "Focused on creating",
-    "emphasizedWord": "impactful",
-    "headingSuffix": "solutions",
-    "paragraph1": "I'm Michael Anokam, a software engineer passionate about creating innovative solutions that make a real impact. With expertise spanning full-stack development, I bring ideas to life through elegant code and thoughtful design.",
-    "paragraph2": "My work focuses on building scalable applications, optimizing performance, and delivering seamless user experiences. I believe in writing code that's not just functional, but maintainable, efficient, and future-proof."
+    "techAliasLabel": "तकनीकी उपनाम",
+    "badge": "मेरे बारे में",
+    "headingPrefix": "बनाने पर केंद्रित",
+    "emphasizedWord": "प्रभावपूर्ण",
+    "headingSuffix": "समाधान",
+    "paragraph1": "मैं माइकल अनोकाम हूं, एक सॉफ्टवेयर इंजीनियर जो वास्तविक प्रभाव डालने वाले नवोन्मेषी समाधान बनाने के लिए उत्सुक हूं। फुल-स्टैक डेवलपमेंट में विशेषज्ञता के साथ, मैं सुरुचिपूर्ण कोड और विचारशील डिजाइन के माध्यम से विचारों को साकार करता हूं।",
+    "paragraph2": "मेरा काम स्केलेबल एप्लिकेशन बनाने, परफॉर्मेंस को ऑप्टिमाइज़ करने और सहज उपयोगकर्ता अनुभव प्रदान करने पर केंद्रित है। मेरा मानना है कि कोड न केवल कार्यात्मक होना चाहिए, बल्कि रखरखाव योग्य, कुशल और भविष्य के लिए भी उपयुक्त होना चाहिए।"
   },
   "highlights": {
-    "yearsExperience": "Years Experience",
-    "projectsDelivered": "Projects Delivered",
-    "happyClients": "Happy Clients",
-    "linesOfCode": "Lines of Code"
+    "yearsExperience": "वर्षों का अनुभव",
+    "projectsDelivered": "वितरित परियोजनाएँ",
+    "happyClients": "खुश ग्राहक",
+    "linesOfCode": "कोड की पंक्तियाँ"
   },
   "skills": {
-    "badge": "My Expertise",
-    "headingPrefix": "Technologies I",
-    "emphasizedWord": "master",
+    "badge": "मेरी विशेषज्ञता",
+    "headingPrefix": "प्रौद्योगिकियाँ I",
+    "emphasizedWord": "मालिक",
     "headingSuffix": "",
-    "description": "A comprehensive toolkit refined over years of building production-grade applications at scale.",
+    "description": "उत्पादन-स्तरीय अनुप्रयोगों को बड़े पैमाने पर विकसित करने के वर्षों के अनुभव से परिष्कृत एक व्यापक टूलकिट।",
     "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "devops": "DevOps",
-      "tools": "Tools"
+      "frontend": "फ़्रंट एंड",
+      "backend": "बैकएंड",
+      "devops": "डेवऑप्स",
+      "tools": "औजार"
     },
     "items": {
-      "frontend": ["HTML5 & CSS3", "JavaScript", "React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      "backend": ["Python", "Django", "Node.js", "Express.js", "PostgreSQL", "MongoDB", "GraphQL"],
-      "devops": ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform", "Linux", "GitHub Actions"],
-      "tools": ["Git", "Figma", "VS Code", "Postman", "Jira", "Notion", "Slack"]
+      "frontend": [
+        "HTML5 & CSS3",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "backend": [
+        "Python",
+        "Django",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "MongoDB",
+        "GraphQL"
+      ],
+      "devops": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "Terraform",
+        "Linux",
+        "GitHub Actions"
+      ],
+      "tools": [
+        "Git",
+        "Figma",
+        "VS Code",
+        "Postman",
+        "Jira",
+        "Notion",
+        "Slack"
+      ]
     }
   },
   "logoMarquee": {
-    "items": ["React", "Node.js", "TypeScript", "Python", "PostgreSQL", "MongoDB", "Docker", "AWS", "GraphQL", "Kubernetes"]
+    "items": [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "PostgreSQL",
+      "MongoDB",
+      "Docker",
+      "AWS",
+      "GraphQL",
+      "Kubernetes"
+    ]
   },
   "projects": {
-    "badge": "Featured Work",
-    "headingPrefix": "Selected",
-    "emphasizedWord": "Projects",
+    "badge": "विशेष कार्य",
+    "headingPrefix": "चयनित",
+    "emphasizedWord": "परियोजनाओं",
     "headingSuffix": "",
-    "viewProject": "View Project",
-    "viewAllProjects": "View All Projects",
+    "viewProject": "प्रोजेक्ट देखें",
+    "viewAllProjects": "सभी प्रोजेक्ट देखें",
     "items": {
       "mediAxis": {
         "title": "MediAxis",
-        "description": "A hospital management system that streamlines patient records, appointments, billing, and staff workflows through a unified dashboard.",
-        "category": "Personal",
-        "tags": ["React", "Django", "PostgreSQL", "Tailwind", "Framer Motion"]
+        "description": "एक अस्पताल प्रबंधन प्रणाली जो एक एकीकृत डैशबोर्ड के माध्यम से रोगी रिकॉर्ड, अपॉइंटमेंट, बिलिंग और स्टाफ वर्कफ़्लो को सुव्यवस्थित करती है।",
+        "category": "निजी",
+        "tags": [
+          "React",
+          "Django",
+          "PostgreSQL",
+          "Tailwind",
+          "Framer Motion"
+        ]
       },
       "portfolio": {
         "title": "Portfolio",
-        "description": "My personal portfolio showcasing selected projects, design experiments, and interactive UI with smooth animations.",
-        "category": "Personal",
-        "tags": ["Next.js", "TypeScript", "Tailwind", "Framer Motion"]
+        "description": "मेरे व्यक्तिगत पोर्टफोलियो में चुनिंदा परियोजनाएं, डिजाइन प्रयोग और सहज एनिमेशन के साथ इंटरैक्टिव यूआई प्रदर्शित किए गए हैं।",
+        "category": "निजी",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "Framer Motion"
+        ]
       },
       "cleanSpark": {
         "title": "CleanSpark",
-        "description": "A clean energy product website showcase promoting sustainable solar solutions for African homes and businesses.",
-        "category": "Client",
-        "tags": ["Next.js", "TypeScript", "Tailwind", "GSAP"]
+        "description": "एक स्वच्छ ऊर्जा उत्पाद वेबसाइट जो अफ्रीकी घरों और व्यवसायों के लिए टिकाऊ सौर समाधानों को बढ़ावा देती है।",
+        "category": "ग्राहक",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "GSAP"
+        ]
       },
       "blackfrica": {
         "title": "Blackfrica",
-        "description": "A culturally-driven NFT marketplace spotlighting African digital art and creators, featuring curated collections, seamless wallet integration, and immersive animated UI.",
-        "category": "Client",
-        "tags": ["Next.js", "TypeScript", "Tailwind", "Framer Motion", "Web3"]
+        "description": "एक सांस्कृतिक रूप से प्रेरित एनएफटी मार्केटप्लेस जो अफ्रीकी डिजिटल कला और रचनाकारों को बढ़ावा देता है, जिसमें क्यूरेटेड संग्रह, सहज वॉलेट एकीकरण और आकर्षक एनिमेटेड यूआई शामिल हैं।",
+        "category": "ग्राहक",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "Framer Motion",
+          "Web3"
+        ]
       }
     },
     "categoryTabs": {
-      "all": "All",
-      "personal": "Personal",
-      "client": "Client",
-      "openSource": "Open Source"
+      "all": "सभी",
+      "personal": "निजी",
+      "client": "ग्राहक",
+      "openSource": "खुला स्त्रोत"
     }
   },
   "projectsPage": {
-    "bannerAlt": "Banner",
-    "bannerQuoteLine1": "\"THE MOST REMARKABLE COMPUTER EVER INVENTED\"",
-    "bannerQuoteLine2": "IS THE HUMAN BRAIN\"",
-    "profileAlt": "Profile",
-    "hireMe": "Hire Me!",
-    "greeting": "Hey",
-    "headingPart1": "Here's What I've",
-    "headingPart2": "Been",
-    "headingAccent": "Building.",
-    "emptyState": "No projects in this category yet.",
-    "viewProject": "View Project",
-    "metaTitle": "Projects",
-    "metaDescription": "All my projects, personal, client, and open-source.",
-    "ogTitle": "Projects | Michael Anokam",
-    "ogDescription": "Showcasing my work: personal, client, and open-source projects.",
-    "twitterDescription": "All my projects in one place."
+    "bannerAlt": "बैनर",
+    "bannerQuoteLine1": "\"अब तक का सबसे उल्लेखनीय कंप्यूटर\"",
+    "bannerQuoteLine2": "क्या मानव मस्तिष्क ऐसा है?",
+    "profileAlt": "प्रोफ़ाइल",
+    "hireMe": "मुझे चुनिएँ!",
+    "greeting": "अरे",
+    "headingPart1": "मेरे पास यही है",
+    "headingPart2": "गया",
+    "headingAccent": "इमारत।",
+    "emptyState": "इस श्रेणी में अभी तक कोई परियोजना नहीं है।",
+    "viewProject": "प्रोजेक्ट देखें",
+    "metaTitle": "परियोजनाओं",
+    "metaDescription": "मेरे सभी प्रोजेक्ट, व्यक्तिगत, क्लाइंट और ओपन-सोर्स।",
+    "ogTitle": "परियोजनाएँ | माइकल अनोकाम",
+    "ogDescription": "मेरे काम का प्रदर्शन: व्यक्तिगत, क्लाइंट और ओपन-सोर्स प्रोजेक्ट।",
+    "twitterDescription": "मेरे सभी प्रोजेक्ट एक ही जगह पर।"
   },
   "experience": {
-    "badge": "Career Path",
-    "headingPrefix": "Professional",
-    "emphasizedWord": "journey",
+    "badge": "जीविका पथ",
+    "headingPrefix": "पेशेवर",
+    "emphasizedWord": "यात्रा",
     "headingSuffix": "",
-    "description": "A timeline of recent growth, challenges overcome, and milestones achieved across my career.",
+    "description": "मेरे करियर में हाल ही में हुई प्रगति, चुनौतियों पर विजय और हासिल की गई उपलब्धियों का एक समयरेखा।",
     "entries": [
       {
-        "role": "Tech Lead",
-        "company": "BLACKfrica (Startup)",
-        "location": "Nigeria (Remote)",
-        "period": "2026 - Present",
-        "description": "Building an MVP for a decentralized fashion modeling ecosystem with landing pages, technical structure, and NFT royalty logic.",
-        "highlights": ["MVP Architecture", "Landing Page", "Web3 Monetization", "Feature Roadmap"]
+        "role": "तकनीकी प्रमुख",
+        "company": "ब्लैकफ़्रीका (स्टार्टअप)",
+        "location": "नाइजीरिया (दूरस्थ)",
+        "period": "2026 - वर्तमान",
+        "description": "लैंडिंग पेज, तकनीकी संरचना और एनएफटी रॉयल्टी लॉजिक सहित एक विकेंद्रीकृत फैशन मॉडलिंग इकोसिस्टम के लिए एमवीपी का निर्माण करना।",
+        "highlights": [
+          "एमवीपी आर्किटेक्चर",
+          "लैंडिंग पृष्ठ",
+          "वेब3 मुद्रीकरण",
+          "फ़ीचर रोडमैप"
+        ]
       },
       {
-        "role": "Frontend Engineer",
-        "company": "Grainlify (Open Source)",
-        "location": "Remote",
+        "role": "फ्रंटएंड इंजीनियर",
+        "company": "ग्रेनलिफाई (ओपन सोर्स)",
+        "location": "दूर",
         "period": "2026",
-        "description": "Enhanced UI and functionality across Grainlify with responsive design, dashboard layout, and dynamic ecosystem interactions.",
-        "highlights": ["Dashboard Layout", "Mobile Hero Fixes", "Profile Toasts", "Leaderboard Filters"]
+        "description": "रिस्पॉन्सिव डिज़ाइन, डैशबोर्ड लेआउट और डायनामिक इकोसिस्टम इंटरैक्शन के साथ Grainlify में बेहतर UI और कार्यक्षमता।",
+        "highlights": [
+          "डैशबोर्ड लेआउट",
+          "मोबाइल हीरो फिक्सेस",
+          "प्रोफ़ाइल टोस्ट",
+          "लीडरबोर्ड फ़िल्टर"
+        ]
       },
       {
-        "role": "Frontend Engineer",
-        "company": "Remitwise (Open Source)",
-        "location": "Remote",
+        "role": "फ्रंटएंड इंजीनियर",
+        "company": "रेमिटवाइज (ओपन सोर्स)",
+        "location": "दूर",
         "period": "2026",
-        "description": "Built and improved UI components and pages, focusing on responsive layouts, seamless interactions, and consistent user experience.",
-        "highlights": ["Recipient Input", "Layout Structure", "Form UX", "UX Consistency"]
+        "description": "रिस्पॉन्सिव लेआउट, सहज इंटरैक्शन और सुसंगत उपयोगकर्ता अनुभव पर ध्यान केंद्रित करते हुए यूआई घटकों और पृष्ठों का निर्माण और सुधार किया।",
+        "highlights": [
+          "प्राप्तकर्ता इनपुट",
+          "लेआउट संरचना",
+          "फॉर्म यूएक्स",
+          "यूएक्स संगति"
+        ]
       },
       {
-        "role": "Frontend Engineer",
-        "company": "Stellar Wrap (Open Source)",
-        "location": "Remote",
+        "role": "फ्रंटएंड इंजीनियर",
+        "company": "स्टेलर रैप (ओपन सोर्स)",
+        "location": "दूर",
         "period": "2026",
-        "description": "Added multi-network support with seamless Mainnet/Testnet switching, network-aware API calls, and type-safe state handling.",
-        "highlights": ["Network Toggle", "API Calls", "Type-Safe Handling", "Zustand State"]
+        "description": "निर्बाध मेननेट/टेस्टनेट स्विचिंग, नेटवर्क-जागरूक एपीआई कॉल और टाइप-सेफ स्टेट हैंडलिंग के साथ मल्टी-नेटवर्क सपोर्ट जोड़ा गया है।",
+        "highlights": [
+          "नेटवर्क टॉगल",
+          "एपीआई कॉल",
+          "टाइप-सेफ हैंडलिंग",
+          "Zustand State"
+        ]
       },
       {
-        "role": "Frontend Engineer",
-        "company": "CommitLabs (Open Source)",
-        "location": "Remote",
+        "role": "फ्रंटएंड इंजीनियर",
+        "company": "कमिटलैब्स (ओपन सोर्स)",
+        "location": "दूर",
         "period": "2026",
-        "description": "Built responsive Hero Section with animations and composed Commitment Marketplace page using existing components with page-level state.",
-        "highlights": ["Hero Section", "Marketplace Page", "Responsive Layout", "Figma Fidelity"]
+        "description": "एनिमेशन के साथ रिस्पॉन्सिव हीरो सेक्शन बनाया और पेज-लेवल स्टेट के साथ मौजूदा कंपोनेंट्स का उपयोग करके कमिटमेंट मार्केटप्लेस पेज तैयार किया।",
+        "highlights": [
+          "हीरो सेक्शन",
+          "बाज़ार पृष्ठ",
+          "उत्तरदायी लेआउट",
+          "फिग्मा फिडेलिटी"
+        ]
       },
       {
-        "role": "UI Engineer",
-        "company": "SkillSphere (Open Source)",
-        "location": "Remote",
+        "role": "यूआई इंजीनियर",
+        "company": "स्किलस्फीयर (ओपन सोर्स)",
+        "location": "दूर",
         "period": "2026",
-        "description": "Implemented a reusable UI component library with dark-mode support and scalable props-driven components for consistent design.",
-        "highlights": ["Props Components", "States Handling", "Reusable UI", "Dark Mode Support"]
+        "description": "एकरूप डिजाइन के लिए डार्क-मोड सपोर्ट और स्केलेबल प्रॉप्स-ड्रिवन कंपोनेंट्स के साथ एक रियूजेबल यूआई कंपोनेंट लाइब्रेरी को लागू किया गया है।",
+        "highlights": [
+          "प्रॉप्स घटक",
+          "राज्य संभाल रहे हैं",
+          "पुन: प्रयोज्य यूआई",
+          "डार्क मोड सपोर्ट"
+        ]
       },
       {
-        "role": "Frontend Engineer",
-        "company": "Stellar-Guilds (Open Source)",
-        "location": "Remote",
+        "role": "फ्रंटएंड इंजीनियर",
+        "company": "स्टेलर-गिल्ड्स (ओपन सोर्स)",
+        "location": "दूर",
         "period": "2026",
-        "description": "Designed and built the landing page UI with responsive sections and an optimized particle animation background with dynamic connections.",
-        "highlights": ["Optimized Performance", "Particle Animation", "Responsive UI", "Smooth Animations"]
+        "description": "रिस्पॉन्सिव सेक्शन और डायनामिक कनेक्शन के साथ ऑप्टिमाइज्ड पार्टिकल एनिमेशन बैकग्राउंड वाली लैंडिंग पेज यूआई को डिजाइन और विकसित किया।",
+        "highlights": [
+          "बेहतर प्रदर्शन",
+          "कण एनीमेशन",
+          "रिस्पॉन्सिव यूआई",
+          "सहज एनिमेशन"
+        ]
       },
       {
-        "role": "Frontend Engineer",
-        "company": "QAC Hackathon",
-        "location": "Remote",
+        "role": "फ्रंटएंड इंजीनियर",
+        "company": "QAC हैकाथॉन",
+        "location": "दूर",
         "period": "2025",
-        "description": "Built Carbnb, car rental system, in a hackathon team with structured roles (PM, UI/UX, backend/frontend) and collaborative workflows.",
-        "highlights": ["Hackathon Build", "Team Workflow", "GitHub Projects"]
+        "description": "हमने एक हैकाथॉन टीम में संरचित भूमिकाओं (पीएम, यूआई/यूएक्स, बैकएंड/फ्रंटएंड) और सहयोगी कार्यप्रवाहों के साथ कार रेंटल सिस्टम, कार्बंबब का निर्माण किया।",
+        "highlights": [
+          "हैकाथॉन निर्माण",
+          "टीम वर्कफ़्लो",
+          "GitHub प्रोजेक्ट्स"
+        ]
       }
     ]
   },
   "contact": {
-    "badge": "Get In Touch",
-    "headingPrefix": "Let's build something",
-    "emphasizedWord": "amazing",
-    "headingSuffix": "together",
-    "description": "Have a project in mind? I'm always open to discussing new opportunities, creative ideas, or just having a chat about technology and design.",
-    "email": "Email",
+    "badge": "संपर्क में रहो",
+    "headingPrefix": "चलिए कुछ बनाते हैं",
+    "emphasizedWord": "अद्भुत",
+    "headingSuffix": "एक साथ",
+    "description": "क्या आपके मन में कोई प्रोजेक्ट है? मैं हमेशा नए अवसरों, रचनात्मक विचारों पर चर्चा करने या प्रौद्योगिकी और डिजाइन के बारे में बातचीत करने के लिए तैयार हूं।",
+    "email": "ईमेल",
     "emailValue": "michaelnathan505@gmail.com",
-    "location": "Location",
+    "location": "जगह",
     "locationValue": "Enugu, Nigeria",
-    "downloadResume": "Download Resume",
-    "successTitle": "Message Sent!",
-    "successMessage": "Thanks for reaching out. I'll get back to you soon.",
-    "sendAnother": "Send another message",
-    "formName": "Your Name",
-    "formEmail": "Email Address",
-    "formMessage": "Your Message",
-    "namePlaceholder": "John Doe",
+    "downloadResume": "अपना रिज्यूमे डाउनलोड करें",
+    "successTitle": "संदेश भेजा गया!",
+    "successMessage": "संपर्क करने के लिए धन्यवाद। मैं जल्द ही आपसे संपर्क करूंगा।",
+    "sendAnother": "एक और संदेश भेजें",
+    "formName": "आपका नाम",
+    "formEmail": "मेल पता",
+    "formMessage": "आपका संदेश",
+    "namePlaceholder": "जॉन डो",
     "emailPlaceholder": "john@example.com",
-    "messagePlaceholder": "Tell me about your project...",
-    "charCount": "{count}/2000 characters",
-    "sendMessage": "Send Message",
-    "sending": "Sending..."
+    "messagePlaceholder": "मुझे अपने प्रोजेक्ट के बारे में बताएं...",
+    "charCount": "{count}/2000 अक्षर",
+    "sendMessage": "मेसेज भेजें",
+    "sending": "भेजा जा रहा है..."
   },
   "validation": {
-    "nameRequired": "Name is required",
-    "nameMinLength": "Name must be at least 2 characters",
-    "nameMaxLength": "Name must be under 50 characters",
-    "emailRequired": "Email is required",
-    "emailInvalid": "Enter a valid email",
-    "messageRequired": "Message is required",
-    "messageMinLength": "Message must be at least 10 characters",
-    "messageMaxLength": "Message must be under 2000 characters"
+    "nameRequired": "नाम आवश्यक है",
+    "nameMinLength": "नाम कम से कम 2 अक्षरों का होना चाहिए",
+    "nameMaxLength": "नाम 50 अक्षरों से कम होना चाहिए",
+    "emailRequired": "ईमेल की जरूरत है",
+    "emailInvalid": "एक वैध ईमेल दर्ज करें",
+    "messageRequired": "संदेश आवश्यक है",
+    "messageMinLength": "संदेश कम से कम 10 अक्षरों का होना चाहिए।",
+    "messageMaxLength": "संदेश 2000 अक्षरों से कम होना चाहिए।"
   },
   "toasts": {
-    "errorDefault": "Something went wrong",
-    "success": "Message sent successfully!",
-    "errorNetwork": "Something went wrong. Please try again."
+    "errorDefault": "कुछ गलत हो गया",
+    "success": "संदेश सफलतापूर्वक भेज दिया गया!",
+    "errorNetwork": "कुछ गड़बड़ हुई है। कृपया दोबारा प्रयास करें।"
   },
   "thoughtBubbles": [
-    "Hire me so I can feed my pet cat 🐈",
-    "Hire me and get free dance lessons (I'll break it down hehe) 💃",
-    "Hire me and I promise to buy a yacht and make it open source 😁",
-    "Hire me so I can become world president 🌍 and stop world hunger",
-    "Seriously... still reading my thoughts? Hire me already! 😅"
+    "मुझे काम पर रख लो ताकि मैं अपनी पालतू बिल्ली 🐈 को खाना खिला सकूँ",
+    "मुझे हायर करें और मुफ्त डांस क्लासेस पाएं (मैं आपको सब कुछ विस्तार से समझा दूंगी hehe) 💃",
+    "मुझे काम पर रखिए और मैं वादा करता हूँ कि मैं एक नौका खरीदूंगा और उसे ओपन सोर्स बना दूंगा 😁",
+    "मुझे नियुक्त करें ताकि मैं विश्व राष्ट्रपति बन सकूं 🌍 और दुनिया से भूख मिटा सकूं।",
+    "सच में... अब भी मेरे विचार पढ़ रहे हो? मुझे काम पर रख लो! 😅"
   ],
   "languageSwitcher": {
-    "label": "Language",
+    "label": "भाषा",
     "en": "English",
     "es": "Español",
     "fr": "Français",

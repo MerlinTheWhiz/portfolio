@@ -24,6 +24,10 @@ function count(cat: ProjectCategory) {
   return projects.filter((p) => p.category === cat).length;
 }
 
+function categoryKey(label: string): string {
+  return label.charAt(0).toLowerCase() + label.slice(1).replace(/\s+(\w)/g, (_, c) => c.toUpperCase());
+}
+
 export default function ProjectsClient() {
   const t = useTranslations("projectsPage");
   const tp = useTranslations("projects");
@@ -100,7 +104,7 @@ export default function ProjectsClient() {
                       {count(cat)}
                     </span>
 
-                    <span className="ml-1 text-text-muted">{tp(`categoryTabs.${cat.toLowerCase()}`)}</span>
+                    <span className="ml-1 text-text-muted">{tp(`categoryTabs.${categoryKey(cat)}`)}</span>
 
                     {i < arr.length - 1 && (
                       <span className="ml-2 text-text-muted ">•</span>
@@ -125,7 +129,7 @@ export default function ProjectsClient() {
                       : "text-text-secondary hover:text-accent-primary after:scale-x-0 hover:after:scale-x-100"
                   }`}
               >
-                {tab === "All" ? tp("categoryTabs.all") : tp(`categoryTabs.${tab.toLowerCase()}`)}
+                {tab === "All" ? tp("categoryTabs.all") : tp(`categoryTabs.${categoryKey(tab)}`)}
               </button>
             ))}
           </div>

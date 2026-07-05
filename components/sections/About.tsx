@@ -90,16 +90,10 @@ const About = () => {
             variants={item}
           >
             <p className="mt-8 space-y-6 text-lg leading-relaxed text-text-secondary">
-              I&apos;m Michael Anokam, a software engineer passionate about
-              creating innovative solutions that make a real impact. With
-              expertise spanning full-stack development, I bring ideas to life
-              through elegant code and thoughtful design.
+              {t("paragraph1")}
             </p>
             <p className="mt-8 space-y-6 text-lg leading-relaxed text-text-secondary">
-              My work focuses on building scalable applications, optimizing
-              performance, and delivering seamless user experiences. I believe
-              in writing code that&apos;s not just functional, but maintainable,
-              efficient, and future-proof.
+              {t("paragraph2")}
             </p>
           </motion.div>
 

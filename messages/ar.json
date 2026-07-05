@@ -1,283 +1,389 @@
 {
   "metadata": {
-    "title": "Michael Anokam - Software Engineer",
-    "titleTemplate": "%s | Michael Anokam",
-    "description": "Software engineer focused on building fast, accessible, and scalable web applications with modern technologies.",
+    "title": "مايكل أنوكام - مهندس برمجيات",
+    "titleTemplate": "%s | مايكل أنوكام",
+    "description": "مهندس برمجيات متخصص في بناء تطبيقات ويب سريعة وسهلة الوصول وقابلة للتطوير باستخدام التقنيات الحديثة.",
     "keywords": [
-      "Software Engineer",
-      "Frontend Developer",
-      "Backend Developer",
-      "Fullstack Developer",
-      "TypeScript",
+      "مهندس برمجيات",
+      "مطور واجهة أمامية",
+      "مطور الواجهة الخلفية",
+      "مطور تطبيقات متكاملة",
+      "تايب سكريبت",
       "Tailwind CSS",
-      "React",
+      "رد فعل",
       "Next.js",
-      "Django",
+      "جانغو",
       "Node.js",
       "PostgreSQL",
       "MongoDB",
-      "Portfolio",
-      "Web Developer",
-      "Remote Software Engineer"
+      "مَلَفّ",
+      "مطور مواقع ويب",
+      "مهندس برمجيات عن بعد"
     ],
     "author": "Michael Anokam",
-    "ogTitle": "Michael Anokam - Software Engineer",
-    "ogDescription": "Building fast, accessible, and scalable web applications with modern technologies.",
-    "ogSiteName": "Michael Anokam Portfolio",
-    "ogImageAlt": "Michael Anokam Portfolio",
+    "ogTitle": "مايكل أنوكام - مهندس برمجيات",
+    "ogDescription": "بناء تطبيقات ويب سريعة وسهلة الوصول وقابلة للتطوير باستخدام التقنيات الحديثة.",
+    "ogSiteName": "ملف أعمال مايكل أنوكام",
+    "ogImageAlt": "ملف أعمال مايكل أنوكام",
     "ogLocale": "en_US",
-    "twitterTitle": "Michael Anokam - Software Engineer",
-    "twitterDescription": "Building fast, accessible, and scalable web applications with modern technologies."
+    "twitterTitle": "مايكل أنوكام - مهندس برمجيات",
+    "twitterDescription": "بناء تطبيقات ويب سريعة وسهلة الوصول وقابلة للتطوير باستخدام التقنيات الحديثة."
   },
   "navbar": {
-    "home": "Home",
-    "projects": "Projects",
-    "theme": "Theme",
-    "github": "GitHub",
-    "linkedin": "LinkedIn",
-    "twitter": "Twitter X",
-    "resume": "Resume",
-    "toggleTheme": "Toggle theme"
+    "home": "بيت",
+    "projects": "المشاريع",
+    "theme": "سمة",
+    "github": "جيت هاب",
+    "linkedin": "لينكد إن",
+    "twitter": "تويتر إكس",
+    "resume": "سيرة ذاتية",
+    "toggleTheme": "تبديل المظهر"
   },
   "mobileMenu": {
-    "resume": "Resume",
-    "toggleMenu": "Toggle menu"
+    "resume": "سيرة ذاتية",
+    "toggleMenu": "تبديل القائمة"
   },
   "footer": {
-    "copyright": "© {year} All rights reserved.",
-    "github": "Github",
-    "linkedin": "LinkedIn",
-    "twitter": "Twitter"
+    "copyright": "© {year} جميع الحقوق محفوظة.",
+    "github": "جيت هاب",
+    "linkedin": "لينكد إن",
+    "twitter": "تغريد"
   },
   "hero": {
-    "available": "Available for new projects",
-    "roles": ["Software Engineer"],
-    "description": "Creative software engineer specializing in building innovative solutions that bridge technology and user experience. I craft clean, efficient code and transform ideas into impactful digital products.",
-    "viewMyWork": "View My Work",
-    "getInTouch": "Get In Touch"
+    "available": "متاح للمشاريع الجديدة",
+    "roles": [
+      "مهندس برمجيات"
+    ],
+    "description": "مهندس برمجيات مبدع متخصص في بناء حلول مبتكرة تربط بين التكنولوجيا وتجربة المستخدم. أُصمم أكوادًا برمجية نظيفة وفعّالة، وأُحوّل الأفكار إلى منتجات رقمية مؤثرة.",
+    "viewMyWork": "عرض أعمالي",
+    "getInTouch": "تواصل معنا"
   },
   "hoverReveal": {
     "name": "Michael Anokam",
     "alias": "MerlinTheWhiz"
   },
   "about": {
-    "imageAlt": "Picture of Michael Anokam avatar",
+    "imageAlt": "الصورة الرمزية لمايكل أنوكام",
     "techAlias": "MerlinTheWhiz",
-    "techAliasLabel": "Tech Alias",
-    "badge": "About Me",
-    "headingPrefix": "Focused on creating",
-    "emphasizedWord": "impactful",
-    "headingSuffix": "solutions",
-    "paragraph1": "I'm Michael Anokam, a software engineer passionate about creating innovative solutions that make a real impact. With expertise spanning full-stack development, I bring ideas to life through elegant code and thoughtful design.",
-    "paragraph2": "My work focuses on building scalable applications, optimizing performance, and delivering seamless user experiences. I believe in writing code that's not just functional, but maintainable, efficient, and future-proof."
+    "techAliasLabel": "الاسم المستعار التقني",
+    "badge": "ْعَنِّي",
+    "headingPrefix": "التركيز على الإبداع",
+    "emphasizedWord": "مؤثر",
+    "headingSuffix": "حلول",
+    "paragraph1": "أنا مايكل أنوكام، مهندس برمجيات شغوف بابتكار حلول إبداعية تُحدث أثراً حقيقياً. بخبرتي الواسعة في تطوير البرمجيات المتكاملة، أُجسّد الأفكار على أرض الواقع من خلال كتابة أكواد أنيقة وتصميم مدروس.",
+    "paragraph2": "يركز عملي على بناء تطبيقات قابلة للتوسع، وتحسين الأداء، وتقديم تجارب مستخدم سلسة. أؤمن بكتابة برمجيات ليست وظيفية فحسب، بل قابلة للصيانة، وفعالة، ومواكبة للمستقبل."
   },
   "highlights": {
-    "yearsExperience": "Years Experience",
-    "projectsDelivered": "Projects Delivered",
-    "happyClients": "Happy Clients",
-    "linesOfCode": "Lines of Code"
+    "yearsExperience": "سنوات من الخبرة",
+    "projectsDelivered": "المشاريع المنجزة",
+    "happyClients": "عملاء سعداء",
+    "linesOfCode": "سطور من التعليمات البرمجية"
   },
   "skills": {
-    "badge": "My Expertise",
-    "headingPrefix": "Technologies I",
-    "emphasizedWord": "master",
+    "badge": "خبرتي",
+    "headingPrefix": "التقنيات ١",
+    "emphasizedWord": "يتقن",
     "headingSuffix": "",
-    "description": "A comprehensive toolkit refined over years of building production-grade applications at scale.",
+    "description": "مجموعة أدوات شاملة تم تطويرها على مر السنين من خلال بناء تطبيقات إنتاجية عالية الجودة على نطاق واسع.",
     "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "devops": "DevOps",
-      "tools": "Tools"
+      "frontend": "الواجهة الأمامية",
+      "backend": "الواجهة الخلفية",
+      "devops": "ديف أوبس",
+      "tools": "أدوات"
     },
     "items": {
-      "frontend": ["HTML5 & CSS3", "JavaScript", "React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      "backend": ["Python", "Django", "Node.js", "Express.js", "PostgreSQL", "MongoDB", "GraphQL"],
-      "devops": ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform", "Linux", "GitHub Actions"],
-      "tools": ["Git", "Figma", "VS Code", "Postman", "Jira", "Notion", "Slack"]
+      "frontend": [
+        "HTML5 & CSS3",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "backend": [
+        "Python",
+        "Django",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "MongoDB",
+        "GraphQL"
+      ],
+      "devops": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "Terraform",
+        "Linux",
+        "GitHub Actions"
+      ],
+      "tools": [
+        "Git",
+        "Figma",
+        "VS Code",
+        "Postman",
+        "Jira",
+        "Notion",
+        "Slack"
+      ]
     }
   },
   "logoMarquee": {
-    "items": ["React", "Node.js", "TypeScript", "Python", "PostgreSQL", "MongoDB", "Docker", "AWS", "GraphQL", "Kubernetes"]
+    "items": [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "PostgreSQL",
+      "MongoDB",
+      "Docker",
+      "AWS",
+      "GraphQL",
+      "Kubernetes"
+    ]
   },
   "projects": {
-    "badge": "Featured Work",
-    "headingPrefix": "Selected",
-    "emphasizedWord": "Projects",
+    "badge": "الأعمال المميزة",
+    "headingPrefix": "مختار",
+    "emphasizedWord": "المشاريع",
     "headingSuffix": "",
-    "viewProject": "View Project",
-    "viewAllProjects": "View All Projects",
+    "viewProject": "عرض المشروع",
+    "viewAllProjects": "عرض جميع المشاريع",
     "items": {
       "mediAxis": {
         "title": "MediAxis",
-        "description": "A hospital management system that streamlines patient records, appointments, billing, and staff workflows through a unified dashboard.",
-        "category": "Personal",
-        "tags": ["React", "Django", "PostgreSQL", "Tailwind", "Framer Motion"]
+        "description": "نظام إدارة مستشفيات يعمل على تبسيط سجلات المرضى والمواعيد والفواتير وسير عمل الموظفين من خلال لوحة تحكم موحدة.",
+        "category": "شخصي",
+        "tags": [
+          "React",
+          "Django",
+          "PostgreSQL",
+          "Tailwind",
+          "Framer Motion"
+        ]
       },
       "portfolio": {
         "title": "Portfolio",
-        "description": "My personal portfolio showcasing selected projects, design experiments, and interactive UI with smooth animations.",
-        "category": "Personal",
-        "tags": ["Next.js", "TypeScript", "Tailwind", "Framer Motion"]
+        "description": "ملف أعمالي الشخصي الذي يعرض مشاريع مختارة، وتجارب تصميمية، وواجهات مستخدم تفاعلية مع رسوم متحركة سلسة.",
+        "category": "شخصي",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "Framer Motion"
+        ]
       },
       "cleanSpark": {
         "title": "CleanSpark",
-        "description": "A clean energy product website showcase promoting sustainable solar solutions for African homes and businesses.",
-        "category": "Client",
-        "tags": ["Next.js", "TypeScript", "Tailwind", "GSAP"]
+        "description": "موقع إلكتروني يعرض منتجات الطاقة النظيفة ويروج لحلول الطاقة الشمسية المستدامة للمنازل والشركات الأفريقية.",
+        "category": "عميل",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "GSAP"
+        ]
       },
       "blackfrica": {
         "title": "Blackfrica",
-        "description": "A culturally-driven NFT marketplace spotlighting African digital art and creators, featuring curated collections, seamless wallet integration, and immersive animated UI.",
-        "category": "Client",
-        "tags": ["Next.js", "TypeScript", "Tailwind", "Framer Motion", "Web3"]
+        "description": "سوق NFT ذو توجه ثقافي يسلط الضوء على الفن الرقمي الأفريقي والمبدعين، ويضم مجموعات منتقاة بعناية، وتكامل سلس مع المحافظ الرقمية، وواجهة مستخدم متحركة غامرة.",
+        "category": "عميل",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "Framer Motion",
+          "Web3"
+        ]
       }
     },
     "categoryTabs": {
-      "all": "All",
-      "personal": "Personal",
-      "client": "Client",
-      "openSource": "Open Source"
+      "all": "الجميع",
+      "personal": "شخصي",
+      "client": "عميل",
+      "openSource": "المصادر المفتوحة"
     }
   },
   "projectsPage": {
-    "bannerAlt": "Banner",
-    "bannerQuoteLine1": "\"THE MOST REMARKABLE COMPUTER EVER INVENTED\"",
-    "bannerQuoteLine2": "IS THE HUMAN BRAIN\"",
-    "profileAlt": "Profile",
-    "hireMe": "Hire Me!",
-    "greeting": "Hey",
-    "headingPart1": "Here's What I've",
-    "headingPart2": "Been",
-    "headingAccent": "Building.",
-    "emptyState": "No projects in this category yet.",
-    "viewProject": "View Project",
-    "metaTitle": "Projects",
-    "metaDescription": "All my projects, personal, client, and open-source.",
-    "ogTitle": "Projects | Michael Anokam",
-    "ogDescription": "Showcasing my work: personal, client, and open-source projects.",
-    "twitterDescription": "All my projects in one place."
+    "bannerAlt": "لافتة",
+    "bannerQuoteLine1": "\"أروع جهاز كمبيوتر تم اختراعه على الإطلاق\"",
+    "bannerQuoteLine2": "هل الدماغ البشري",
+    "profileAlt": "حساب تعريفي",
+    "hireMe": "وظفني!",
+    "greeting": "يا",
+    "headingPart1": "إليكم ما لدي",
+    "headingPart2": "كان",
+    "headingAccent": "مبنى.",
+    "emptyState": "لا توجد مشاريع في هذه الفئة حتى الآن.",
+    "viewProject": "عرض المشروع",
+    "metaTitle": "المشاريع",
+    "metaDescription": "جميع مشاريعي، الشخصية منها والخاصة بالعملاء والمفتوحة المصدر.",
+    "ogTitle": "المشاريع | مايكل أنوكام",
+    "ogDescription": "عرض أعمالي: مشاريع شخصية، ومشاريع عملاء، ومشاريع مفتوحة المصدر.",
+    "twitterDescription": "جميع مشاريعي في مكان واحد."
   },
   "experience": {
-    "badge": "Career Path",
-    "headingPrefix": "Professional",
-    "emphasizedWord": "journey",
+    "badge": "المسار الوظيفي",
+    "headingPrefix": "احترافي",
+    "emphasizedWord": "رحلة",
     "headingSuffix": "",
-    "description": "A timeline of recent growth, challenges overcome, and milestones achieved across my career.",
+    "description": "جدول زمني يوضح النمو الأخير، والتحديات التي تم التغلب عليها، والإنجازات التي تحققت خلال مسيرتي المهنية.",
     "entries": [
       {
-        "role": "Tech Lead",
-        "company": "BLACKfrica (Startup)",
-        "location": "Nigeria (Remote)",
-        "period": "2026 - Present",
-        "description": "Building an MVP for a decentralized fashion modeling ecosystem with landing pages, technical structure, and NFT royalty logic.",
-        "highlights": ["MVP Architecture", "Landing Page", "Web3 Monetization", "Feature Roadmap"]
+        "role": "قائد الفريق التقني",
+        "company": "بلاك أفريكا (شركة ناشئة)",
+        "location": "نيجيريا (عن بعد)",
+        "period": "2026 - حتى الآن",
+        "description": "بناء نموذج أولي قابل للتطبيق لنظام بيئي لامركزي لعرض الأزياء يتضمن صفحات هبوط، وهيكل تقني، ومنطق حقوق الملكية للرموز غير القابلة للاستبدال (NFT).",
+        "highlights": [
+          "بنية MVP",
+          "الصفحة الرئيسية",
+          "تحقيق الربح من Web3",
+          "خارطة طريق الميزات"
+        ]
       },
       {
-        "role": "Frontend Engineer",
-        "company": "Grainlify (Open Source)",
-        "location": "Remote",
+        "role": "مهندس واجهة أمامية",
+        "company": "Grainlify (مفتوح المصدر)",
+        "location": "بعيد",
         "period": "2026",
-        "description": "Enhanced UI and functionality across Grainlify with responsive design, dashboard layout, and dynamic ecosystem interactions.",
-        "highlights": ["Dashboard Layout", "Mobile Hero Fixes", "Profile Toasts", "Leaderboard Filters"]
+        "description": "تم تحسين واجهة المستخدم والوظائف في جميع أنحاء Grainlify من خلال التصميم المتجاوب وتخطيط لوحة التحكم والتفاعلات الديناميكية للنظام البيئي.",
+        "highlights": [
+          "تصميم لوحة التحكم",
+          "إصلاحات لعبة موبايل هيرو",
+          "نخب تعريفية",
+          "فلاتر لوحة المتصدرين"
+        ]
       },
       {
-        "role": "Frontend Engineer",
-        "company": "Remitwise (Open Source)",
-        "location": "Remote",
+        "role": "مهندس واجهة أمامية",
+        "company": "ريميت وايز (مفتوح المصدر)",
+        "location": "بعيد",
         "period": "2026",
-        "description": "Built and improved UI components and pages, focusing on responsive layouts, seamless interactions, and consistent user experience.",
-        "highlights": ["Recipient Input", "Layout Structure", "Form UX", "UX Consistency"]
+        "description": "قمت ببناء وتحسين مكونات وواجهات المستخدم، مع التركيز على التصميمات المتجاوبة والتفاعلات السلسة وتجربة المستخدم المتسقة.",
+        "highlights": [
+          "مدخلات المستلم",
+          "هيكل التخطيط",
+          "تجربة المستخدم للنماذج",
+          "اتساق تجربة المستخدم"
+        ]
       },
       {
-        "role": "Frontend Engineer",
-        "company": "Stellar Wrap (Open Source)",
-        "location": "Remote",
+        "role": "مهندس واجهة أمامية",
+        "company": "غلاف ستيلر (مفتوح المصدر)",
+        "location": "بعيد",
         "period": "2026",
-        "description": "Added multi-network support with seamless Mainnet/Testnet switching, network-aware API calls, and type-safe state handling.",
-        "highlights": ["Network Toggle", "API Calls", "Type-Safe Handling", "Zustand State"]
+        "description": "تمت إضافة دعم الشبكات المتعددة مع تبديل سلس بين الشبكة الرئيسية وشبكة الاختبار، واستدعاءات واجهة برمجة التطبيقات الواعية بالشبكة، ومعالجة الحالة الآمنة من حيث النوع.",
+        "highlights": [
+          "تبديل الشبكة",
+          "استدعاءات واجهة برمجة التطبيقات",
+          "التعامل الآمن مع الأنواع",
+          "حالة الحالة"
+        ]
       },
       {
-        "role": "Frontend Engineer",
-        "company": "CommitLabs (Open Source)",
-        "location": "Remote",
+        "role": "مهندس واجهة أمامية",
+        "company": "CommitLabs (مفتوح المصدر)",
+        "location": "بعيد",
         "period": "2026",
-        "description": "Built responsive Hero Section with animations and composed Commitment Marketplace page using existing components with page-level state.",
-        "highlights": ["Hero Section", "Marketplace Page", "Responsive Layout", "Figma Fidelity"]
+        "description": "قمت ببناء قسم البطل المتجاوب مع الرسوم المتحركة وتكوين صفحة سوق الالتزامات باستخدام المكونات الموجودة مع حالة على مستوى الصفحة.",
+        "highlights": [
+          "قسم البطل",
+          "صفحة السوق",
+          "تصميم متجاوب",
+          "دقة فيجما"
+        ]
       },
       {
-        "role": "UI Engineer",
-        "company": "SkillSphere (Open Source)",
-        "location": "Remote",
+        "role": "مهندس واجهة المستخدم",
+        "company": "سكيل سفير (مفتوح المصدر)",
+        "location": "بعيد",
         "period": "2026",
-        "description": "Implemented a reusable UI component library with dark-mode support and scalable props-driven components for consistent design.",
-        "highlights": ["Props Components", "States Handling", "Reusable UI", "Dark Mode Support"]
+        "description": "تم تنفيذ مكتبة مكونات واجهة مستخدم قابلة لإعادة الاستخدام مع دعم الوضع الداكن ومكونات قابلة للتوسع تعتمد على الخصائص لتصميم متسق.",
+        "highlights": [
+          "مكونات الدعائم",
+          "الولايات التي تتولى الأمر",
+          "واجهة مستخدم قابلة لإعادة الاستخدام",
+          "دعم الوضع الداكن"
+        ]
       },
       {
-        "role": "Frontend Engineer",
-        "company": "Stellar-Guilds (Open Source)",
-        "location": "Remote",
+        "role": "مهندس واجهة أمامية",
+        "company": "Stellar-Guilds (مفتوح المصدر)",
+        "location": "بعيد",
         "period": "2026",
-        "description": "Designed and built the landing page UI with responsive sections and an optimized particle animation background with dynamic connections.",
-        "highlights": ["Optimized Performance", "Particle Animation", "Responsive UI", "Smooth Animations"]
+        "description": "قمت بتصميم وبناء واجهة المستخدم لصفحة الهبوط مع أقسام متجاوبة وخلفية رسوم متحركة محسّنة للجسيمات مع اتصالات ديناميكية.",
+        "highlights": [
+          "أداء مُحسَّن",
+          "الرسوم المتحركة بالجسيمات",
+          "واجهة مستخدم متجاوبة",
+          "رسوم متحركة سلسة"
+        ]
       },
       {
-        "role": "Frontend Engineer",
-        "company": "QAC Hackathon",
-        "location": "Remote",
+        "role": "مهندس واجهة أمامية",
+        "company": "هاكاثون QAC",
+        "location": "بعيد",
         "period": "2025",
-        "description": "Built Carbnb, car rental system, in a hackathon team with structured roles (PM, UI/UX, backend/frontend) and collaborative workflows.",
-        "highlights": ["Hackathon Build", "Team Workflow", "GitHub Projects"]
+        "description": "قمت ببناء نظام تأجير السيارات Carbnb، ضمن فريق هاكاثون بأدوار منظمة (مدير المشروع، واجهة المستخدم/تجربة المستخدم، الواجهة الخلفية/الواجهة الأمامية) وسير عمل تعاوني.",
+        "highlights": [
+          "بناء هاكاثون",
+          "سير عمل الفريق",
+          "مشاريع جيت هاب"
+        ]
       }
     ]
   },
   "contact": {
-    "badge": "Get In Touch",
-    "headingPrefix": "Let's build something",
-    "emphasizedWord": "amazing",
-    "headingSuffix": "together",
-    "description": "Have a project in mind? I'm always open to discussing new opportunities, creative ideas, or just having a chat about technology and design.",
-    "email": "Email",
+    "badge": "تواصل معنا",
+    "headingPrefix": "لنبني شيئاً",
+    "emphasizedWord": "مدهش",
+    "headingSuffix": "معاً",
+    "description": "هل لديك مشروع في ذهنك؟ أنا دائماً منفتح على مناقشة الفرص الجديدة، والأفكار الإبداعية، أو مجرد الدردشة حول التكنولوجيا والتصميم.",
+    "email": "بريد إلكتروني",
     "emailValue": "michaelnathan505@gmail.com",
-    "location": "Location",
+    "location": "موقع",
     "locationValue": "Enugu, Nigeria",
-    "downloadResume": "Download Resume",
-    "successTitle": "Message Sent!",
-    "successMessage": "Thanks for reaching out. I'll get back to you soon.",
-    "sendAnother": "Send another message",
-    "formName": "Your Name",
-    "formEmail": "Email Address",
-    "formMessage": "Your Message",
-    "namePlaceholder": "John Doe",
+    "downloadResume": "تحميل السيرة الذاتية",
+    "successTitle": "تم إرسال الرسالة!",
+    "successMessage": "شكراً لتواصلك. سأرد عليك قريباً.",
+    "sendAnother": "أرسل رسالة أخرى",
+    "formName": "اسمك",
+    "formEmail": "عنوان البريد الإلكتروني",
+    "formMessage": "رسالتك",
+    "namePlaceholder": "جون دو",
     "emailPlaceholder": "john@example.com",
-    "messagePlaceholder": "Tell me about your project...",
-    "charCount": "{count}/2000 characters",
-    "sendMessage": "Send Message",
-    "sending": "Sending..."
+    "messagePlaceholder": "أخبرني عن مشروعك...",
+    "charCount": "{count}/2000 حرفًا",
+    "sendMessage": "إرسال رسالة",
+    "sending": "إرسال..."
   },
   "validation": {
-    "nameRequired": "Name is required",
-    "nameMinLength": "Name must be at least 2 characters",
-    "nameMaxLength": "Name must be under 50 characters",
-    "emailRequired": "Email is required",
-    "emailInvalid": "Enter a valid email",
-    "messageRequired": "Message is required",
-    "messageMinLength": "Message must be at least 10 characters",
-    "messageMaxLength": "Message must be under 2000 characters"
+    "nameRequired": "الاسم مطلوب",
+    "nameMinLength": "يجب أن يتكون الاسم من حرفين على الأقل",
+    "nameMaxLength": "يجب ألا يتجاوز الاسم 50 حرفًا",
+    "emailRequired": "البريد الإلكتروني مطلوب",
+    "emailInvalid": "أدخل بريدًا إلكترونيًا صحيحًا",
+    "messageRequired": "الرسالة مطلوبة",
+    "messageMinLength": "يجب ألا يقل طول الرسالة عن 10 أحرف",
+    "messageMaxLength": "يجب ألا يتجاوز طول الرسالة 2000 حرف"
   },
   "toasts": {
-    "errorDefault": "Something went wrong",
-    "success": "Message sent successfully!",
-    "errorNetwork": "Something went wrong. Please try again."
+    "errorDefault": "حدث خطأ ما",
+    "success": "تم إرسال الرسالة بنجاح!",
+    "errorNetwork": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
   },
   "thoughtBubbles": [
-    "Hire me so I can feed my pet cat 🐈",
-    "Hire me and get free dance lessons (I'll break it down hehe) 💃",
-    "Hire me and I promise to buy a yacht and make it open source 😁",
-    "Hire me so I can become world president 🌍 and stop world hunger",
-    "Seriously... still reading my thoughts? Hire me already! 😅"
+    "وظفني لأتمكن من إطعام قطتي الأليفة 🐈",
+    "استأجرني واحصل على دروس رقص مجانية (سأشرحها لك بالتفصيل ههه) 💃",
+    "وظّفني وأعدك بشراء يخت وجعله مفتوح المصدر 😁",
+    "وظفوني لأصبح رئيس العالم 🌍 وأقضي على الجوع في العالم",
+    "بجدية... ما زلت تقرأ أفكاري؟ وظّفني الآن! 😅"
   ],
   "languageSwitcher": {
-    "label": "Language",
+    "label": "لغة",
     "en": "English",
     "es": "Español",
     "fr": "Français",

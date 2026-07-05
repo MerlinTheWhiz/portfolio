@@ -1,283 +1,389 @@
 {
   "metadata": {
-    "title": "Michael Anokam - Software Engineer",
+    "title": "Michael Anokam – Softwareentwickler",
     "titleTemplate": "%s | Michael Anokam",
-    "description": "Software engineer focused on building fast, accessible, and scalable web applications with modern technologies.",
+    "description": "Softwareentwickler mit Schwerpunkt auf der Entwicklung schneller, zugänglicher und skalierbarer Webanwendungen mit modernen Technologien.",
     "keywords": [
-      "Software Engineer",
-      "Frontend Developer",
-      "Backend Developer",
-      "Fullstack Developer",
-      "TypeScript",
+      "Softwareentwickler",
+      "Frontend-Entwickler",
+      "Backend-Entwickler",
+      "Fullstack-Entwickler",
+      "Typoskript",
       "Tailwind CSS",
-      "React",
+      "Reagieren",
       "Next.js",
       "Django",
       "Node.js",
       "PostgreSQL",
       "MongoDB",
       "Portfolio",
-      "Web Developer",
-      "Remote Software Engineer"
+      "Webentwickler",
+      "Remote-Softwareentwickler"
     ],
     "author": "Michael Anokam",
-    "ogTitle": "Michael Anokam - Software Engineer",
-    "ogDescription": "Building fast, accessible, and scalable web applications with modern technologies.",
+    "ogTitle": "Michael Anokam – Softwareentwickler",
+    "ogDescription": "Entwicklung schneller, zugänglicher und skalierbarer Webanwendungen mit modernen Technologien.",
     "ogSiteName": "Michael Anokam Portfolio",
     "ogImageAlt": "Michael Anokam Portfolio",
     "ogLocale": "en_US",
-    "twitterTitle": "Michael Anokam - Software Engineer",
-    "twitterDescription": "Building fast, accessible, and scalable web applications with modern technologies."
+    "twitterTitle": "Michael Anokam – Softwareentwickler",
+    "twitterDescription": "Entwicklung schneller, zugänglicher und skalierbarer Webanwendungen mit modernen Technologien."
   },
   "navbar": {
-    "home": "Home",
-    "projects": "Projects",
-    "theme": "Theme",
+    "home": "Heim",
+    "projects": "Projekte",
+    "theme": "Thema",
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "twitter": "Twitter X",
-    "resume": "Resume",
-    "toggleTheme": "Toggle theme"
+    "resume": "Wieder aufnehmen",
+    "toggleTheme": "Design umschalten"
   },
   "mobileMenu": {
-    "resume": "Resume",
-    "toggleMenu": "Toggle menu"
+    "resume": "Wieder aufnehmen",
+    "toggleMenu": "Menü umschalten"
   },
   "footer": {
-    "copyright": "© {year} All rights reserved.",
-    "github": "Github",
+    "copyright": "© {year} Alle Rechte vorbehalten.",
+    "github": "GitHub",
     "linkedin": "LinkedIn",
     "twitter": "Twitter"
   },
   "hero": {
-    "available": "Available for new projects",
-    "roles": ["Software Engineer"],
-    "description": "Creative software engineer specializing in building innovative solutions that bridge technology and user experience. I craft clean, efficient code and transform ideas into impactful digital products.",
-    "viewMyWork": "View My Work",
-    "getInTouch": "Get In Touch"
+    "available": "Verfügbar für neue Projekte",
+    "roles": [
+      "Softwareentwickler"
+    ],
+    "description": "Kreativer Softwareentwickler mit Spezialisierung auf innovative Lösungen an der Schnittstelle von Technologie und Nutzererfahrung. Ich entwickle sauberen, effizienten Code und setze Ideen in wirkungsvolle digitale Produkte um.",
+    "viewMyWork": "Meine Arbeiten ansehen",
+    "getInTouch": "Nehmen Sie Kontakt auf"
   },
   "hoverReveal": {
     "name": "Michael Anokam",
     "alias": "MerlinTheWhiz"
   },
   "about": {
-    "imageAlt": "Picture of Michael Anokam avatar",
+    "imageAlt": "Bild des Michael Anokam-Avatars",
     "techAlias": "MerlinTheWhiz",
     "techAliasLabel": "Tech Alias",
-    "badge": "About Me",
-    "headingPrefix": "Focused on creating",
-    "emphasizedWord": "impactful",
-    "headingSuffix": "solutions",
-    "paragraph1": "I'm Michael Anokam, a software engineer passionate about creating innovative solutions that make a real impact. With expertise spanning full-stack development, I bring ideas to life through elegant code and thoughtful design.",
-    "paragraph2": "My work focuses on building scalable applications, optimizing performance, and delivering seamless user experiences. I believe in writing code that's not just functional, but maintainable, efficient, and future-proof."
+    "badge": "Über mich",
+    "headingPrefix": "Fokussiert auf die Schaffung",
+    "emphasizedWord": "wirkungsvoll",
+    "headingSuffix": "Lösungen",
+    "paragraph1": "Ich bin Michael Anokam, ein Softwareentwickler mit Leidenschaft für innovative Lösungen, die wirklich etwas bewegen. Dank meiner Expertise in der Full-Stack-Entwicklung setze ich Ideen durch eleganten Code und durchdachtes Design in die Realität um.",
+    "paragraph2": "Meine Arbeit konzentriert sich auf die Entwicklung skalierbarer Anwendungen, die Optimierung der Performance und die Bereitstellung nahtloser Nutzererlebnisse. Ich glaube an Code, der nicht nur funktional, sondern auch wartungsfreundlich, effizient und zukunftssicher ist."
   },
   "highlights": {
-    "yearsExperience": "Years Experience",
-    "projectsDelivered": "Projects Delivered",
-    "happyClients": "Happy Clients",
-    "linesOfCode": "Lines of Code"
+    "yearsExperience": "Jahre Erfahrung",
+    "projectsDelivered": "Abgeschlossene Projekte",
+    "happyClients": "Zufriedene Kunden",
+    "linesOfCode": "Codezeilen"
   },
   "skills": {
-    "badge": "My Expertise",
-    "headingPrefix": "Technologies I",
-    "emphasizedWord": "master",
+    "badge": "Meine Expertise",
+    "headingPrefix": "Technologien I",
+    "emphasizedWord": "Master",
     "headingSuffix": "",
-    "description": "A comprehensive toolkit refined over years of building production-grade applications at scale.",
+    "description": "Ein umfassendes Toolkit, das über Jahre hinweg durch die Entwicklung produktionsreifer Anwendungen im großen Maßstab verfeinert wurde.",
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
       "devops": "DevOps",
-      "tools": "Tools"
+      "tools": "Werkzeuge"
     },
     "items": {
-      "frontend": ["HTML5 & CSS3", "JavaScript", "React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      "backend": ["Python", "Django", "Node.js", "Express.js", "PostgreSQL", "MongoDB", "GraphQL"],
-      "devops": ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform", "Linux", "GitHub Actions"],
-      "tools": ["Git", "Figma", "VS Code", "Postman", "Jira", "Notion", "Slack"]
+      "frontend": [
+        "HTML5 & CSS3",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "backend": [
+        "Python",
+        "Django",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "MongoDB",
+        "GraphQL"
+      ],
+      "devops": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "Terraform",
+        "Linux",
+        "GitHub Actions"
+      ],
+      "tools": [
+        "Git",
+        "Figma",
+        "VS Code",
+        "Postman",
+        "Jira",
+        "Notion",
+        "Slack"
+      ]
     }
   },
   "logoMarquee": {
-    "items": ["React", "Node.js", "TypeScript", "Python", "PostgreSQL", "MongoDB", "Docker", "AWS", "GraphQL", "Kubernetes"]
+    "items": [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "PostgreSQL",
+      "MongoDB",
+      "Docker",
+      "AWS",
+      "GraphQL",
+      "Kubernetes"
+    ]
   },
   "projects": {
-    "badge": "Featured Work",
-    "headingPrefix": "Selected",
-    "emphasizedWord": "Projects",
+    "badge": "Ausgewähltes Werk",
+    "headingPrefix": "Ausgewählt",
+    "emphasizedWord": "Projekte",
     "headingSuffix": "",
-    "viewProject": "View Project",
-    "viewAllProjects": "View All Projects",
+    "viewProject": "Projekt ansehen",
+    "viewAllProjects": "Alle Projekte ansehen",
     "items": {
       "mediAxis": {
         "title": "MediAxis",
-        "description": "A hospital management system that streamlines patient records, appointments, billing, and staff workflows through a unified dashboard.",
-        "category": "Personal",
-        "tags": ["React", "Django", "PostgreSQL", "Tailwind", "Framer Motion"]
+        "description": "Ein Krankenhausmanagementsystem, das Patientenakten, Terminvergabe, Abrechnung und Arbeitsabläufe des Personals über ein einheitliches Dashboard optimiert.",
+        "category": "Persönlich",
+        "tags": [
+          "React",
+          "Django",
+          "PostgreSQL",
+          "Tailwind",
+          "Framer Motion"
+        ]
       },
       "portfolio": {
         "title": "Portfolio",
-        "description": "My personal portfolio showcasing selected projects, design experiments, and interactive UI with smooth animations.",
-        "category": "Personal",
-        "tags": ["Next.js", "TypeScript", "Tailwind", "Framer Motion"]
+        "description": "Mein persönliches Portfolio, das ausgewählte Projekte, Designexperimente und interaktive Benutzeroberflächen mit flüssigen Animationen präsentiert.",
+        "category": "Persönlich",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "Framer Motion"
+        ]
       },
       "cleanSpark": {
         "title": "CleanSpark",
-        "description": "A clean energy product website showcase promoting sustainable solar solutions for African homes and businesses.",
-        "category": "Client",
-        "tags": ["Next.js", "TypeScript", "Tailwind", "GSAP"]
+        "description": "Eine Website, die Produkte im Bereich saubere Energie präsentiert und nachhaltige Solarlösungen für afrikanische Haushalte und Unternehmen vorstellt.",
+        "category": "Kunde",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "GSAP"
+        ]
       },
       "blackfrica": {
         "title": "Blackfrica",
-        "description": "A culturally-driven NFT marketplace spotlighting African digital art and creators, featuring curated collections, seamless wallet integration, and immersive animated UI.",
-        "category": "Client",
-        "tags": ["Next.js", "TypeScript", "Tailwind", "Framer Motion", "Web3"]
+        "description": "Ein kulturell geprägter NFT-Marktplatz, der afrikanische digitale Kunst und ihre Schöpfer in den Mittelpunkt stellt und kuratierte Kollektionen, nahtlose Wallet-Integration und eine immersive animierte Benutzeroberfläche bietet.",
+        "category": "Kunde",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "Framer Motion",
+          "Web3"
+        ]
       }
     },
     "categoryTabs": {
-      "all": "All",
-      "personal": "Personal",
-      "client": "Client",
+      "all": "Alle",
+      "personal": "Persönlich",
+      "client": "Kunde",
       "openSource": "Open Source"
     }
   },
   "projectsPage": {
     "bannerAlt": "Banner",
-    "bannerQuoteLine1": "\"THE MOST REMARKABLE COMPUTER EVER INVENTED\"",
-    "bannerQuoteLine2": "IS THE HUMAN BRAIN\"",
-    "profileAlt": "Profile",
-    "hireMe": "Hire Me!",
+    "bannerQuoteLine1": "\"DER BEMERKENSWERTESTE COMPUTER, DER JE ERFUNDEN WURDE\"",
+    "bannerQuoteLine2": "IST DAS MENSCHLICHE GEHIRN?",
+    "profileAlt": "Profil",
+    "hireMe": "Engagieren Sie mich!",
     "greeting": "Hey",
-    "headingPart1": "Here's What I've",
-    "headingPart2": "Been",
-    "headingAccent": "Building.",
-    "emptyState": "No projects in this category yet.",
-    "viewProject": "View Project",
-    "metaTitle": "Projects",
-    "metaDescription": "All my projects, personal, client, and open-source.",
-    "ogTitle": "Projects | Michael Anokam",
-    "ogDescription": "Showcasing my work: personal, client, and open-source projects.",
-    "twitterDescription": "All my projects in one place."
+    "headingPart1": "Hier ist, was ich habe",
+    "headingPart2": "Gewesen",
+    "headingAccent": "Gebäude.",
+    "emptyState": "In dieser Kategorie sind noch keine Projekte vorhanden.",
+    "viewProject": "Projekt ansehen",
+    "metaTitle": "Projekte",
+    "metaDescription": "Alle meine Projekte, private, Kunden- und Open-Source-Projekte.",
+    "ogTitle": "Projekte | Michael Anokam",
+    "ogDescription": "Ich präsentiere meine Arbeiten: persönliche Projekte, Kundenprojekte und Open-Source-Projekte.",
+    "twitterDescription": "Alle meine Projekte an einem Ort."
   },
   "experience": {
-    "badge": "Career Path",
+    "badge": "Karriereweg",
     "headingPrefix": "Professional",
-    "emphasizedWord": "journey",
+    "emphasizedWord": "Reise",
     "headingSuffix": "",
-    "description": "A timeline of recent growth, challenges overcome, and milestones achieved across my career.",
+    "description": "Eine Zeitleiste des jüngsten Wachstums, der bewältigten Herausforderungen und der erreichten Meilensteine im Laufe meiner Karriere.",
     "entries": [
       {
-        "role": "Tech Lead",
+        "role": "Technischer Leiter",
         "company": "BLACKfrica (Startup)",
-        "location": "Nigeria (Remote)",
-        "period": "2026 - Present",
-        "description": "Building an MVP for a decentralized fashion modeling ecosystem with landing pages, technical structure, and NFT royalty logic.",
-        "highlights": ["MVP Architecture", "Landing Page", "Web3 Monetization", "Feature Roadmap"]
+        "location": "Nigeria (Fernzugriff)",
+        "period": "2026 – heute",
+        "description": "Entwicklung eines MVP für ein dezentrales Fashion-Modeling-Ökosystem mit Landingpages, technischer Struktur und NFT-Lizenzlogik.",
+        "highlights": [
+          "MVP-Architektur",
+          "Landingpage",
+          "Web3-Monetarisierung",
+          "Feature-Roadmap"
+        ]
       },
       {
-        "role": "Frontend Engineer",
+        "role": "Frontend-Entwickler",
         "company": "Grainlify (Open Source)",
-        "location": "Remote",
+        "location": "Fernbedienung",
         "period": "2026",
-        "description": "Enhanced UI and functionality across Grainlify with responsive design, dashboard layout, and dynamic ecosystem interactions.",
-        "highlights": ["Dashboard Layout", "Mobile Hero Fixes", "Profile Toasts", "Leaderboard Filters"]
+        "description": "Verbesserte Benutzeroberfläche und Funktionalität in Grainlify durch responsives Design, Dashboard-Layout und dynamische Interaktionen im Ökosystem.",
+        "highlights": [
+          "Dashboard-Layout",
+          "Mobile Hero-Fixes",
+          "Profil-Toasts",
+          "Bestenlistenfilter"
+        ]
       },
       {
-        "role": "Frontend Engineer",
+        "role": "Frontend-Entwickler",
         "company": "Remitwise (Open Source)",
-        "location": "Remote",
+        "location": "Fernbedienung",
         "period": "2026",
-        "description": "Built and improved UI components and pages, focusing on responsive layouts, seamless interactions, and consistent user experience.",
-        "highlights": ["Recipient Input", "Layout Structure", "Form UX", "UX Consistency"]
+        "description": "Entwicklung und Verbesserung von UI-Komponenten und -Seiten mit Fokus auf responsive Layouts, nahtlose Interaktionen und ein konsistentes Benutzererlebnis.",
+        "highlights": [
+          "Empfängereingabe",
+          "Layoutstruktur",
+          "Formular-UX",
+          "UX-Konsistenz"
+        ]
       },
       {
-        "role": "Frontend Engineer",
+        "role": "Frontend-Entwickler",
         "company": "Stellar Wrap (Open Source)",
-        "location": "Remote",
+        "location": "Fernbedienung",
         "period": "2026",
-        "description": "Added multi-network support with seamless Mainnet/Testnet switching, network-aware API calls, and type-safe state handling.",
-        "highlights": ["Network Toggle", "API Calls", "Type-Safe Handling", "Zustand State"]
+        "description": "Unterstützung für mehrere Netzwerke hinzugefügt, inklusive nahtlosem Wechsel zwischen Mainnet und Testnet, netzwerkfähigen API-Aufrufen und typsicherer Zustandsverwaltung.",
+        "highlights": [
+          "Netzwerk-Umschalter",
+          "API-Aufrufe",
+          "Typsichere Handhabung",
+          "Zustand"
+        ]
       },
       {
-        "role": "Frontend Engineer",
+        "role": "Frontend-Entwickler",
         "company": "CommitLabs (Open Source)",
-        "location": "Remote",
+        "location": "Fernbedienung",
         "period": "2026",
-        "description": "Built responsive Hero Section with animations and composed Commitment Marketplace page using existing components with page-level state.",
-        "highlights": ["Hero Section", "Marketplace Page", "Responsive Layout", "Figma Fidelity"]
+        "description": "Ich habe einen responsiven Hero-Bereich mit Animationen erstellt und die Commitment Marketplace-Seite unter Verwendung vorhandener Komponenten mit Seitenstatus zusammengestellt.",
+        "highlights": [
+          "Heldenbereich",
+          "Marktplatzseite",
+          "Responsives Layout",
+          "Figma-Fidelity"
+        ]
       },
       {
-        "role": "UI Engineer",
+        "role": "UI-Entwickler",
         "company": "SkillSphere (Open Source)",
-        "location": "Remote",
+        "location": "Fernbedienung",
         "period": "2026",
-        "description": "Implemented a reusable UI component library with dark-mode support and scalable props-driven components for consistent design.",
-        "highlights": ["Props Components", "States Handling", "Reusable UI", "Dark Mode Support"]
+        "description": "Implementierte eine wiederverwendbare UI-Komponentenbibliothek mit Unterstützung für den Dunkelmodus und skalierbaren, props-gesteuerten Komponenten für ein konsistentes Design.",
+        "highlights": [
+          "Requisitenkomponenten",
+          "Staaten im Umgang mit",
+          "Wiederverwendbare Benutzeroberfläche",
+          "Unterstützung für den Dunkelmodus"
+        ]
       },
       {
-        "role": "Frontend Engineer",
-        "company": "Stellar-Guilds (Open Source)",
-        "location": "Remote",
+        "role": "Frontend-Entwickler",
+        "company": "Stellar-Gilden (Open Source)",
+        "location": "Fernbedienung",
         "period": "2026",
-        "description": "Designed and built the landing page UI with responsive sections and an optimized particle animation background with dynamic connections.",
-        "highlights": ["Optimized Performance", "Particle Animation", "Responsive UI", "Smooth Animations"]
+        "description": "Ich habe die Benutzeroberfläche der Landingpage mit responsiven Abschnitten und einem optimierten Partikelanimationshintergrund mit dynamischen Verbindungen entworfen und erstellt.",
+        "highlights": [
+          "Optimierte Leistung",
+          "Partikelanimation",
+          "Responsive Benutzeroberfläche",
+          "Flüssige Animationen"
+        ]
       },
       {
-        "role": "Frontend Engineer",
+        "role": "Frontend-Entwickler",
         "company": "QAC Hackathon",
-        "location": "Remote",
+        "location": "Fernbedienung",
         "period": "2025",
-        "description": "Built Carbnb, car rental system, in a hackathon team with structured roles (PM, UI/UX, backend/frontend) and collaborative workflows.",
-        "highlights": ["Hackathon Build", "Team Workflow", "GitHub Projects"]
+        "description": "Ich habe Carbnb, ein Autovermietungssystem, in einem Hackathon-Team mit strukturierten Rollen (PM, UI/UX, Backend/Frontend) und kollaborativen Arbeitsabläufen entwickelt.",
+        "highlights": [
+          "Hackathon-Bau",
+          "Team-Workflow",
+          "GitHub-Projekte"
+        ]
       }
     ]
   },
   "contact": {
-    "badge": "Get In Touch",
-    "headingPrefix": "Let's build something",
-    "emphasizedWord": "amazing",
-    "headingSuffix": "together",
-    "description": "Have a project in mind? I'm always open to discussing new opportunities, creative ideas, or just having a chat about technology and design.",
-    "email": "Email",
+    "badge": "Nehmen Sie Kontakt auf",
+    "headingPrefix": "Lasst uns etwas bauen",
+    "emphasizedWord": "toll",
+    "headingSuffix": "zusammen",
+    "description": "Haben Sie ein Projekt im Sinn? Ich bin immer offen für Gespräche über neue Möglichkeiten, kreative Ideen oder einfach nur für ein Gespräch über Technologie und Design.",
+    "email": "E-Mail",
     "emailValue": "michaelnathan505@gmail.com",
-    "location": "Location",
+    "location": "Standort",
     "locationValue": "Enugu, Nigeria",
-    "downloadResume": "Download Resume",
-    "successTitle": "Message Sent!",
-    "successMessage": "Thanks for reaching out. I'll get back to you soon.",
-    "sendAnother": "Send another message",
-    "formName": "Your Name",
-    "formEmail": "Email Address",
-    "formMessage": "Your Message",
+    "downloadResume": "Lebenslauf herunterladen",
+    "successTitle": "Nachricht gesendet!",
+    "successMessage": "Danke für Ihre Kontaktaufnahme. Ich melde mich in Kürze bei Ihnen.",
+    "sendAnother": "Sende eine weitere Nachricht",
+    "formName": "Ihr Name",
+    "formEmail": "E-Mail-Adresse",
+    "formMessage": "Ihre Nachricht",
     "namePlaceholder": "John Doe",
     "emailPlaceholder": "john@example.com",
-    "messagePlaceholder": "Tell me about your project...",
-    "charCount": "{count}/2000 characters",
-    "sendMessage": "Send Message",
-    "sending": "Sending..."
+    "messagePlaceholder": "Erzählen Sie mir von Ihrem Projekt...",
+    "charCount": "{count}/2000 Zeichen",
+    "sendMessage": "Nachricht senden",
+    "sending": "Wird gesendet..."
   },
   "validation": {
-    "nameRequired": "Name is required",
-    "nameMinLength": "Name must be at least 2 characters",
-    "nameMaxLength": "Name must be under 50 characters",
-    "emailRequired": "Email is required",
-    "emailInvalid": "Enter a valid email",
-    "messageRequired": "Message is required",
-    "messageMinLength": "Message must be at least 10 characters",
-    "messageMaxLength": "Message must be under 2000 characters"
+    "nameRequired": "Name erforderlich",
+    "nameMinLength": "Der Name muss mindestens 2 Zeichen lang sein.",
+    "nameMaxLength": "Der Name darf maximal 50 Zeichen lang sein.",
+    "emailRequired": "E-Mail-Adresse erforderlich",
+    "emailInvalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
+    "messageRequired": "Eine Nachricht ist erforderlich.",
+    "messageMinLength": "Die Nachricht muss mindestens 10 Zeichen lang sein.",
+    "messageMaxLength": "Die Nachricht darf maximal 2000 Zeichen lang sein."
   },
   "toasts": {
-    "errorDefault": "Something went wrong",
-    "success": "Message sent successfully!",
-    "errorNetwork": "Something went wrong. Please try again."
+    "errorDefault": "Etwas ist schiefgelaufen.",
+    "success": "Nachricht erfolgreich gesendet!",
+    "errorNetwork": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
   },
   "thoughtBubbles": [
-    "Hire me so I can feed my pet cat 🐈",
-    "Hire me and get free dance lessons (I'll break it down hehe) 💃",
-    "Hire me and I promise to buy a yacht and make it open source 😁",
-    "Hire me so I can become world president 🌍 and stop world hunger",
-    "Seriously... still reading my thoughts? Hire me already! 😅"
+    "Stellt mich ein, damit ich meine Katze füttern kann 🐈",
+    "Engagiere mich und erhalte kostenlose Tanzstunden (ich erkläre es dir ganz genau, hehe) 💃",
+    "Engagiert mich und ich verspreche euch, eine Yacht zu kaufen und sie als Open Source zu veröffentlichen 😁",
+    "Stellt mich ein, damit ich Weltpräsident werde 🌍 und den Welthunger beende.",
+    "Im Ernst... liest du immer noch meine Gedanken? Stell mich endlich ein! 😅"
   ],
   "languageSwitcher": {
-    "label": "Language",
+    "label": "Sprache",
     "en": "English",
     "es": "Español",
     "fr": "Français",
