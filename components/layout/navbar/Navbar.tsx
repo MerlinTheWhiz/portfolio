@@ -6,6 +6,7 @@ import { Home, FolderGit2 } from "lucide-react";
 import { LuGithub, LuLinkedin, LuDownload } from "react-icons/lu";
 import { BsTwitterX } from "react-icons/bs";
 import MobileMenu from "./MobileMenu";
+import TabletMenu from "./TabletMenu";
 import ThemeToggle from "../../ui/ThemeToggle";
 import ThemeToggleSlider from "../../ui/ThemeToggleSlider";
 import ThoughtAvatar from "@/components/ui/ThoughtAvatar";
@@ -117,8 +118,13 @@ const Navbar = () => {
         </div>
       </motion.div>
 
+      {/* Tablet Right Rail */}
+      <div className="hidden sm:flex lg:hidden fixed right-6 z-50 items-center" style={{ top: '29px' }}>
+        <TabletMenu />
+      </div>
+
       {/* Desktop Right Rail */}
-      <div className="hidden sm:flex fixed right-6 z-50 items-center gap-4" style={{ top: '29px' }}>
+      <div className="hidden lg:flex fixed right-6 z-50 items-center gap-4" style={{ top: '29px' }}>
         <LanguageSwitcher variant="desktop" />
         <ThemeToggleSlider />
       </div>
