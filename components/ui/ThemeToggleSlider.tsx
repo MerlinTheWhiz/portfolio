@@ -5,10 +5,12 @@ import { motion, animate } from "framer-motion";
 import { LuSun, LuMoon } from "react-icons/lu";
 import { useState, useRef, useCallback, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function ThemeToggleSlider() {
   const t = useTranslations("navbar");
+  const locale = useLocale();
+  const isRtl = locale === "ar";
   const { theme, systemTheme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   const isDark = currentTheme === "dark";
@@ -83,7 +85,11 @@ export default function ThemeToggleSlider() {
         </span>
         <motion.span
           className="absolute top-1 w-8 h-8 rounded-full bg-white dark:bg-gray-700 shadow-sm border border-border-default flex items-center justify-center"
-          animate={{ x: isDark ? 50 : 4 }}
+          style={isRtl ? { right: 4 } : { left: 4 }}
+          animate={isRtl
+            ? { right: isDark ? 50 : 4 }
+            : { left: isDark ? 50 : 4 }
+          }
           transition={{ duration: 0.6, ease: [0.65, 0, 0.35, 1] }}
         >
           {isDark ? (

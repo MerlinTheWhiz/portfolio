@@ -2,7 +2,7 @@
 
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const techLogos = [
   { key: "react", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -32,14 +32,17 @@ const nameMap: Record<string, string> = {
 
 const LogoCarousel = () => {
   const t = useTranslations("logoMarquee");
+  const locale = useLocale();
+  const isRtl = locale === "ar";
   const items = t.raw("items") as string[];
 
   return (
-    <div className="overflow-hidden md:mx-auto max-w-7xl py-6">
+    <div className="overflow-hidden md:mx-auto max-w-7xl py-6" dir="ltr">
       <Marquee
         gradient={false}
         speed={40}
         pauseOnHover
+        direction={isRtl ? "right" : "left"}
         className="flex items-center"
       >
         {techLogos.map(({ key, logo }, idx) => {

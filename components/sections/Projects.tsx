@@ -6,7 +6,7 @@ import { projects } from "@/lib/projects";
 import { ArrowUpRight } from "lucide-react";
 import { LuGithub } from "react-icons/lu";
 import ScrambleText from "@/components/ui/ScrambleText";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 
 const ProjectIdMap: Record<number, string> = {
@@ -18,19 +18,21 @@ const ProjectIdMap: Record<number, string> = {
 
 const Projects = () => {
   const t = useTranslations("projects");
+  const locale = useLocale();
+  const isRtl = locale === "ar";
   return (
     <section
       id="projects"
       className="relative bg-background py-20 sm:py-30 flex justify-center items-center"
     >
       <div className="max-w-7xl w-full flex flex-col relative z-10 px-6 ">
-        <div className="flex flex-col text-left mb-16">
+        <div className="flex flex-col text-start mb-16">
           <span className="inline-block px-4 w-fit py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6">
             {t("badge")}
           </span>
           <motion.h2
             className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: isRtl ? 50 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: false }}
