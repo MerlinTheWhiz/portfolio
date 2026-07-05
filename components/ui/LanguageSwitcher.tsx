@@ -18,7 +18,7 @@ const languages: { code: string; label: string }[] = [
   { code: "ar", label: "العربية" },
 ];
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ variant = "mobile" }: { variant?: "desktop" | "mobile" }) {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -47,16 +47,21 @@ export default function LanguageSwitcher() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setIsOpen((o) => !o)}
-        className="flex items-center justify-center gap-1.5 w-[72px] h-10 rounded-full border border-border-default bg-background-card shadow-lg transition-all duration-300 hover:shadow-accent-primary/20 hover:shadow-md cursor-pointer"
-        aria-label="Switch language"
-      >
-        <Languages className="w-5 h-5 text-gray-400" />
-        <ChevronRight
-          className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-            isOpen ? "rotate-90" : ""
-          }`}
-        />
-      </button>
+        className={variant === "desktop"
+            ? "flex items-center justify-center gap-1.5 w-[72px] h-10 rounded-full border border-border-default bg-background-card shadow-lg transition-all duration-300 hover:shadow-accent-primary/20 hover:shadow-md cursor-pointer"
+            : "p-1.5 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-gray-200 dark:hover:bg-white/10 text-gray-500 cursor-pointer"
+          }
+          aria-label="Switch language"
+        >
+          <Languages className={variant === "desktop" ? "w-5 h-5 text-gray-400" : "w-5 h-5"} />
+          {variant === "desktop" && (
+            <ChevronRight
+              className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${
+                isOpen ? "rotate-90" : ""
+              }`}
+            />
+          )}
+        </button>
 
       {isOpen && (
         <div className="absolute right-0 top-full mt-2 z-[100] min-w-[140px] rounded-xl border border-border-default bg-background p-1.5 shadow-lg">

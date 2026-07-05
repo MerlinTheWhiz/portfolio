@@ -53,7 +53,7 @@ const Navbar = () => {
             >
               <ThemeToggle />
             </div>
-            <LanguageSwitcher />
+        <LanguageSwitcher />
           </div>
           {/* <span className="flex sm:hidden border-l h-6 border-gray-400/80"></span> */}
           <MobileMenu />
@@ -120,7 +120,7 @@ const Navbar = () => {
 
       {/* Desktop Right Rail */}
       <div className="hidden sm:flex fixed right-6 z-50 items-center gap-4" style={{ top: '29px' }}>
-        <LanguageSwitcher />
+        <LanguageSwitcher variant="desktop" />
         <ThemeToggleSlider />
       </div>
     </nav>
