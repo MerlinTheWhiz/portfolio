@@ -2,9 +2,8 @@
 
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { useTransition } from "react";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { Languages } from "lucide-react";
+import { useTransition, useState, useRef, useEffect } from "react";
+import { Languages, ChevronRight } from "lucide-react";
 
 const languages: { code: string; label: string }[] = [
   { code: "en", label: "English" },
@@ -24,45 +23,58 @@ export default function LanguageSwitcher() {
   const pathname = usePathname();
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
 
   function switchLocale(next: string) {
     startTransition(() => {
       router.replace(pathname, { locale: next });
+      setIsOpen(false);
     });
   }
 
   return (
-    <DropdownMenu.Root>
-      <DropdownMenu.Trigger asChild>
-        <button
-          className="p-1.5 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:text-text-primary hover:bg-gray-200 dark:hover:bg-white/10 text-gray-500"
-          aria-label="Switch language"
-        >
-          <Languages className="w-5 h-5" />
-        </button>
-      </DropdownMenu.Trigger>
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setIsOpen((o) => !o)}
+        className="flex items-center justify-center gap-1.5 w-[72px] h-10 rounded-full border border-border-default bg-background-card shadow-lg transition-all duration-300 hover:shadow-accent-primary/20 hover:shadow-md cursor-pointer"
+        aria-label="Switch language"
+      >
+        <Languages className="w-5 h-5 text-gray-400" />
+        <ChevronRight
+          className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+            isOpen ? "rotate-90" : ""
+          }`}
+        />
+      </button>
 
-      <DropdownMenu.Portal>
-        <DropdownMenu.Content
-          align="end"
-          sideOffset={8}
-          className="z-50 min-w-[140px] rounded-xl border border-border-default bg-background p-1.5 shadow-lg backdrop-blur-md"
-        >
+      {isOpen && (
+        <div className="absolute right-0 top-full mt-2 z-[100] min-w-[140px] rounded-xl border border-border-default bg-background p-1.5 shadow-lg">
           {languages.map((lang) => (
-            <DropdownMenu.Item
+            <button
               key={lang.code}
               onClick={() => switchLocale(lang.code)}
-              className={`cursor-pointer rounded-lg px-3 py-2 text-sm transition-colors duration-150 flex items-center gap-2 ${
+              className={`w-full text-left rounded-lg px-3 py-2 text-sm transition-colors duration-150 cursor-pointer ${
                 locale === lang.code
                   ? "text-accent-primary font-semibold"
                   : "text-text-secondary hover:text-text-primary hover:bg-gray-100 dark:hover:bg-white/5"
               }`}
             >
               {lang.label}
-            </DropdownMenu.Item>
+            </button>
           ))}
-        </DropdownMenu.Content>
-      </DropdownMenu.Portal>
-    </DropdownMenu.Root>
+        </div>
+      )}
+    </div>
   );
 }

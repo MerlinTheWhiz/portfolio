@@ -107,7 +107,6 @@ const Navbar = () => {
               {" "}
               <FolderGit2 className="w-5 h-5" />
             </Link>
-            <LanguageSwitcher />
             <span className="hidden sm:block border-l h-6 border-gray-400/80"></span>
           </div>
           <div className="hidden sm:flex rounded-full text-white font-semibold bg-accent-primary hover:bg-accent-hover text-sm px-4 py-2 md:hover:scale-102 transition-all duration-300">
@@ -119,8 +118,9 @@ const Navbar = () => {
         </div>
       </motion.div>
 
-      {/* Desktop Theme Toggle - Far Right */}
-      <div className="hidden sm:flex fixed right-6 z-50 items-center" style={{ top: '29px' }}>
+      {/* Desktop Right Rail */}
+      <div className="hidden sm:flex fixed right-6 z-50 items-center gap-4" style={{ top: '29px' }}>
+        <LanguageSwitcher />
         <ThemeToggleSlider />
       </div>
     </nav>
