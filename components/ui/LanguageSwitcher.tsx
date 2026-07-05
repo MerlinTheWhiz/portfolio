@@ -64,7 +64,9 @@ export default function LanguageSwitcher({ variant = "mobile" }: { variant?: "de
         </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-full mt-2 z-[100] min-w-[140px] rounded-xl border border-border-default bg-background p-1.5 shadow-lg">
+        <div className={`absolute top-full mt-2 z-[100] min-w-[140px] rounded-xl border border-border-default bg-background p-1.5 shadow-lg ${
+          variant === "desktop" ? "right-0" : "left-1/2 -translate-x-1/2"
+        }`}>
           {languages.map((lang) => (
             <button
               key={lang.code}

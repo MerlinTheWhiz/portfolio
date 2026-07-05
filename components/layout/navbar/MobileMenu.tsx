@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import { LuMenu, LuX, LuGithub, LuLinkedin, LuDownload } from "react-icons/lu";
 import { BsTwitterX } from "react-icons/bs";
 import { useTranslations } from "next-intl";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 const MobileMenu = () => {
   const t = useTranslations("mobileMenu");
@@ -46,6 +47,9 @@ const MobileMenu = () => {
         >
           <BsTwitterX className="w-5 h-5" />
         </a>
+      </div>
+      <div className="flex justify-center mt-4">
+        <LanguageSwitcher />
       </div>
       <div className="flex justify-between items-center mt-6">
         <a

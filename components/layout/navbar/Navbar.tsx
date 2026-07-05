@@ -53,7 +53,6 @@ const Navbar = () => {
             >
               <ThemeToggle />
             </div>
-        <LanguageSwitcher />
           </div>
           {/* <span className="flex sm:hidden border-l h-6 border-gray-400/80"></span> */}
           <MobileMenu />
