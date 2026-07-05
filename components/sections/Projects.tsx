@@ -6,9 +6,18 @@ import { projects } from "@/lib/projects";
 import { ArrowUpRight } from "lucide-react";
 import { LuGithub } from "react-icons/lu";
 import ScrambleText from "@/components/ui/ScrambleText";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
+const ProjectIdMap: Record<number, string> = {
+  1: "mediAxis",
+  2: "portfolio",
+  3: "cleanSpark",
+  4: "blackfrica",
+};
+
 const Projects = () => {
+  const t = useTranslations("projects");
   return (
     <section
       id="projects"
@@ -17,7 +26,7 @@ const Projects = () => {
       <div className="max-w-7xl w-full flex flex-col relative z-10 px-6 ">
         <div className="flex flex-col text-left mb-16">
           <span className="inline-block px-4 w-fit py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6">
-            Featured Work
+            {t("badge")}
           </span>
           <motion.h2
             className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight"
@@ -26,7 +35,7 @@ const Projects = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: false }}
           >
-            Selected <ScrambleText text="Projects" className="text-accent-primary" as="span" />
+            {t("headingPrefix")} <ScrambleText text={t("emphasizedWord")} className="text-accent-primary" as="span" />
           </motion.h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
@@ -49,7 +58,7 @@ const Projects = () => {
 
                 <div className="">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
+                    {t.raw(`items.${ProjectIdMap[project.id]}.tags`).map((tag: string) => (
                       <span
                         key={tag}
                         className="px-3 py-1 rounded-full text-xs bg-[#dbeafe] dark:bg-white/5 text-text-secondary"
@@ -59,10 +68,10 @@ const Projects = () => {
                     ))}
                   </div>
                   <h3 className="text-2xl font-bold mb-2 text-text-primary group-hover:text-accent-primary transition-colors duration-300">
-                    {project.title}
+                    {t(`items.${ProjectIdMap[project.id]}.title`)}
                   </h3>
                   <p className="line-clamp-2 mb-6 text-text-muted">
-                    {project.description}
+                    {t(`items.${ProjectIdMap[project.id]}.description`)}
                   </p>
                   <div className="flex items-center gap-4">
                     <a
@@ -71,7 +80,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-sm font-medium text-accent-primary hover:text-accent-hover transition-colors"
                     >
-                      View Project <ArrowUpRight size={16} />
+                      {t("viewProject")} <ArrowUpRight size={16} />
                     </a>
                     <a
                       href={project.github}
@@ -93,7 +102,7 @@ const Projects = () => {
           text-accent-primary px-8 py-4 ease-in-out md:hover:scale-102 transition-all duration-300
           justify-center items-center"
           >
-            View All Projects{" "}
+            {t("viewAllProjects")}{" "}
             <ArrowUpRight
               size={16}
               className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5"

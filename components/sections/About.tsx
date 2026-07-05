@@ -5,6 +5,7 @@ import aboutImage from "@/public/logo.png";
 import { Code2 } from "lucide-react";
 import Highlights from "../ui/Highlights";
 import ScrambleText from "@/components/ui/ScrambleText";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 const container = {
@@ -27,6 +28,7 @@ const item = {
 };
 
 const About = () => {
+  const t = useTranslations("about");
   return (
     <section
       id="about"
@@ -43,7 +45,7 @@ const About = () => {
         >
           <Image
             src={aboutImage}
-            alt="Picture of Michael Anokam avatar"
+            alt={t("imageAlt")}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-linear-to-t via-transparent to-transparent from-background" />
@@ -53,9 +55,9 @@ const About = () => {
                 <Code2 size={18} className="w-6 h-6 text-accent-primary" />
               </span>
               <div className="text-left">
-                <p className="text-2xl font-bold">MerlinTheWhiz</p>
+                <p className="text-2xl font-bold">{t("techAlias")}</p>
                 <p className="text-sm text-text-primary/80 dark:text-text-muted">
-                  Tech Alias
+                  {t("techAliasLabel")}
                 </p>
               </div>
             </div>
@@ -74,30 +76,24 @@ const About = () => {
             className="inline-block px-4 w-fit py-1.5 bg-accent-primary/10 text-accent-primary text-sm font-medium rounded-full mb-6"
             variants={item}
           >
-            About Me
+            {t("badge")}
           </motion.span>
           <motion.h2
             className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight"
             variants={item}
           >
-            Focused on creating{" "}
-            <ScrambleText text="impactful" className="text-accent-primary" as="span" />{" "}
-            solutions
+            {t("headingPrefix")}{" "}
+            <ScrambleText text={t("emphasizedWord")} className="text-accent-primary" as="span" />{" "}
+            {t("headingSuffix")}
           </motion.h2>
           <motion.div
             variants={item}
           >
             <p className="mt-8 space-y-6 text-lg leading-relaxed text-text-secondary">
-              I&apos;m Michael Anokam, a software engineer passionate about
-              creating innovative solutions that make a real impact. With
-              expertise spanning full-stack development, I bring ideas to life
-              through elegant code and thoughtful design.
+              {t("paragraph1")}
             </p>
             <p className="mt-8 space-y-6 text-lg leading-relaxed text-text-secondary">
-              My work focuses on building scalable applications, optimizing
-              performance, and delivering seamless user experiences. I believe
-              in writing code that&apos;s not just functional, but maintainable,
-              efficient, and future-proof.
+              {t("paragraph2")}
             </p>
           </motion.div>
 

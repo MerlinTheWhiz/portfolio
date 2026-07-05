@@ -4,8 +4,11 @@ import { useState } from "react";
 import { createPortal } from "react-dom";
 import { LuMenu, LuX, LuGithub, LuLinkedin, LuDownload } from "react-icons/lu";
 import { BsTwitterX } from "react-icons/bs";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 const MobileMenu = () => {
+  const t = useTranslations("mobileMenu");
   const [open, setOpen] = useState(false);
 
   const drawer = (
@@ -45,6 +48,9 @@ const MobileMenu = () => {
           <BsTwitterX className="w-5 h-5" />
         </a>
       </div>
+      <div className="flex justify-center mt-4">
+        <LanguageSwitcher />
+      </div>
       <div className="flex justify-between items-center mt-6">
         <a
           href="/resume.pdf"
@@ -52,7 +58,7 @@ const MobileMenu = () => {
           className="flex items-center justify-center gap-2 px-4 w-full py-2 rounded-full bg-accent-primary text-white text-sm font-semibold"
         >
           <LuDownload className="w-4 h-4" />
-          Resume
+          {t("resume")}
         </a>
       </div>
     </div>
@@ -63,7 +69,7 @@ const MobileMenu = () => {
       <button
         onClick={() => setOpen(!open)}
         className="pr-2 py-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 dark:text-white transition"
-        aria-label="Toggle menu"
+        aria-label={t("toggleMenu")}
       >
         {open ? <LuX className="w-5 h-5" /> : <LuMenu className="w-5 h-5" />}
       </button>

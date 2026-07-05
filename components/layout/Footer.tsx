@@ -1,10 +1,14 @@
-export default function Footer() {
+import { getTranslations } from "next-intl/server";
+
+export default async function Footer() {
+  const t = await getTranslations("footer");
+
   return (
     <footer className="border-t border-gray-200 bg-background dark:border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-sm text-gray-600 dark:text-[#737373]">
-            © {new Date().getFullYear()} All rights reserved.
+            {t("copyright", { year: new Date().getFullYear() })}
           </p>
 
           <div className="flex items-center gap-6">
@@ -15,7 +19,7 @@ export default function Footer() {
               className="text-sm text-gray-600 transition-colors hover:text-accent-primary dark:text-[#737373] dark:hover:text-accent-primary"
               title="GitHub"
             >
-              Github
+              {t("github")}
             </a>
             <a
               href="https://www.linkedin.com/in/michaelanokamcodes/"
@@ -24,7 +28,7 @@ export default function Footer() {
               className="text-sm text-gray-600 transition-colors hover:text-accent-primary dark:text-[#737373] dark:hover:text-accent-primary"
               title="LinkedIn"
             >
-              LinkedIn
+              {t("linkedin")}
             </a>
             <a
               href="https://x.com/madebymichael_"
@@ -33,7 +37,7 @@ export default function Footer() {
               className="text-sm text-gray-600 transition-colors hover:text-accent-primary dark:text-[#737373] dark:hover:text-accent-primary"
               title="Twitter X"
             >
-              Twitter
+              {t("twitter")}
             </a>
           </div>
         </div>

@@ -1,0 +1,398 @@
+{
+  "metadata": {
+    "title": "Michael Anokam - ソフトウェア エンジニア",
+    "titleTemplate": "%s | マイケル・アノカム",
+    "description": "最新技術を用いて、高速でアクセスしやすく、拡張性の高いウェブアプリケーションの構築に注力するソフトウェアエンジニア。",
+    "keywords": [
+      "ソフトウェアエンジニア",
+      "フロントエンド開発者",
+      "バックエンド開発者",
+      "フルスタック開発者",
+      "TypeScript",
+      "Tailwind CSS",
+      "React",
+      "Next.js",
+      "ジャンゴ",
+      "Node.js",
+      "PostgreSQL",
+      "MongoDB",
+      "ポートフォリオ",
+      "ウェブ開発者",
+      "リモートソフトウェアエンジニア"
+    ],
+    "author": "Michael Anokam",
+    "ogTitle": "Michael Anokam - ソフトウェア エンジニア",
+    "ogDescription": "最新技術を用いて、高速でアクセスしやすく、拡張性の高いウェブアプリケーションを構築します。",
+    "ogSiteName": "マイケル・アノカムのポートフォリオ",
+    "ogImageAlt": "マイケル・アノカムのポートフォリオ",
+    "ogLocale": "en_US",
+    "twitterTitle": "Michael Anokam - ソフトウェア エンジニア",
+    "twitterDescription": "最新技術を用いて、高速でアクセスしやすく、拡張性の高いウェブアプリケーションを構築します。"
+  },
+  "navbar": {
+    "home": "家",
+    "projects": "プロジェクト",
+    "theme": "テーマ",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter X",
+    "resume": "再開する",
+    "toggleTheme": "テーマの切り替え"
+  },
+  "mobileMenu": {
+    "resume": "再開する",
+    "toggleMenu": "メニューを切り替える"
+  },
+  "footer": {
+    "copyright": "© {year} 無断複写・転載を禁じます。",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "twitter": "ツイッター"
+  },
+  "hero": {
+    "available": "新規プロジェクトに対応可能です",
+    "roles": [
+      "ソフトウェアエンジニア"
+    ],
+    "description": "テクノロジーとユーザーエクスペリエンスを融合させた革新的なソリューション構築を専門とする、創造性豊かなソフトウェアエンジニアです。クリーンで効率的なコードを作成し、アイデアをインパクトのあるデジタル製品へと昇華させます。",
+    "viewMyWork": "私の作品を見る",
+    "getInTouch": "お問い合わせ"
+  },
+  "hoverReveal": {
+    "name": "Michael Anokam",
+    "alias": "MerlinTheWhiz"
+  },
+  "about": {
+    "imageAlt": "マイケル・アノカムのアバターの写真",
+    "techAlias": "MerlinTheWhiz",
+    "techAliasLabel": "テックエイリアス",
+    "badge": "私について",
+    "headingPrefix": "創造することに焦点を当てる",
+    "emphasizedWord": "影響力のある",
+    "headingSuffix": "解決策",
+    "paragraph1": "マイケル・アノカムと申します。革新的なソリューションを生み出し、真に社会に貢献することに情熱を注ぐソフトウェアエンジニアです。フルスタック開発の専門知識を活かし、洗練されたコードと綿密なデザインを通して、アイデアを形にします。",
+    "paragraph2": "私の仕事は、拡張性の高いアプリケーションの構築、パフォーマンスの最適化、そしてシームレスなユーザーエクスペリエンスの提供に重点を置いています。私は、単に機能的なだけでなく、保守性、効率性、そして将来性を備えたコードを書くことを信条としています。"
+  },
+  "highlights": {
+    "yearsExperience": "経験年数",
+    "projectsDelivered": "完了したプロジェクト",
+    "happyClients": "満足した顧客",
+    "linesOfCode": "コード行数"
+  },
+  "skills": {
+    "badge": "私の専門分野",
+    "headingPrefix": "テクノロジーI",
+    "emphasizedWord": "マスター",
+    "headingSuffix": "",
+    "description": "長年にわたり、大規模な本番環境向けアプリケーションを構築してきた経験に基づいて磨き上げられた、包括的なツールキット。",
+    "categories": {
+      "frontend": "フロントエンド",
+      "backend": "バックエンド",
+      "devops": "DevOps",
+      "tools": "ツール"
+    },
+    "items": {
+      "frontend": [
+        "HTML5 & CSS3",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "backend": [
+        "Python",
+        "Django",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "MongoDB",
+        "GraphQL"
+      ],
+      "devops": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "Terraform",
+        "Linux",
+        "GitHub Actions"
+      ],
+      "tools": [
+        "Git",
+        "Figma",
+        "VS Code",
+        "Postman",
+        "Jira",
+        "Notion",
+        "Slack"
+      ]
+    }
+  },
+  "logoMarquee": {
+    "items": [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "PostgreSQL",
+      "MongoDB",
+      "Docker",
+      "AWS",
+      "GraphQL",
+      "Kubernetes"
+    ]
+  },
+  "projects": {
+    "badge": "注目作品",
+    "headingPrefix": "選ばれた",
+    "emphasizedWord": "プロジェクト",
+    "headingSuffix": "",
+    "viewProject": "プロジェクトを見る",
+    "viewAllProjects": "すべてのプロジェクトを見る",
+    "items": {
+      "mediAxis": {
+        "title": "MediAxis",
+        "description": "患者記録、予約、請求、およびスタッフのワークフローを統合ダッシュボードを通じて効率化する病院管理システム。",
+        "category": "個人的",
+        "tags": [
+          "React",
+          "Django",
+          "PostgreSQL",
+          "Tailwind",
+          "Framer Motion"
+        ]
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "厳選したプロジェクト、デザイン実験、そして滑らかなアニメーションを備えたインタラクティブなUIを紹介する私の個人ポートフォリオです。",
+        "category": "個人的",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "Framer Motion"
+        ]
+      },
+      "cleanSpark": {
+        "title": "CleanSpark",
+        "description": "アフリカの家庭や企業向けに持続可能な太陽光発電ソリューションを紹介する、クリーンエネルギー製品ウェブサイト。",
+        "category": "クライアント",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "GSAP"
+        ]
+      },
+      "blackfrica": {
+        "title": "Blackfrica",
+        "description": "アフリカのデジタルアートとクリエイターに焦点を当てた、文化主導型のNFTマーケットプレイス。厳選されたコレクション、シームレスなウォレット統合、没入感のあるアニメーションUIが特徴です。",
+        "category": "クライアント",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "Framer Motion",
+          "Web3"
+        ]
+      }
+    },
+    "categoryTabs": {
+      "all": "全て",
+      "personal": "個人的",
+      "client": "クライアント",
+      "openSource": "オープンソース"
+    }
+  },
+  "projectsPage": {
+    "bannerAlt": "バナー",
+    "bannerQuoteLine1": "「史上最も驚異的なコンピューター」",
+    "bannerQuoteLine2": "人間の脳とは",
+    "profileAlt": "プロフィール",
+    "hireMe": "私を雇ってください！",
+    "greeting": "おい",
+    "headingPart1": "私が持っているものは以下の通りです",
+    "headingPart2": "された",
+    "headingAccent": "建物。",
+    "emptyState": "このカテゴリにはまだプロジェクトがありません。",
+    "viewProject": "プロジェクトを見る",
+    "metaTitle": "プロジェクト",
+    "metaDescription": "私のすべてのプロジェクト（個人プロジェクト、クライアント向けプロジェクト、オープンソースプロジェクト）。",
+    "ogTitle": "プロジェクト | マイケル・アノカム",
+    "ogDescription": "私の作品を紹介します：個人プロジェクト、クライアントプロジェクト、オープンソースプロジェクト。",
+    "twitterDescription": "私のプロジェクトはすべて一箇所に集まっています。"
+  },
+  "experience": {
+    "badge": "キャリアパス",
+    "headingPrefix": "プロ",
+    "emphasizedWord": "旅",
+    "headingSuffix": "",
+    "description": "私のキャリアにおける近年の成長、克服した課題、達成した節目を時系列でまとめたものです。",
+    "entries": [
+      {
+        "role": "テクニカルリード",
+        "company": "BLACKfrica（スタートアップ）",
+        "location": "ナイジェリア（遠隔地）",
+        "period": "2026年～現在",
+        "description": "ランディングページ、技術構造、NFTロイヤリティロジックを備えた、分散型ファッションモデリングエコシステムのMVP（最小実行可能製品）を構築する。",
+        "highlights": [
+          "MVPアーキテクチャ",
+          "ランディングページ",
+          "Web3の収益化",
+          "機能ロードマップ"
+        ]
+      },
+      {
+        "role": "フロントエンドエンジニア",
+        "company": "Grainlify（オープンソース）",
+        "location": "リモート",
+        "period": "2026",
+        "description": "Grainlify全体にわたって、レスポンシブデザイン、ダッシュボードレイアウト、動的なエコシステムインタラクションにより、UIと機能が強化されました。",
+        "highlights": [
+          "ダッシュボードのレイアウト",
+          "モバイルヒーローの修正",
+          "プロフィールのトースト",
+          "リーダーボードフィルター"
+        ]
+      },
+      {
+        "role": "フロントエンドエンジニア",
+        "company": "Remitwise（オープンソース）",
+        "location": "リモート",
+        "period": "2026",
+        "description": "レスポンシブなレイアウト、シームレスな操作性、一貫性のあるユーザーエクスペリエンスに重点を置き、UIコンポーネントとページを構築および改善しました。",
+        "highlights": [
+          "受信者の入力",
+          "レイアウト構造",
+          "フォームUX",
+          "UXの一貫性"
+        ]
+      },
+      {
+        "role": "フロントエンドエンジニア",
+        "company": "Stellar Wrap（オープンソース）",
+        "location": "リモート",
+        "period": "2026",
+        "description": "シームレスなメインネット／テストネット切り替え、ネットワーク対応API呼び出し、型安全な状態処理など、マルチネットワークサポートを追加しました。",
+        "highlights": [
+          "ネットワーク切り替え",
+          "API呼び出し",
+          "安全な取り扱い",
+          "状態"
+        ]
+      },
+      {
+        "role": "フロントエンドエンジニア",
+        "company": "CommitLabs（オープンソース）",
+        "location": "リモート",
+        "period": "2026",
+        "description": "既存のコンポーネントとページレベルの状態を使用して、アニメーション付きのレスポンシブなヒーローセクションを構築し、コミットメントマーケットプレイスページを構成しました。",
+        "highlights": [
+          "ヒーローセクション",
+          "マーケットプレイスページ",
+          "レスポンシブレイアウト",
+          "Figmaの忠実度"
+        ]
+      },
+      {
+        "role": "UIエンジニア",
+        "company": "SkillSphere（オープンソース）",
+        "location": "リモート",
+        "period": "2026",
+        "description": "ダークモードに対応し、一貫性のあるデザインを実現するために拡張可能なプロパティ駆動型コンポーネントを備えた、再利用可能なUIコンポーネントライブラリを実装しました。",
+        "highlights": [
+          "小道具コンポーネント",
+          "州による対応",
+          "再利用可能なUI",
+          "ダークモード対応"
+        ]
+      },
+      {
+        "role": "フロントエンドエンジニア",
+        "company": "ステラギルド（オープンソース）",
+        "location": "リモート",
+        "period": "2026",
+        "description": "レスポンシブなセクションと、動的な接続を備えた最適化されたパーティクルアニメーションの背景を持つランディングページのUIを設計・構築しました。",
+        "highlights": [
+          "最適化されたパフォーマンス",
+          "パーティクルアニメーション",
+          "レスポンシブUI",
+          "スムーズなアニメーション"
+        ]
+      },
+      {
+        "role": "フロントエンドエンジニア",
+        "company": "QACハッカソン",
+        "location": "リモート",
+        "period": "2025",
+        "description": "役割分担（プロジェクトマネージャー、UI/UXデザイナー、バックエンド/フロントエンドエンジニア）と協働的なワークフローを備えたハッカソンチームで、レンタカーシステム「Carbnb」を構築しました。",
+        "highlights": [
+          "ハッカソンビルド",
+          "チームワークフロー",
+          "GitHubプロジェクト"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "badge": "お問い合わせ",
+    "headingPrefix": "何かを作ってみよう",
+    "emphasizedWord": "すばらしい",
+    "headingSuffix": "一緒に",
+    "description": "何かプロジェクトをお考えですか？新しい機会やクリエイティブなアイデア、あるいはテクノロジーやデザインについてのおしゃべりなど、いつでも大歓迎です。",
+    "email": "メール",
+    "emailValue": "michaelnathan505@gmail.com",
+    "location": "位置",
+    "locationValue": "Enugu, Nigeria",
+    "downloadResume": "履歴書をダウンロード",
+    "successTitle": "メッセージ送信済み！",
+    "successMessage": "ご連絡ありがとうございます。後ほど改めてご連絡いたします。",
+    "sendAnother": "別のメッセージを送信する",
+    "formName": "あなたの名前",
+    "formEmail": "電子メールアドレス",
+    "formMessage": "あなたのメッセージ",
+    "namePlaceholder": "ジョン・ドゥ",
+    "emailPlaceholder": "john@example.com",
+    "messagePlaceholder": "あなたのプロジェクトについて教えてください。",
+    "charCount": "{count}/2000文字",
+    "sendMessage": "メッセージを送信",
+    "sending": "送信中..."
+  },
+  "validation": {
+    "nameRequired": "名前は必須です",
+    "nameMinLength": "名前は2文字以上である必要があります",
+    "nameMaxLength": "名前は50文字以内である必要があります",
+    "emailRequired": "メールアドレスは必須です。",
+    "emailInvalid": "有効なメールアドレスを入力してください",
+    "messageRequired": "メッセージは必須です。",
+    "messageMinLength": "メッセージは10文字以上である必要があります",
+    "messageMaxLength": "メッセージは2000文字以内である必要があります"
+  },
+  "toasts": {
+    "errorDefault": "何らかの問題が発生しました",
+    "success": "メッセージが正常に送信されました！",
+    "errorNetwork": "エラーが発生しました。もう一度お試しください。"
+  },
+  "thoughtBubbles": [
+    "私を雇ってください。そうすれば私の飼い猫に餌をあげられます🐈",
+    "私を雇ってくれたら、ダンスレッスンを無料で受けられますよ（詳しく解説しますね、へへ）💃",
+    "私を雇ってくれたら、ヨットを買ってオープンソースにすることを約束します😁",
+    "私を雇ってください。そうすれば私は世界大統領🌍になり、世界の飢餓をなくすことができます。",
+    "マジで…まだ私の考えを読んでるの？もう私を雇ってよ！😅"
+  ],
+  "languageSwitcher": {
+    "label": "言語",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ko": "한국어",
+    "ja": "日本語",
+    "zh": "中文",
+    "de": "Deutsch",
+    "hi": "हिन्दी",
+    "pt": "Português",
+    "ar": "العربية"
+  }
+}

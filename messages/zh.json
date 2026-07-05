@@ -1,0 +1,398 @@
+{
+  "metadata": {
+    "title": "迈克尔·阿诺卡姆 - 软件工程师",
+    "titleTemplate": "%s | 迈克尔·阿诺卡姆",
+    "description": "专注于使用现代技术构建快速、易用且可扩展的 Web 应用程序的软件工程师。",
+    "keywords": [
+      "软件工程师",
+      "前端开发人员",
+      "后端开发人员",
+      "全栈开发人员",
+      "TypeScript",
+      "Tailwind CSS",
+      "React",
+      "Next.js",
+      "Django",
+      "Node.js",
+      "PostgreSQL",
+      "MongoDB",
+      "文件夹",
+      "网站开发人员",
+      "远程软件工程师"
+    ],
+    "author": "Michael Anokam",
+    "ogTitle": "迈克尔·阿诺卡姆 - 软件工程师",
+    "ogDescription": "利用现代技术构建快速、易用且可扩展的Web应用程序。",
+    "ogSiteName": "迈克尔·阿诺卡姆作品集",
+    "ogImageAlt": "迈克尔·阿诺卡姆作品集",
+    "ogLocale": "en_US",
+    "twitterTitle": "迈克尔·阿诺卡姆 - 软件工程师",
+    "twitterDescription": "利用现代技术构建快速、易用且可扩展的Web应用程序。"
+  },
+  "navbar": {
+    "home": "家",
+    "projects": "项目",
+    "theme": "主题",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter X",
+    "resume": "恢复",
+    "toggleTheme": "切换主题"
+  },
+  "mobileMenu": {
+    "resume": "恢复",
+    "toggleMenu": "切换菜单"
+  },
+  "footer": {
+    "copyright": "© {year} 版权所有。",
+    "github": "Github",
+    "linkedin": "LinkedIn",
+    "twitter": "叽叽喳喳"
+  },
+  "hero": {
+    "available": "可用于新项目",
+    "roles": [
+      "软件工程师"
+    ],
+    "description": "我是一位富有创造力的软件工程师，专注于构建融合技术与用户体验的创新解决方案。我擅长编写简洁高效的代码，并将创意转化为具有影响力的数字产品。",
+    "viewMyWork": "查看我的作品",
+    "getInTouch": "联系我们"
+  },
+  "hoverReveal": {
+    "name": "Michael Anokam",
+    "alias": "MerlinTheWhiz"
+  },
+  "about": {
+    "imageAlt": "迈克尔·阿诺卡姆头像图片",
+    "techAlias": "MerlinTheWhiz",
+    "techAliasLabel": "技术别名",
+    "badge": "关于我",
+    "headingPrefix": "专注于创造",
+    "emphasizedWord": "有影响力的",
+    "headingSuffix": "解决方案",
+    "paragraph1": "我是 Michael Anokam，一名软件工程师，热衷于创造能够产生真正影响的创新解决方案。凭借全栈开发方面的专业知识，我能够通过优雅的代码和周到的设计将想法变为现实。",
+    "paragraph2": "我的工作重点是构建可扩展的应用程序、优化性能并提供流畅的用户体验。我坚信，编写代码不仅要功能齐全，更要易于维护、高效且面向未来。"
+  },
+  "highlights": {
+    "yearsExperience": "工作年限",
+    "projectsDelivered": "已交付项目",
+    "happyClients": "客户满意度",
+    "linesOfCode": "代码行数"
+  },
+  "skills": {
+    "badge": "我的专长",
+    "headingPrefix": "技术 I",
+    "emphasizedWord": "掌握",
+    "headingSuffix": "",
+    "description": "一套经过多年大规模构建生产级应用程序经验不断完善的综合工具包。",
+    "categories": {
+      "frontend": "前端",
+      "backend": "后端",
+      "devops": "DevOps",
+      "tools": "工具"
+    },
+    "items": {
+      "frontend": [
+        "HTML5 & CSS3",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "backend": [
+        "Python",
+        "Django",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "MongoDB",
+        "GraphQL"
+      ],
+      "devops": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "Terraform",
+        "Linux",
+        "GitHub Actions"
+      ],
+      "tools": [
+        "Git",
+        "Figma",
+        "VS Code",
+        "Postman",
+        "Jira",
+        "Notion",
+        "Slack"
+      ]
+    }
+  },
+  "logoMarquee": {
+    "items": [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "PostgreSQL",
+      "MongoDB",
+      "Docker",
+      "AWS",
+      "GraphQL",
+      "Kubernetes"
+    ]
+  },
+  "projects": {
+    "badge": "精选作品",
+    "headingPrefix": "已选",
+    "emphasizedWord": "项目",
+    "headingSuffix": "",
+    "viewProject": "查看项目",
+    "viewAllProjects": "查看所有项目",
+    "items": {
+      "mediAxis": {
+        "title": "MediAxis",
+        "description": "一个医院管理系统，通过统一的仪表盘简化患者记录、预约、计费和员工工作流程。",
+        "category": "个人的",
+        "tags": [
+          "React",
+          "Django",
+          "PostgreSQL",
+          "Tailwind",
+          "Framer Motion"
+        ]
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "我的个人作品集展示了精选项目、设计实验和具有流畅动画的交互式用户界面。",
+        "category": "个人的",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "Framer Motion"
+        ]
+      },
+      "cleanSpark": {
+        "title": "CleanSpark",
+        "description": "一个清洁能源产品网站，旨在推广适用于非洲家庭和企业的可持续太阳能解决方案。",
+        "category": "客户",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "GSAP"
+        ]
+      },
+      "blackfrica": {
+        "title": "Blackfrica",
+        "description": "一个以文化为驱动的 NFT 市场，聚焦非洲数字艺术和创作者，提供精选系列、无缝钱包集成和沉浸式动画用户界面。",
+        "category": "客户",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "Framer Motion",
+          "Web3"
+        ]
+      }
+    },
+    "categoryTabs": {
+      "all": "全部",
+      "personal": "个人的",
+      "client": "客户",
+      "openSource": "开源"
+    }
+  },
+  "projectsPage": {
+    "bannerAlt": "横幅",
+    "bannerQuoteLine1": "“有史以来最卓越的计算机”",
+    "bannerQuoteLine2": "人脑是",
+    "profileAlt": "轮廓",
+    "hireMe": "雇佣我！",
+    "greeting": "嘿",
+    "headingPart1": "以下是我所拥有的",
+    "headingPart2": "到过",
+    "headingAccent": "建筑。",
+    "emptyState": "目前该类别下尚无项目。",
+    "viewProject": "查看项目",
+    "metaTitle": "项目",
+    "metaDescription": "我的所有项目，包括个人项目、客户项目和开源项目。",
+    "ogTitle": "项目 | Michael Anokam",
+    "ogDescription": "展示我的作品：个人项目、客户项目和开源项目。",
+    "twitterDescription": "我的所有项目都在这里。"
+  },
+  "experience": {
+    "badge": "职业发展路径",
+    "headingPrefix": "专业的",
+    "emphasizedWord": "旅行",
+    "headingSuffix": "",
+    "description": "以下是我职业生涯中近期发展、克服的挑战和取得的里程碑的时间线。",
+    "entries": [
+      {
+        "role": "技术主管",
+        "company": "BLACKfrica（初创公司）",
+        "location": "尼日利亚（远程）",
+        "period": "2026年至今",
+        "description": "为去中心化时尚模特生态系统构建最小可行产品 (MVP)，包括着陆页、技术架构和 NFT 版税逻辑。",
+        "highlights": [
+          "MVP架构",
+          "着陆页",
+          "Web3 货币化",
+          "功能路线图"
+        ]
+      },
+      {
+        "role": "前端工程师",
+        "company": "Grainlify（开源）",
+        "location": "偏僻的",
+        "period": "2026",
+        "description": "Grainlify 的用户界面和功能得到增强，采用了响应式设计、仪表板布局和动态生态系统交互。",
+        "highlights": [
+          "仪表盘布局",
+          "移动英雄修复",
+          "个人资料祝酒词",
+          "排行榜筛选器"
+        ]
+      },
+      {
+        "role": "前端工程师",
+        "company": "Remitwise（开源）",
+        "location": "偏僻的",
+        "period": "2026",
+        "description": "构建并改进了用户界面组件和页面，重点关注响应式布局、无缝交互和一致的用户体验。",
+        "highlights": [
+          "接收者输入",
+          "布局结构",
+          "表单用户体验",
+          "用户体验一致性"
+        ]
+      },
+      {
+        "role": "前端工程师",
+        "company": "Stellar Wrap（开源软件）",
+        "location": "偏僻的",
+        "period": "2026",
+        "description": "增加了多网络支持，实现了主网/测试网的无缝切换、网络感知 API 调用和类型安全的状态处理。",
+        "highlights": [
+          "网络切换",
+          "API调用",
+          "类型安全搬运",
+          "状态"
+        ]
+      },
+      {
+        "role": "前端工程师",
+        "company": "CommitLabs（开源）",
+        "location": "偏僻的",
+        "period": "2026",
+        "description": "使用现有组件和页面级状态，构建了带有动画效果的响应式英雄区域和承诺市场页面。",
+        "highlights": [
+          "英雄章节",
+          "市场页面",
+          "响应式布局",
+          "Figma Fidelity"
+        ]
+      },
+      {
+        "role": "UI工程师",
+        "company": "SkillSphere（开源）",
+        "location": "偏僻的",
+        "period": "2026",
+        "description": "实现了一个可重用的 UI 组件库，支持暗黑模式和可扩展的 props 驱动组件，以实现一致的设计。",
+        "highlights": [
+          "道具组件",
+          "各州处理",
+          "可重用的用户界面",
+          "支持深色模式"
+        ]
+      },
+      {
+        "role": "前端工程师",
+        "company": "Stellar-Guilds（开源）",
+        "location": "偏僻的",
+        "period": "2026",
+        "description": "设计并构建了具有响应式分区和优化粒子动画背景以及动态连接的着陆页用户界面。",
+        "highlights": [
+          "优化性能",
+          "粒子动画",
+          "响应式用户界面",
+          "流畅的动画"
+        ]
+      },
+      {
+        "role": "前端工程师",
+        "company": "QAC黑客马拉松",
+        "location": "偏僻的",
+        "period": "2025",
+        "description": "在黑客马拉松团队中，我们构建了汽车租赁系统 Carbnb，团队成员角色分工明确（产品经理、UI/UX设计师、后端/前端开发人员），并采用协作式工作流程。",
+        "highlights": [
+          "黑客马拉松构建",
+          "团队工作流程",
+          "GitHub 项目"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "badge": "联系我们",
+    "headingPrefix": "我们来建造一些东西吧。",
+    "emphasizedWord": "惊人的",
+    "headingSuffix": "一起",
+    "description": "有项目想法吗？我随时乐意探讨新的机会、创意，或者只是聊聊技术和设计。",
+    "email": "电子邮件",
+    "emailValue": "michaelnathan505@gmail.com",
+    "location": "地点",
+    "locationValue": "Enugu, Nigeria",
+    "downloadResume": "下载简历",
+    "successTitle": "信息已发送！",
+    "successMessage": "感谢您的联系。我会尽快回复您。",
+    "sendAnother": "再发一条消息",
+    "formName": "你的名字",
+    "formEmail": "电子邮件",
+    "formMessage": "您的留言",
+    "namePlaceholder": "约翰·多伊",
+    "emailPlaceholder": "john@example.com",
+    "messagePlaceholder": "请介绍一下你的项目……",
+    "charCount": "{count}/2000 个字符",
+    "sendMessage": "发送消息",
+    "sending": "正在发送..."
+  },
+  "validation": {
+    "nameRequired": "姓名（必填）",
+    "nameMinLength": "名称必须至少包含 2 个字符",
+    "nameMaxLength": "姓名长度必须少于 50 个字符",
+    "emailRequired": "必须提供电子邮件地址",
+    "emailInvalid": "请输入有效的电子邮件地址",
+    "messageRequired": "必须填写此消息",
+    "messageMinLength": "消息长度必须至少为 10 个字符。",
+    "messageMaxLength": "消息长度必须少于 2000 个字符"
+  },
+  "toasts": {
+    "errorDefault": "出问题了",
+    "success": "信息发送成功！",
+    "errorNetwork": "出错了，请重试。"
+  },
+  "thoughtBubbles": [
+    "雇我吧，这样我就可以喂我的宠物猫了🐈",
+    "雇佣我，即可获得免费舞蹈课程（我会详细讲解的，嘿嘿）💃",
+    "雇佣我，我保证买艘游艇，然后把它开源😁",
+    "雇佣我，让我成为世界总统🌍，并消除世界饥饿！",
+    "说真的……你还在读我的想法？赶紧雇佣我吧！😅"
+  ],
+  "languageSwitcher": {
+    "label": "语言",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ko": "한국어",
+    "ja": "日本語",
+    "zh": "中文",
+    "de": "Deutsch",
+    "hi": "हिन्दी",
+    "pt": "Português",
+    "ar": "العربية"
+  }
+}
