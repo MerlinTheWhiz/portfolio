@@ -155,7 +155,8 @@ export default function ContactSection() {
 
             {/* Download Resume */}
             <a
-              href="#"
+              href="/resume.pdf"
+              download
               className="mt-12 inline-flex items-center gap-3 px-6 py-4 rounded-2xl border transition-all duration-300 group border-border-default hover:border-accent-primary/30 hover:bg-[#dbeafe] dark:hover:bg-background-card hover:scale-105"
             >
               <span className="font-medium">{t("downloadResume")}</span>
