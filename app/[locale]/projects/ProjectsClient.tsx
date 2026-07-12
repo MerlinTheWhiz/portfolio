@@ -4,7 +4,7 @@ import Image from "next/image";
 import { projects, ProjectCategory } from "@/lib/projects";
 import { ArrowUpRight } from "lucide-react";
 import { LuGithub } from "react-icons/lu";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useState } from "react";
 import ProjectsThoughtAvatar from "@/components/ui/ProjectsThoughtAvatar";
 import { useTranslations } from "next-intl";
