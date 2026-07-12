@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { projects } from "@/lib/projects";
 import { ArrowUpRight } from "lucide-react";
 import { LuGithub } from "react-icons/lu";

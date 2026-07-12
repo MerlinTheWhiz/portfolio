@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import HeroTypewriter from "../ui/HeroTypewriter";
 import DotGrid from "../ui/DotGrid/DotGrid";
 import HoverRevealText from "../ui/HeroHoverRevealText";
@@ -111,11 +111,17 @@ const Hero = () => {
               {t("viewMyWork")}
             </span>
           </Link>
-          <Link href="/#contact">
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <span className="flex rounded-full bg-accent-primary/5 dark:bg-accent-primary/10 hover:bg-accent-primary/10 hover:dark:bg-accent-primary/20 border-2 border-accent-primary text-accent-primary px-8 py-4 ease-in-out md:hover:scale-102 transition-all duration-300">
               {t("getInTouch")}
             </span>
-          </Link>
+          </a>
         </motion.div>
       </motion.div>
     </section>

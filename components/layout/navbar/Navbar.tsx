@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import logo from "../../../public/logo.png";
 import { Home, FolderGit2 } from "lucide-react";
 import { LuGithub, LuLinkedin, LuDownload } from "react-icons/lu";
